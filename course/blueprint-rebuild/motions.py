@@ -464,14 +464,21 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
             if local >= start:
                 shown = min(len(rows), int(index / step) + 1)
     if paced:
-        # Do not sit on the first line for more than 8s. The 29 August sell waits for that date.
-        cap = len(rows)
-        at_29 = ui._word_at(shot, "29")
-        if at_29 is None or local < at_29:
-            cap = 1
-        shown = max(shown, min(cap, 1 + int(local / 8)))
-        if at_29 is not None and local >= at_29:
-            shown = max(shown, 2)
+        # Buy row when 17 August is spoken, sell row when 29 August is spoken.
+        gates = [
+            ui._phrase_at(shot, "17 august"),
+            ui._phrase_at(shot, "29 august"),
+            ui._phrase_at(shot, "the card shows"),
+            ui._phrase_at(shot, "two fees"),
+            ui._phrase_at(shot, "that is about"),
+        ]
+        shown = 0
+        for at in gates:
+            if at is not None and local >= at:
+                shown += 1
+            else:
+                break
+        shown = min(shown, len(rows))
     if chapter == "One pair" and shot.get("lesson_id") == "bp-01-introduction":
         net_at = ui._phrase_at(shot, "that is about")
         if net_at is not None and local >= net_at:
@@ -489,23 +496,46 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
             ui._phrase_at(shot, "24,000"),
             ui._phrase_at(shot, "81"),
         ]
-    y = 220
-    step = 72 if len(rows) > 6 else 86
-    row_h = 62 if len(rows) > 6 else 74
+    y = 286 if chapter == "One pair" and shot.get("lesson_id") == "bp-01-introduction" else 220
+    step = 64 if chapter == "One pair" and shot.get("lesson_id") == "bp-01-introduction" else (72 if len(rows) > 6 else 86)
+    row_h = 56 if chapter == "One pair" and shot.get("lesson_id") == "bp-01-introduction" else (62 if len(rows) > 6 else 74)
     accent = int(local // 8) % max(1, shown) if paced or chapter == "The stop" else -1
     made_at = ui._phrase_at(shot, "made up") if chapter == "Downside" else None
-    if chapter == "Downside" and shot.get("lesson_id") == "bp-01-introduction" and (made_at is None or local < made_at):
-        box = (ui.MX, 200, ui.RIGHT, 700)
-        draw.rounded_rectangle(box, 18, fill=ui.GLASS, outline=ui.CYAN, width=3)
-        draw.text((box[0] + 36, box[1] + 24), "Three buys on the way down", font=ui.font(36), fill=ui.WHITE)
-        ys = (360, 450, 540)
-        for i, yy in enumerate(ys):
-            draw.line([(box[0] + 80, yy), (box[2] - 80, yy)], fill=ui.CYAN, width=3)
-            draw.text((box[0] + 90, yy - 32), f"Buy {i + 1}", font=ui.font(24), fill=ui.WHITE)
-        t = min(1.0, local / 6.0)
-        x0, x1 = box[0] + 140, box[2] - 140
-        pts = [(x0 + (x1 - x0) * i / 7, 280 + (540 - 280) * (i / 7) * max(t, 0.05)) for i in range(8)]
-        draw.line(pts, fill=ui.WHITE, width=4)
+    if chapter == "Downside" and shot.get("lesson_id") == "bp-01-introduction":
+        first_price = ui._phrase_at(shot, "276")
+        if made_at is None or local < made_at or first_price is None or local < first_price:
+            box = (ui.MX, 200, ui.RIGHT, 700)
+            draw.rounded_rectangle(box, 18, fill=ui.GLASS, outline=ui.CYAN, width=3)
+            draw.text((box[0] + 36, box[1] + 24), "Three buys on the way down", font=ui.font(36), fill=ui.WHITE)
+            ys = (360, 450, 540)
+            for i, yy in enumerate(ys):
+                draw.line([(box[0] + 80, yy), (box[2] - 80, yy)], fill=ui.CYAN, width=3)
+                draw.text((box[0] + 90, yy - 32), f"Buy {i + 1}", font=ui.font(24), fill=ui.WHITE)
+            t = min(1.0, local / 6.0)
+            x0, x1 = box[0] + 140, box[2] - 140
+            pts = [(x0 + (x1 - x0) * i / 7, 280 + (540 - 280) * (i / 7) * max(t, 0.05)) for i in range(8)]
+            draw.line(pts, fill=ui.WHITE, width=4)
+            return
+        # The table arrives with the spoken prices, not as a header on its own.
+        table = [
+            ("Buy 1", "0.01 at 27,630 = 276.30", ui._phrase_at(shot, "276")),
+            ("Buy 2", "0.01 at 26,730 = 267.30", ui._phrase_at(shot, "26,730")),
+            ("Buy 3", "0.01 at 25,830 = 258.30", ui._phrase_at(shot, "25,830")),
+            ("Total", "801.90", ui._phrase_at(shot, "801")),
+            ("At 24,000", "worth 720", ui._phrase_at(shot, "720")),
+            ("Down", "81.90", ui._phrase_at(shot, "81")),
+        ]
+        ui._example(draw, ui.RIGHT - 280, 168)
+        y = 230
+        for name, value, at in table:
+            if at is None or local < at:
+                break
+            draw.rounded_rectangle([ui.MX, y, ui.RIGHT, y + 64], 12, outline=ui.CYAN, width=2)
+            draw.text((ui.MX + 28, y + 14), name, font=ui.font(28), fill=ui.CYAN)
+            draw.text((ui.MX + 280, y + 14), "EXAMPLE  " + value, font=ui.font(28), fill=ui.WHITE)
+            y += 72
+        if local >= (ui._phrase_at(shot, "0.03") or 10**9):
+            draw.text((ui.MX + 28, min(y, 680)), "0.03 BTC × $24,000 = $720", font=ui.font(32), fill=ui.CYAN)
         return
     visible = [text for text in rows[:shown] if not (chapter == "Downside" and text.startswith("EXAMPLE, made up") and (made_at is None or local < made_at))]
     if any(ch.isdigit() for text in visible for ch in text):
@@ -528,15 +558,16 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
         if y > 700:
             break
     if chapter == "One pair" and shot.get("lesson_id") == "bp-01-introduction":
-        gap_at = ui._phrase_at(shot, "the card shows")
-        if gap_at is not None and local >= gap_at:
-            draw.text((ui.MX + 28, 168), "gap × coin size = gross:  $900 × 0.01 = $9.00", font=ui.font(28), fill=ui.CYAN)
-            draw.text((ui.MX + 28, 204), "0.1% on the buy + 0.1% on the sell", font=ui.font(28), fill=ui.WHITE)
-    if chapter == "Downside" and shot.get("lesson_id") == "bp-01-introduction" and made_at is not None and local >= made_at:
-        draw.text((ui.MX + 28, 168), "3 × 0.01 = 0.03 BTC;  0.03 × $24,000 = $720", font=ui.font(28), fill=ui.CYAN)
-    if paced and (shot.get("chapter") or "") == "One pair":
-        bar = [ui.MX + 520, 168, ui.MX + 980, 196]
-        draw.rounded_rectangle(bar, 8, outline=ui.CYAN, width=2)
-        filled = bar[0] + int((bar[2] - bar[0]) * min(1.0, local / 32.0))
-        if filled > bar[0] + 4:
-            draw.rounded_rectangle([bar[0], bar[1], filled, bar[3]], 8, fill=ui.CYAN)
+        # Clear of the title. The progress pill no longer shares this line.
+        gross_at = ui._phrase_at(shot, "900 dollars")
+        if gross_at is not None and local >= gross_at:
+            draw.rounded_rectangle([ui.MX, 214, ui.RIGHT, 268], 10, fill=ui.GLASS, outline=ui.CYAN, width=2)
+            draw.text((ui.MX + 24, 226), "gap × coin size = gross:  $900 × 0.01 = $9.00", font=ui.font(28), fill=ui.WHITE)
+        fee_at = ui._phrase_at(shot, "two fees") or ui._phrase_at(shot, "the card shows")
+        if fee_at is not None and local >= fee_at:
+            draw.text(
+                (ui.MX + 24, 640),
+                "0.1% of $267.30 ≈ $0.27 + 0.1% of $276.30 ≈ $0.28 = $0.54",
+                font=ui.font(26),
+                fill=ui.CYAN,
+            )

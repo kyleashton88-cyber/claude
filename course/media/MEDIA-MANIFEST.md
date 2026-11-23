@@ -38,4 +38,18 @@ Source commit `dea5f0a` (wording `20bf182`, then the card fix). Duration 845.6s.
 
 Join: `cat master.mp4.part01 master.mp4.part02 master.mp4.part03 > master.mp4`
 
-The same folder holds `captions.vtt`, `spoken-script.txt`, `gate-report.md`, and `cards/` for the changed pictures. BP-02 is not re-rendered.
+The same folder holds `captions.vtt`, `spoken-script.txt`, `gate-report.md`, and `cards/` for the changed pictures.
+
+## BP-02 after W6–W8 and Part A, 23 Nov
+
+Source at render start: `b9c0230`, plus the picture beat that keeps long cards from sitting still. Duration 641.6s. 1,768 spoken words. Gate PASS: −14.4 LUFS, −3.6 dBTP.
+
+| Lesson | Commit | File | Duration | Bytes | SHA-256 | Where it lives |
+|---|---|---|---|---|---|---|
+| BP-02 W6–W8 | `b9c0230` | `master.mp4` | 641.6s | 194954562 | `35452af20c6aef64a3e42cdedb5ff912c393e7147402e5f63619a64358684d07` | Agent store `/cursor/stores/self/artifacts/bp-23nov/bp02-b9c0230/` |
+| BP-02 W6–W8 | `b9c0230` | `master.mp4.part01` | | 104857600 | `357ce63cd2dacf903e26b8e42f4204af05588d9db3e6cf45fa2a63cdfa6916c0` | Same folder |
+| BP-02 W6–W8 | `b9c0230` | `master.mp4.part02` | | 90096962 | `cb1d6ca7bed86cb1a5a6837fa7796e0d2134a932c742b113761f07aa20c1265d` | Same folder |
+
+Join: `cat master.mp4.part01 master.mp4.part02 > master.mp4`
+
+`SHA256SUMS` in that folder lists only files that are in the folder.

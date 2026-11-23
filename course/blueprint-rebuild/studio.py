@@ -2331,6 +2331,16 @@ def _paint_bp02_scene(base: Image.Image, scene: str) -> None:
         draw.text((x0 + 48, y0 + 80), scene, font=font(36), fill=WHITE)
 
 
+def _bp02_beat(base: Image.Image, local: float, label: str) -> None:
+    """A titled block that moves every 8 seconds, so a long sentence is not one still picture."""
+    draw = ImageDraw.Draw(base)
+    slot = int(local // 8) % 2
+    y = 520 if slot == 0 else 620
+    draw.rounded_rectangle([140, y, 1780, y + 72], 12, fill=CYAN)
+    text = (label or "GridBot Builder")[:42]
+    draw.text((164, y + 16), text, font=font(32), fill=NAVY)
+
+
 def paint_v2_cards(base: Image.Image, shot: dict, local: float) -> None:
     cards = list(shot.get("v2_cards") or [])
     card = cards[_v2_index(shot, local)]
@@ -2414,26 +2424,32 @@ def _paint_bp01_picture(base: Image.Image, shot: dict, local: float) -> bool:
         return True
     if chapter == "Buy and sell":
         frame("Buy and sell")
-        draw.text((box[0] + 80, 300), "Buy: cash becomes coin", font=font(36), fill=CYAN)
-        draw.text((box[0] + 80, 380), "Sell: coin becomes cash", font=font(36), fill=WHITE)
+        draw.rounded_rectangle([box[0] + 80, 280, box[0] + 360, 400], 12, outline=CYAN, width=3)
+        draw.text((box[0] + 120, 320), "Cash", font=font(36), fill=WHITE)
+        draw.line([(box[0] + 380, 330), (box[0] + 560, 330)], fill=CYAN, width=6)
+        draw.polygon([(box[0] + 540, 310), (box[0] + 580, 330), (box[0] + 540, 350)], fill=CYAN)
+        draw.rounded_rectangle([box[0] + 600, 280, box[0] + 880, 400], 12, outline=CYAN, width=3)
+        draw.text((box[0] + 640, 320), "Coin", font=font(36), fill=CYAN)
+        draw.line([(box[0] + 560, 460), (box[0] + 380, 460)], fill=WHITE, width=6)
+        draw.polygon([(box[0] + 400, 440), (box[0] + 360, 460), (box[0] + 400, 480)], fill=WHITE)
+        draw.text((box[0] + 80, 500), "Buy: cash to coin", font=font(28), fill=CYAN)
+        draw.text((box[0] + 520, 500), "Sell: coin to cash", font=font(28), fill=WHITE)
         if _spoken(shot, local, "spot account"):
-            draw.text((box[0] + 80, 480), "A spot account: you own the coin.", font=font(32), fill=CYAN)
-            draw.text((box[0] + 80, 540), "Nothing is borrowed.", font=font(32), fill=WHITE)
+            draw.text((box[0] + 80, 580), "Spot: you own the coin. Nothing is borrowed.", font=font(28), fill=WHITE)
         return True
-    if chapter == "Buys and sells" and _spoken(shot, local, "you choose"):
+    if chapter == "Buys and sells" and _spoken(shot, local, "you choose the range"):
         frame("You choose")
         rows = [
             ("you choose the range", "YOU choose the range"),
-            ("the gaps", "YOU choose the gaps"),
-            ("the money", "YOU choose the money"),
+            ("the gaps and the money", "YOU choose the gaps and the money"),
             ("the bot places", "THE BOT places each order"),
         ]
         y = 280
         for phrase, label in rows:
-            if phrase == "you choose the range" or _spoken(shot, local, phrase):
-                draw.rounded_rectangle([box[0] + 48, y, box[2] - 48, y + 64], 12, outline=CYAN, width=2)
-                draw.text((box[0] + 72, y + 14), label, font=font(32), fill=WHITE)
-                y += 80
+            if _spoken(shot, local, phrase):
+                draw.rounded_rectangle([box[0] + 48, y, box[2] - 48, y + 72], 12, outline=CYAN, width=2)
+                draw.text((box[0] + 72, y + 16), label, font=font(32), fill=WHITE)
+                y += 96
         return True
     if chapter == "Downside" and "through the top" in (shot.get("vo") or "").lower():
         frame("What you hold")
@@ -2463,7 +2479,9 @@ def _paint_bp01_picture(base: Image.Image, shot: dict, local: float) -> bool:
             kind = "range"
         elif chapter == "Recap" and index == 1:
             kind = "fees"
-        elif chapter == "Recap" and index >= 2:
+        elif chapter == "Recap" and index == 2:
+            kind = "hold"
+        elif chapter == "Recap" and index >= 3:
             kind = "chart"
         elif chapter == "One sentence to keep":
             kind = "fees"
@@ -2472,7 +2490,9 @@ def _paint_bp01_picture(base: Image.Image, shot: dict, local: float) -> bool:
             slab = 280 + (int(local) % 3) * 40
             draw.rectangle([box[0] + 80, slab, box[0] + 720, slab + 120], fill=CYAN)
             draw.text((box[0] + 100, slab + 36), "Not on this page", font=font(36), fill=NAVY)
-            draw.text((box[0] + 80, 560), "A seed phrase is the master password to a wallet.", font=font(28), fill=WHITE)
+            draw.text((box[0] + 80, 520), "A seed phrase or private key is the master password", font=font(28), fill=WHITE)
+            draw.text((box[0] + 80, 564), "to a crypto wallet.", font=font(28), fill=WHITE)
+            draw.text((box[0] + 80, 612), "An API secret lets an app place trades on your account.", font=font(28), fill=CYAN)
             return True
         if kind == "pair":
             frame("The pair")
@@ -2485,6 +2505,13 @@ def _paint_bp01_picture(base: Image.Image, shot: dict, local: float) -> bool:
             draw.text((box[0] + 100, 312), "Top and bottom", font=font(32), fill=NAVY)
             draw.rectangle([box[0] + 80, 500, box[2] - 80, 560], fill=CYAN)
             draw.text((box[0] + 100, 512), "Stop if the close stays outside", font=font(32), fill=NAVY)
+            return True
+        if kind == "hold":
+            frame("What you hold")
+            draw.rounded_rectangle([box[0] + 80, 320, box[0] + 520, 500], 16, fill=CYAN)
+            draw.text((box[0] + 120, 380), "Cash", font=font(48), fill=NAVY)
+            draw.rounded_rectangle([box[0] + 620, 320, box[0] + 1060, 500], 16, outline=CYAN, width=3)
+            draw.text((box[0] + 680, 380), "Coin", font=font(48), fill=CYAN)
             return True
         if kind == "paper":
             frame("Paper or demo")
@@ -2501,12 +2528,13 @@ def _paint_bp01_picture(base: Image.Image, shot: dict, local: float) -> bool:
             return True
         if kind == "chart":
             frame("Outside the range")
-            draw.line([(box[0] + 80, 300), (box[2] - 80, 300)], fill=CYAN, width=3)
-            draw.line([(box[0] + 80, 520), (box[2] - 80, 520)], fill=CYAN, width=3)
-            draw.text((box[0] + 90, 260), "Top", font=font(24), fill=CYAN)
-            draw.text((box[0] + 90, 536), "Bottom", font=font(24), fill=CYAN)
-            draw.line([(box[0] + 200, 400), (box[0] + 700, 220)], fill=WHITE, width=4)
-            draw.text((box[0] + 720, 200), "Close outside, then the next close still outside", font=font(24), fill=WHITE)
+            top_y, bot_y = 360, 560
+            draw.line([(box[0] + 80, top_y), (box[0] + 900, top_y)], fill=CYAN, width=4)
+            draw.line([(box[0] + 80, bot_y), (box[0] + 900, bot_y)], fill=CYAN, width=4)
+            draw.text((box[0] + 920, top_y - 16), "Top", font=font(28), fill=CYAN)
+            draw.text((box[0] + 920, bot_y - 16), "Bottom", font=font(28), fill=CYAN)
+            draw.line([(box[0] + 160, 460), (box[0] + 420, 300), (box[0] + 700, 240)], fill=WHITE, width=4)
+            draw.text((box[0] + 80, 600), "Next close still outside", font=font(28), fill=WHITE)
             return True
         frame("Notebook")
         lines = ["Top and bottom", "One gap", "Stop rule", "Example on the page"]
@@ -2528,6 +2556,7 @@ def paint_stack(base: Image.Image, shot: dict, local: float) -> None:
     draw = ImageDraw.Draw(base)
     if shot.get("v2_cards") and shot.get("lesson_id") == "bp-02-what-you-need":
         paint_v2_cards(base, shot, local)
+        _bp02_beat(base, local, str(shot.get("term") or shot.get("chapter") or ""))
         return
     if _paint_bp01_picture(base, shot, local):
         return
@@ -2609,7 +2638,8 @@ def paint_stack(base: Image.Image, shot: dict, local: float) -> None:
                 shown += 1
         if shown == 0 and local >= 0.2:
             shown = 1
-        _draw_named_rows(draw, named[:shown])
+        rows = named[:shown]
+        _draw_named_rows(draw, rows[-3:])
         return
     if named:
         _draw_named_rows(draw, named)
@@ -3178,17 +3208,18 @@ def paint_lesson_still(base: Image.Image, shot: dict, local: float, dur: float) 
         gw, gh = int(200 * zoom), int(62 * zoom)
         d.rectangle([gx - 6, gy - 4, gx + gw, gy + gh], fill=NAVY)
         d.text((gx, gy), "MOVES", font=font(max(28, int(48 * zoom))), fill=WHITE)
-        if _spoken(shot, local, "sideways") or (_word_at(shot, "sideways") is None and local >= 18):
-            d.rounded_rectangle([MX + 48, 430, RIGHT - 48, 700], 16, fill=NAVY, outline=CYAN, width=3)
-            d.text((MX + 76, 450), "Sideways", font=font(36), fill=CYAN)
-            d.line([(MX + 80, 520), (RIGHT - 80, 520)], fill=CYAN, width=3)
-            d.line([(MX + 80, 640), (RIGHT - 80, 640)], fill=CYAN, width=3)
+        sideways_at = _phrase_at(shot, "moves sideways")
+        if sideways_at is not None and local >= sideways_at:
+            # The diagram only. The words sit above it, not on the lines.
+            d.rounded_rectangle([MX + 80, 360, RIGHT - 80, 700], 16, fill=NAVY, outline=CYAN, width=3)
+            d.text((MX + 108, 380), "Sideways", font=font(36), fill=CYAN)
+            d.line([(MX + 120, 500), (RIGHT - 120, 500)], fill=CYAN, width=3)
+            d.line([(MX + 120, 640), (RIGHT - 120, 640)], fill=CYAN, width=3)
             d.line(
-                [(MX + 120, 580), (MX + 280, 540), (MX + 440, 600), (MX + 600, 540), (MX + 760, 600)],
+                [(MX + 180, 570), (MX + 360, 520), (MX + 540, 590), (MX + 720, 520), (MX + 900, 580)],
                 fill=WHITE, width=4,
             )
-            d.text((MX + 820, 560), "Between the same top and bottom", font=font(28), fill=WHITE)
-        elif local >= 18:
+        elif local >= 0.4:
             # The still would otherwise sit for the whole hook. MOVES stays at the top.
             card = (MX + 48, 500, RIGHT - 48, 700)
             d.rounded_rectangle(card, 16, fill=NAVY, outline=CYAN, width=3)
@@ -3302,18 +3333,20 @@ def paint_candle(base: Image.Image, shot: dict, local: float = 0) -> None:
         return int(top + (high - price) / span * (bot - top))
 
     y_high, y_low, y_close = y_of(high), y_of(low), y_of(close)
-    note = (
-        "Traders call it a candle because the full version has a thick body and a thin wick, like a candle. "
-        "Here we only need the high, the low and the close."
-    )
-    ny = box[1] + 68
-    for line in wrap(note, 28, box[2] - box[0] - 80)[:3]:
-        draw.text((box[0] + 36, ny), line, font=font(28), fill=CYAN)
-        ny += 34
-    draw.line([(cx, y_high), (cx, y_low)], fill=CYAN, width=4)
-    draw.line([(cx - 28, y_high), (cx + 28, y_high)], fill=CYAN, width=4)
-    draw.line([(cx - 28, y_low), (cx + 28, y_low)], fill=CYAN, width=4)
-    draw.rounded_rectangle([cx - 46, y_close - 10, cx + 46, y_close + 10], 6, fill=CYAN)
+    draw.text((box[0] + 36, box[1] + 80), "High, low, close", font=font(28), fill=CYAN)
+    draw.text((cx + 220, box[1] + 80), "A candle", font=font(28), fill=WHITE)
+    # Simple mark.
+    draw.line([(cx - 160, y_high), (cx - 160, y_low)], fill=CYAN, width=4)
+    draw.line([(cx - 188, y_high), (cx - 132, y_high)], fill=CYAN, width=4)
+    draw.line([(cx - 188, y_low), (cx - 132, y_low)], fill=CYAN, width=4)
+    draw.rounded_rectangle([cx - 206, y_close - 10, cx - 114, y_close + 10], 6, fill=CYAN)
+    # A real candle beside it: thin wick, thick body. No extra price.
+    wick_x = cx + 280
+    body_top = min(y_close, y_high + (y_low - y_high) // 3)
+    body_bot = max(y_close, body_top + 36)
+    draw.line([(wick_x, y_high), (wick_x, y_low)], fill=WHITE, width=3)
+    draw.rounded_rectangle([wick_x - 28, body_top, wick_x + 28, body_bot], 4, fill=CYAN)
+    cx = cx - 160
     labels = (
         (y_high, f"High {high:,}", -280),
         (y_close, f"Close {close:,}", 80),
@@ -3362,9 +3395,13 @@ def paint_course_map(base: Image.Image, shot: dict, local: float) -> None:
             break
     if not words and local >= float(shot.get("duration") or 12) * 0.62:
         slide = 2
-    shown = steps[:6] if slide == 1 else steps[6:]
-    y = 210
-    left = MX + 28
+    pool = steps[:6] if slide == 1 else steps[6:]
+    # Three at a time, so the roadmap is not one long still list.
+    page = min(len(pool) - 1, int(local // 8))
+    start = min(page, max(0, len(pool) - 3))
+    shown = pool[start:start + 3]
+    y = 240
+    left = MX + 80
     for number, name in shown:
         draw.rounded_rectangle([left, y, left + 72, y + 64], 12, fill=TAG, outline=CYAN, width=2)
         num_x = left + 22 if len(number) == 1 else left + 8
