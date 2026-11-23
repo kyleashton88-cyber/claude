@@ -1125,12 +1125,12 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
 
     if chapter == "The levels" and shot.get("lesson_id") == "bp-01-introduction":
         formula = "(30,331 − 24,930) ÷ 6 ≈ 900"
-        face_f = font(32)
-        fw = int(face_f.getlength(formula)) + 28
-        # Under the chart, clear of 24,930 and clear of the caption bar at y=800.
-        fx, fy = MX, 712
-        draw.rounded_rectangle([fx, fy, fx + fw, fy + 44], 10, fill=TAG, outline=CYAN, width=2)
-        draw.text((fx + 14, fy + 6), formula, font=face_f, fill=WHITE)
+        face_f = font(28)
+        fw = int(face_f.getlength(formula)) + 24
+        # Inside the card header, above the plot and above the y=732 caption gap.
+        fx, fy = 980, 236
+        draw.rounded_rectangle([fx, fy, min(fx + fw, RIGHT - 24), fy + 40], 10, fill=TAG, outline=CYAN, width=2)
+        draw.text((fx + 12, fy + 6), formula, font=face_f, fill=WHITE)
     if chapter == "The range" and shot.get("lesson_id") == "bp-01-introduction":
         if _word_at(shot, "hindsight") is None or local >= (_word_at(shot, "hindsight") or 0):
             draw.rounded_rectangle([plot[2] - 250, plot[1] - 48, plot[2] - 20, plot[1] - 6], 10, fill=TAG, outline=CYAN, width=2)
@@ -2447,16 +2447,51 @@ def _paint_bp01_picture(base: Image.Image, shot: dict, local: float) -> bool:
     if chapter in {"Self-check", "Your turn", "No secrets", "Recap", "The pair, next", "One sentence to keep"}:
         index = int(shot.get("index") or 0)
         kind = "notebook"
-        if chapter == "Self-check" and index == 1:
+        if chapter == "No secrets":
+            kind = "secrets"
+        elif chapter == "The pair, next":
+            kind = "pair"
+        elif chapter == "Self-check" and index == 1:
             kind = "fees"
-        elif chapter in {"Self-check", "Your turn"} and index >= 1:
+        elif chapter == "Self-check" and index >= 2:
             kind = "chart"
+        elif chapter == "Your turn" and index == 1:
+            kind = "chart"
+        elif chapter == "Your turn" and index >= 2:
+            kind = "paper"
+        elif chapter == "Recap" and index == 0:
+            kind = "range"
         elif chapter == "Recap" and index == 1:
             kind = "fees"
         elif chapter == "Recap" and index >= 2:
             kind = "chart"
         elif chapter == "One sentence to keep":
             kind = "fees"
+        if kind == "secrets":
+            frame("No secrets")
+            slab = 280 + (int(local) % 3) * 40
+            draw.rectangle([box[0] + 80, slab, box[0] + 720, slab + 120], fill=CYAN)
+            draw.text((box[0] + 100, slab + 36), "Not on this page", font=font(36), fill=NAVY)
+            draw.text((box[0] + 80, 560), "A seed phrase is the master password to a wallet.", font=font(28), fill=WHITE)
+            return True
+        if kind == "pair":
+            frame("The pair")
+            draw.rectangle([box[0] + 80, 340, box[2] - 80, 500], fill=CYAN)
+            draw.text((box[0] + 110, 390), "Bitcoin and US dollars", font=font(40), fill=NAVY)
+            return True
+        if kind == "range":
+            frame("Range")
+            draw.rectangle([box[0] + 80, 300, box[2] - 80, 360], fill=CYAN)
+            draw.text((box[0] + 100, 312), "Top and bottom", font=font(32), fill=NAVY)
+            draw.rectangle([box[0] + 80, 500, box[2] - 80, 560], fill=CYAN)
+            draw.text((box[0] + 100, 512), "Stop if the close stays outside", font=font(32), fill=NAVY)
+            return True
+        if kind == "paper":
+            frame("Paper or demo")
+            shift = 300 + (int(local) % 4) * 50
+            draw.rectangle([box[0] + 80, shift, box[0] + 640, shift + 90], fill=CYAN)
+            draw.text((box[0] + 100, shift + 24), "No real order", font=font(36), fill=NAVY)
+            return True
         if kind == "fees":
             frame("One pair, after fees")
             _example(draw, box[0] + 28, box[1] + 80)
