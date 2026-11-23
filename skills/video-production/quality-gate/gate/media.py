@@ -132,13 +132,15 @@ def longest_static(frames: np.ndarray, fps: int = 2, mad_limit: float = 0.5) -> 
     return worst / fps, worst_at / fps
 
 
-# Picture band on a 160x90 frame. Rows 0–11 are the title. Rows 62–89 are the
-# burned captions and the lower third. A new caption is not a new picture.
+# Picture band on a 160x90 frame. Rows 0–11 are the title. Rows 54–61 are the
+# lane under the card (y 648–744 on a 1080 frame). A block that only slides in
+# that lane is not a new picture. Rows 62–89 are the burned captions.
 VISUAL_ROW_START = 12
-VISUAL_ROW_END = 62
+VISUAL_ROW_END = 54
 # The moving background on a still card stays near 0.5. A new sentence on the
-# same card is about 2.5. Caption rows are not in this sample, so a caption
-# change cannot end a hold. 2.4 keeps a real card change and ignores the glow.
+# same card is about 2.5. Caption rows and the under-card lane are not in this
+# sample, so neither a caption nor a sliding filler block can end a hold.
+# 2.4 keeps a real card change and ignores the glow.
 VISUAL_MAD_LIMIT = 2.4
 
 

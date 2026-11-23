@@ -62,7 +62,9 @@ class LayoutLog:
                 if intersects(bar, box):
                     found.append(f"cyan bar covers text: {text[:80]}")
             for box in self.diagrams:
-                if intersects(bar, box) and not _inside(bar, box):
+                # A line whose centre sits inside the bar is still covered.
+                # The label may sit in the bar. The diagram may not.
+                if intersects(bar, box):
                     found.append("cyan bar covers a diagram line")
                     break
         for box, text in self.texts:

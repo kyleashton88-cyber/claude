@@ -18,7 +18,15 @@ sys.path.insert(0, str(HERE))
 from gate.captions import caption_coverage_problems, caption_problems, parse_captions  # noqa: E402
 from gate.numbers import find_dates, lesson_figures, number_problems, screen_figures  # noqa: E402
 from gate.evaluate import caption_gap_pixels, evaluate  # noqa: E402
-from gate.media import black_runs, gray_frames, judge_loudness, longest_static, visual_holds  # noqa: E402
+from gate.media import (  # noqa: E402
+    VISUAL_ROW_END,
+    VISUAL_ROW_START,
+    black_runs,
+    gray_frames,
+    judge_loudness,
+    longest_static,
+    visual_holds,
+)
 from gate.profiles import PROFILES, get_profile, length_ok  # noqa: E402
 from gate.synth import encode_black_gap, encode_clip, write_pass_captions  # noqa: E402
 from gate.textscan import find_brands, has_disclaimer, tesseract_path  # noqa: E402
@@ -271,6 +279,15 @@ class PictureTests(unittest.TestCase):
             for index in range(0, 24, 8):
                 cards[index:index + 8] = 40 * (index // 8 + 1)
             self.assertEqual(visual_holds(cards, fps=1), [])
+            # A block that only moves in the under-card lane is not a new picture.
+            lane = np.zeros((25, 90, 160), dtype=np.uint8)
+            lane[:, 54:62, 20:90] = 40
+            lane[8:, 54:62, 70:140] = 200
+            band = lane[:, VISUAL_ROW_START:VISUAL_ROW_END]
+            self.assertEqual(visual_holds(band, fps=1), [(0.0, 25.0)])
+            band = band.copy()
+            band[10, 8:28, 10:80] = 220
+            self.assertFalse(any(start <= 8 and start + length > 12 for start, length in visual_holds(band, fps=1)))
 
             gap = encode_black_gap(folder / "gap.mp4")
             dark = black_runs(gray_frames(gap, fps=4), fps=4)

@@ -79,3 +79,7 @@ Stewart signed off the nine BP-03 to BP-11 scripts at commit `b958dff`. Those sp
 | X6 | BP-03 is titled "How a grid bot works, order by order." The BP-02 end line and end card say "Next lesson: How a grid bot works, order by order." |
 
 The stop card is still for the whole chapter. A GridBot Builder block moves in the lane under that card every 8 seconds, so the picture changes without covering the card.
+
+## Fix order 13, pictures only
+
+No spoken word changed. The stop card draws the notebook, the stop sign, and the real daily closes, including 33,086 and 33,902 when October is spoken. The sliding block is gone. The hold gate ignores the lane under the card, so a filler block cannot pass it. A cyan bar that crosses a diagram fails the layout gate.

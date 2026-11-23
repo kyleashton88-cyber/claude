@@ -22,7 +22,7 @@ SPECS: dict[str, dict] = {
             "YOU write the stop",
             "YOU act on the stop",
             "THE BOT places each order",
-            "THE BOT refills one rung away",
+            "THE BOT refills one rung up or down",
         ],
     },
     "BP01-V04": {
@@ -389,20 +389,103 @@ SPECS: dict[str, dict] = {
 }
 
 
-def _paint_stall(draw, ui) -> None:
-    """The stall, before any priced fill is spoken."""
-    box = (ui.MX, 200, ui.RIGHT, 700)
+def _paint_stall(draw, ui, local: float) -> None:
+    """The stall, built in steps, and kept above the lane."""
+    box = (ui.MX, 188, ui.RIGHT, ui.CARD_BOTTOM)
     draw.rounded_rectangle(box, 22, fill=ui.GLASS, outline=ui.CYAN, width=2)
-    draw.text((box[0] + 36, box[1] + 28), "A market stall", font=ui.font(40), fill=ui.WHITE)
-    left, right = box[0] + 220, box[2] - 220
-    draw.polygon(
-        [(left, 430), (left + 80, 340), (right - 80, 340), (right, 430)],
-        outline=ui.CYAN,
-    )
-    draw.line([(left, 430), (right, 430)], fill=ui.CYAN, width=4)
-    draw.rounded_rectangle([left + 40, 500, right - 40, 590], 10, outline=ui.CYAN, width=3)
-    draw.line([(left + 120, 590), (left + 120, 660)], fill=ui.CYAN, width=4)
-    draw.line([(right - 120, 590), (right - 120, 660)], fill=ui.CYAN, width=4)
+    draw.text((box[0] + 36, box[1] + 20), "A market stall", font=ui.font(40), fill=ui.WHITE)
+    left, right = box[0] + 280, box[2] - 280
+    if local >= 1.5:
+        draw.polygon(
+            [(left, 360), (left + 70, 280), (right - 70, 280), (right, 360)],
+            outline=ui.CYAN,
+        )
+    if local >= 3.0:
+        draw.line([(left, 360), (right, 360)], fill=ui.CYAN, width=4)
+        draw.rounded_rectangle([left + 36, 400, right - 36, 490], 10, outline=ui.CYAN, width=3)
+    if local >= 4.5:
+        draw.line([(left + 100, 490), (left + 100, 560)], fill=ui.CYAN, width=4)
+        draw.line([(right - 100, 490), (right - 100, 560)], fill=ui.CYAN, width=4)
+
+
+def _summer_closes(ui) -> tuple[list[dict], list[dict]]:
+    import json
+
+    data = json.loads((ui.ROOT / "course/data/public-prices/btc-usd-windows.json").read_text())
+    inside = list(data["range_2023"])
+    outside = [row for row in data["breakout_2023"] if row["date"] in {"2023-10-23", "2023-10-24"}]
+    return inside, outside
+
+
+def _paint_stop_card(draw, shot: dict, local: float, ui) -> None:
+    """Notebook, a stop sign, and the real daily closes, a new stretch every 6 seconds."""
+    import math
+
+    box = (ui.MX, 176, ui.RIGHT, ui.CARD_BOTTOM)
+    draw.rounded_rectangle(box, 18, fill=ui.GLASS, outline=ui.CYAN, width=3)
+    draw.text((box[0] + 28, box[1] + 12), "WRITE YOUR STOP DOWN", font=ui.font(32), fill=ui.CYAN)
+    note = (box[0] + 28, box[1] + 64, box[0] + 300, box[1] + 250)
+    draw.rounded_rectangle(note, 12, outline=ui.WHITE, width=3)
+    for i in range(5):
+        draw.line([(note[0] + 18, note[1] + 28 + i * 32), (note[2] - 18, note[1] + 28 + i * 32)], fill=ui.CYAN, width=3)
+    draw.line([(note[2] - 36, note[1] - 8), (note[2] + 8, note[3] - 28)], fill=ui.WHITE, width=6)
+    cx, cy, radius = box[0] + 500, box[1] + 160, 58
+    points = []
+    for index in range(8):
+        angle = math.radians(-90 + index * 45 + 22.5)
+        points.append((cx + radius * math.cos(angle), cy + radius * math.sin(angle)))
+    draw.polygon(points, outline=ui.CYAN)
+    draw.line(points + [points[0]], fill=ui.CYAN, width=4)
+    draw.text((cx - 36, cy - 16), "STOP", font=ui.font(28), fill=ui.WHITE)
+    hand = (cx - 130, cy + 10)
+    draw.rounded_rectangle([hand[0], hand[1], hand[0] + 36, hand[1] + 48], 8, outline=ui.WHITE, width=3)
+    for finger in range(3):
+        draw.rounded_rectangle(
+            [hand[0] + 4 + finger * 10, hand[1] - 22, hand[0] + 12 + finger * 10, hand[1] + 8],
+            4, outline=ui.WHITE, width=3,
+        )
+    draw.text((box[0] + 28, box[1] + 268), "Write it before you start", font=ui.font(24), fill=ui.WHITE)
+    draw.text((box[0] + 28, box[1] + 304), "The stop is your written rule", font=ui.font(24), fill=ui.CYAN)
+    inside, outside = _summer_closes(ui)
+    shown = min(len(inside), 8 + int(local // 6) * 16)
+    october_at = ui._word_at(shot, "october")
+    show_out = october_at is not None and local >= october_at
+    plot = (box[0] + 620, box[1] + 64, box[2] - 28, box[3] - 28)
+    draw.rounded_rectangle(plot, 10, outline=ui.CYAN, width=2)
+    lo, hi = 24000, 35000
+
+    def y_of(price: float) -> int:
+        span = hi - lo
+        return int(plot[3] - 16 - (price - lo) / span * (plot[3] - plot[1] - 32))
+
+    top_y, bot_y = y_of(30331), y_of(24930)
+    draw.line([(plot[0] + 12, top_y), (plot[2] - 12, top_y)], fill=ui.CYAN, width=3)
+    draw.line([(plot[0] + 12, bot_y), (plot[2] - 12, bot_y)], fill=ui.CYAN, width=3)
+    draw.text((plot[2] - 120, top_y - 26), "30,331", font=ui.font(22), fill=ui.CYAN)
+    draw.text((plot[2] - 120, bot_y + 6), "24,930", font=ui.font(22), fill=ui.CYAN)
+    ui._example(draw, plot[2] - 200, plot[1] + 8)
+    closes = inside[:shown]
+    if show_out:
+        closes = closes + outside
+    if len(closes) >= 2:
+        step = (plot[2] - plot[0] - 36) / max(1, len(inside) + 2 - 1)
+        pts = []
+        for index, row in enumerate(closes):
+            pts.append((plot[0] + 18 + step * index, y_of(float(row["close"]))))
+        draw.line(pts, fill=ui.WHITE, width=5)
+        for index, (x, y) in enumerate(pts):
+            radius_dot = 8 if index >= len(pts) - 2 else 4
+            draw.ellipse([x - radius_dot, y - radius_dot, x + radius_dot, y + radius_dot], fill=ui.WHITE)
+        last = closes[-1]
+        label = f"{last['date'][8:10]} {last['date'][5:7]}  {round(float(last['close'])):,}"
+        if show_out:
+            label = "23 Oct 33,086   24 Oct 33,902"
+        face = ui.font(22)
+        pill_w = int(face.getlength(label)) + 28
+        px = min(pts[-1][0], plot[2] - pill_w - 8)
+        py = plot[1] + 8
+        draw.rounded_rectangle([px, py, px + pill_w, py + 36], 8, fill=ui.CYAN)
+        draw.text((px + 12, py + 6), label, font=face, fill=ui.NAVY)
 
 
 def paint_visual(base, shot: dict, local: float, ui) -> None:
@@ -419,7 +502,7 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
             (None, "THE BOT places each order"),
             ("write the stop", "YOU write the stop"),
             ("you act", "YOU act on the stop"),
-            ("one rung", "THE BOT refills one rung away"),
+            ("one rung", "THE BOT refills one rung up or down"),
         ]
         y = 188
         for phrase, label in labels:
@@ -430,27 +513,8 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
             draw.text((ui.MX + 28, y + 14), label, font=ui.font(32), fill=ui.WHITE)
             y += 72
         return
-    # The six-row stop list finishes in the top of the card. The 23 October
-    # line is spoken later, so the picture changes again with that sentence.
     if (shot.get("chapter") or "") == "The stop" and shot.get("lesson_id") == "bp-01-introduction":
-        october_at = ui._word_at(shot, "october")
-        box = (ui.MX, 188, ui.RIGHT, ui.CARD_BOTTOM)
-        draw.rounded_rectangle(box, 18, fill=ui.GLASS, outline=ui.CYAN, width=3)
-        draw.text((box[0] + 36, box[1] + 16), "WRITE YOUR STOP DOWN", font=ui.font(36), fill=ui.CYAN)
-        # The path the voice describes: inside the lines, then a close that leaves.
-        top_y, bot_y = box[1] + 120, box[1] + 280
-        draw.line([(box[0] + 80, top_y), (box[0] + 980, top_y)], fill=ui.CYAN, width=4)
-        draw.line([(box[0] + 80, bot_y), (box[0] + 980, bot_y)], fill=ui.CYAN, width=4)
-        draw.text((box[0] + 1000, top_y - 16), "30,331", font=ui.font(28), fill=ui.CYAN)
-        draw.text((box[0] + 1000, bot_y - 16), "24,930", font=ui.font(28), fill=ui.CYAN)
-        path = [(box[0] + 120, bot_y - 40), (box[0] + 320, top_y + 50), (box[0] + 520, bot_y - 20), (box[0] + 760, top_y - 36)]
-        draw.line(path, fill=ui.WHITE, width=4)
-        if october_at is not None and local >= october_at:
-            draw.text((box[0] + 36, box[1] + 320), "23 Oct close outside. 24 Oct still outside.", font=ui.font(32), fill=ui.WHITE)
-        else:
-            draw.text((box[0] + 36, box[1] + 320), "Two daily closes. The second one still outside.", font=ui.font(28), fill=ui.WHITE)
-        # The card itself holds for the chapter. Motion stays in the lane under it.
-        ui._bp02_beat(base, local, "")
+        _paint_stop_card(draw, shot, local, ui)
         return
     # The pair rows finish in the top of the card. The bottom-leave line is later.
     if (shot.get("chapter") or "") == "One pair" and shot.get("lesson_id") == "bp-01-introduction":
@@ -474,11 +538,12 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
     if chapter == "How a grid can capture bounces":
         buy_at = ui._phrase_at(shot, "one buy")
         if buy_at is None or local < buy_at:
-            _paint_stall(draw, ui)
+            _paint_stall(draw, ui, local)
             fee_at = ui._phrase_at(shot, "exchanges charge")
             if fee_at is not None and local >= fee_at:
-                draw.rounded_rectangle([ui.MX + 80, 560, ui.RIGHT - 80, 660], 16, fill=ui.CYAN)
-                draw.text((ui.MX + 110, 588), "A fee on each trade", font=ui.font(40), fill=ui.NAVY)
+                # In the lane under the stall, not across the drawing.
+                lane = ui.MOTION_LANE
+                draw.text((lane[0] + 16, lane[1] + 14), "A fee on each trade", font=ui.font(28), fill=ui.WHITE)
             return
         sell_at = ui._phrase_at(shot, "later sell")
         if sell_at is None or local < sell_at:
@@ -541,13 +606,22 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
             ("Down", "81.90", ui._phrase_at(shot, "81")),
         ]
         ui._example(draw, ui.RIGHT - 280, 168)
-        y = 200
+        draw.text((ui.MX + 28, 188), "Three buys on the way down", font=ui.font(32), fill=ui.WHITE)
+        down_at = ui._phrase_at(shot, "you are down")
+        y = 240
         for name, value, at in table:
-            if at is None or local < at:
+            if name == "Down":
+                at = down_at or at
+            if name.startswith("Buy"):
+                opens = ui._phrase_at(shot, "three buys")
+                if opens is not None and local < opens:
+                    continue
+            elif at is None or local < at:
                 break
             draw.rounded_rectangle([ui.MX, y, ui.RIGHT, y + 56], 12, outline=ui.CYAN, width=2)
             draw.text((ui.MX + 28, y + 12), name, font=ui.font(28), fill=ui.CYAN)
-            draw.text((ui.MX + 280, y + 12), "EXAMPLE  " + value, font=ui.font(28), fill=ui.WHITE)
+            if at is not None and local >= at:
+                draw.text((ui.MX + 280, y + 12), "EXAMPLE  " + value, font=ui.font(28), fill=ui.WHITE)
             y += 64
         if local >= (ui._phrase_at(shot, "0.03") or 10**9):
             draw.text((ui.MX + 28, min(y, 600)), "0.03 BTC × $24,000 = $720", font=ui.font(32), fill=ui.CYAN)
@@ -556,8 +630,22 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
     if any(ch.isdigit() for text in visible for ch in text):
         ui._example(draw, ui.RIGHT - 280, 168)
     start_row = 0
-    if chapter == "One pair" and shot.get("lesson_id") == "bp-01-introduction":
-        start_row = max(0, shown - 4)
+    one_pair = chapter == "One pair" and shot.get("lesson_id") == "bp-01-introduction"
+    formula_on = False
+    fee_line_on = False
+    if one_pair:
+        gross_at = ui._phrase_at(shot, "900 dollars")
+        fee_spoken = ui._phrase_at(shot, "two fees") or ui._phrase_at(shot, "the card shows")
+        formula_on = gross_at is not None and local >= gross_at
+        fee_line_on = fee_spoken is not None and local >= fee_spoken
+        if shown == 0 and not formula_on:
+            ui._example(draw, ui.RIGHT - 280, 168)
+            draw.rounded_rectangle([ui.MX, 240, ui.RIGHT, 340], 14, outline=ui.CYAN, width=2)
+            draw.text((ui.MX + 28, 262), "0.01 bitcoin", font=ui.font(36), fill=ui.WHITE)
+            return
+        extras = (1 if formula_on else 0) + (1 if fee_line_on else 0)
+        start_row = max(0, shown - max(1, 4 - extras))
+        ui._example(draw, ui.RIGHT - 280, 168)
     for index, text in enumerate(rows[:shown]):
         if index < start_row:
             continue
@@ -577,19 +665,16 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
         y += step
         if y > 700:
             break
-    if chapter == "One pair" and shot.get("lesson_id") == "bp-01-introduction":
-        # Clear of the title. The progress pill no longer shares this line.
-        gross_at = ui._phrase_at(shot, "900 dollars")
-        if gross_at is not None and local >= gross_at:
-            draw.rounded_rectangle([ui.MX, 214, ui.RIGHT, 268], 10, fill=ui.GLASS, outline=ui.CYAN, width=2)
-            draw.text((ui.MX + 24, 226), "gap × coin size = gross:  $900 × 0.01 = $9.00", font=ui.font(28), fill=ui.WHITE)
-        fee_at = ui._phrase_at(shot, "two fees") or ui._phrase_at(shot, "the card shows")
-        if fee_at is not None and local >= fee_at:
+    if one_pair:
+        # At most four lines, counting the formula and the fee basis.
+        if formula_on:
+            draw.rounded_rectangle([ui.MX, 188, ui.RIGHT, 236], 10, fill=ui.GLASS, outline=ui.CYAN, width=2)
+            draw.text((ui.MX + 24, 198), "gap × coin size = gross:  $900 × 0.01 = $9.00", font=ui.font(26), fill=ui.WHITE)
+        if fee_line_on:
             draw.text(
-                (ui.MX + 24, 600),
+                (ui.MX + 24, 560),
                 "0.1% of $267.30 = $0.2673; 0.1% of $276.30 = $0.2763; total $0.5436 ≈ $0.54",
                 font=ui.font(24),
                 fill=ui.CYAN,
             )
-        # Four lines at a time. Older rows scroll off as the voice moves on.
         return
