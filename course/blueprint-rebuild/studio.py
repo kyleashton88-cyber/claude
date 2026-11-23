@@ -3306,11 +3306,25 @@ def paint_lesson_still(base: Image.Image, shot: dict, local: float, dur: float) 
         gw, gh = int(200 * zoom), int(62 * zoom)
         d.rectangle([gx - 6, gy - 4, gx + gw, gy + gh], fill=NAVY)
         d.text((gx, gy), "MOVES", font=font(max(28, int(48 * zoom))), fill=WHITE)
-        lane_y = MOTION_LANE[1] + 12
+        # Beside the diagram, not on it. A new line every 8 seconds.
+        lessons = [
+            (0.4, "What a grid bot does"),
+            (8.0, "When it can capture bounces"),
+            (16.0, "Where it loses"),
+        ]
         if _phrase_at(shot, "limit orders") is not None and local >= _phrase_at(shot, "limit orders"):
-            d.text((MX, lane_y), "Limit order = an order that waits at your price", font=font(28), fill=WHITE)
-        elif _spoken(shot, local, "nothing left to do"):
-            d.text((MX, lane_y), "Nothing left to do", font=font(28), fill=CYAN)
+            lessons.append((_phrase_at(shot, "limit orders"), "Limit order = waits at your price"))
+        if _spoken(shot, local, "nothing left to do"):
+            lessons.append((34.0, "Nothing left to do"))
+        y = 220
+        shown = [(at, line) for at, line in lessons if local >= at]
+        for index, (_at, line) in enumerate(shown):
+            if y > 560:
+                break
+            latest = index == len(shown) - 1
+            d.rounded_rectangle([1360, y, 1800, y + 64], 12, fill=CYAN if latest else GLASS, outline=CYAN, width=3)
+            d.text((1380, y + 16), line, font=font(22), fill=NAVY if latest else WHITE)
+            y += 80
     if still.endswith("bp-01-introduction/009.png"):
         d = ImageDraw.Draw(base)
         d.text((MX, MOTION_LANE[1] + 12), "Paper or demo. No real order.", font=font(28), fill=WHITE)

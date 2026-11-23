@@ -404,8 +404,22 @@ def _paint_stall(draw, ui, local: float) -> None:
         draw.line([(left, 360), (right, 360)], fill=ui.CYAN, width=4)
         draw.rounded_rectangle([left + 36, 400, right - 36, 490], 10, outline=ui.CYAN, width=3)
     if local >= 4.5:
-        draw.line([(left + 100, 490), (left + 100, 560)], fill=ui.CYAN, width=4)
-        draw.line([(right - 100, 490), (right - 100, 560)], fill=ui.CYAN, width=4)
+        draw.line([(left + 100, 490), (left + 100, 520)], fill=ui.CYAN, width=4)
+        draw.line([(right - 100, 490), (right - 100, 520)], fill=ui.CYAN, width=4)
+    notes = (
+        (6.0, "Buys a little cheaper"),
+        (12.0, "Sells a little dearer"),
+    )
+    y = 560
+    due = [line for at, line in notes if local >= at]
+    for index, line in enumerate(due):
+        latest = index == len(due) - 1
+        draw.rounded_rectangle(
+            [box[0] + 36, y, box[0] + 720, y + 28], 8,
+            fill=ui.CYAN if latest else ui.GLASS, outline=ui.CYAN, width=2,
+        )
+        draw.text((box[0] + 52, y + 2), line, font=ui.font(22), fill=ui.NAVY if latest else ui.WHITE)
+        y += 32
 
 
 def _summer_closes(ui) -> tuple[list[dict], list[dict]]:
@@ -476,16 +490,21 @@ def _paint_stop_card(draw, shot: dict, local: float, ui) -> None:
         for index, (x, y) in enumerate(pts):
             radius_dot = 8 if index >= len(pts) - 2 else 4
             draw.ellipse([x - radius_dot, y - radius_dot, x + radius_dot, y + radius_dot], fill=ui.WHITE)
-        last = closes[-1]
+        last = closes[min(len(closes) - 1, max(0, int(local // 6) * 16))]
         label = f"{last['date'][8:10]} {last['date'][5:7]}  {round(float(last['close'])):,}"
         if show_out:
             label = "23 Oct 33,086   24 Oct 33,902"
+            mark = pts[-1][0]
+        else:
+            mark = pts[min(len(pts) - 1, max(0, int(local // 6) * 12))][0]
         face = ui.font(22)
-        pill_w = int(face.getlength(label)) + 28
-        px = min(pts[-1][0], plot[2] - pill_w - 8)
+        pill_w = min(int(face.getlength(label)) + 28, plot[2] - plot[0] - 16)
+        px = plot[2] - pill_w - 8
         py = plot[1] + 8
         draw.rounded_rectangle([px, py, px + pill_w, py + 36], 8, fill=ui.CYAN)
         draw.text((px + 12, py + 6), label, font=face, fill=ui.NAVY)
+        # A playhead on the real path. It steps every 6 seconds.
+        draw.rectangle([mark - 8, plot[1] + 52, mark + 8, plot[3] - 16], fill=ui.CYAN)
 
 
 def paint_visual(base, shot: dict, local: float, ui) -> None:
