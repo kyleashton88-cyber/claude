@@ -48,1110 +48,1143 @@ at the end of each day, marked Example.
 00:00:32.367 --> 00:00:34.266 line:78% position:50% align:center size:90%
 No order is sent from this lesson.
 
-00:00:35.265 --> 00:00:37.241 line:78% position:50% align:center size:90%
+00:00:35.265 --> 00:00:37.164 line:78% position:50% align:center size:90%
 By the end of this series you will
 
-00:00:37.241 --> 00:00:39.291 line:78% position:50% align:center size:90%
-understand what a grid bot, a small
+00:00:37.164 --> 00:00:38.952 line:78% position:50% align:center size:90%
+understand what a grid bot does.
 
-00:00:39.291 --> 00:00:41.340 line:78% position:50% align:center size:90%
-program that places these orders
+00:00:39.349 --> 00:00:40.801 line:78% position:50% align:center size:90%
+It is a small program that
 
-00:00:41.340 --> 00:00:43.243 line:78% position:50% align:center size:90%
-for you, does, when it can capture
+00:00:40.801 --> 00:00:42.366 line:78% position:50% align:center size:90%
+places these orders for you.
 
-00:00:43.243 --> 00:00:44.854 line:78% position:50% align:center size:90%
+00:00:42.822 --> 00:00:44.721 line:78% position:50% align:center size:90%
+You will learn when it can capture
+
+00:00:44.721 --> 00:00:46.285 line:78% position:50% align:center size:90%
 bounces, and where it loses.
 
-00:00:45.374 --> 00:00:47.384 line:78% position:50% align:center size:90%
+00:00:46.533 --> 00:00:48.544 line:78% position:50% align:center size:90%
 You will know how to plan one, test
 
-00:00:47.384 --> 00:00:49.284 line:78% position:50% align:center size:90%
+00:00:48.544 --> 00:00:50.443 line:78% position:50% align:center size:90%
 it on paper, run it, check it, and
 
-00:00:49.284 --> 00:00:51.331 line:78% position:50% align:center size:90%
+00:00:50.443 --> 00:00:52.491 line:78% position:50% align:center size:90%
 change the capital you give to bots
 
-00:00:51.331 --> 00:00:53.193 line:78% position:50% align:center size:90%
+00:00:52.491 --> 00:00:54.352 line:78% position:50% align:center size:90%
 only under written risk rules.
 
-00:00:53.713 --> 00:00:55.110 line:78% position:50% align:center size:90%
+00:00:54.872 --> 00:00:56.269 line:78% position:50% align:center size:90%
 This is education, not
 
-00:00:55.110 --> 00:00:56.429 line:78% position:50% align:center size:90%
+00:00:56.269 --> 00:00:57.589 line:78% position:50% align:center size:90%
 a promise of results.
 
-00:00:56.949 --> 00:00:58.560 line:78% position:50% align:center size:90%
+00:00:58.109 --> 00:00:59.719 line:78% position:50% align:center size:90%
 Price often moves sideways,
 
-00:00:58.560 --> 00:01:00.310 line:78% position:50% align:center size:90%
+00:00:59.719 --> 00:01:01.469 line:78% position:50% align:center size:90%
 bouncing between the same top
 
-00:01:00.310 --> 00:01:02.061 line:78% position:50% align:center size:90%
+00:01:01.469 --> 00:01:03.220 line:78% position:50% align:center size:90%
 and bottom instead of leaving.
 
-00:01:02.581 --> 00:01:04.290 line:78% position:50% align:center size:90%
+00:01:03.740 --> 00:01:05.450 line:78% position:50% align:center size:90%
 A grid is a ladder of waiting
 
-00:01:04.290 --> 00:01:06.000 line:78% position:50% align:center size:90%
+00:01:05.450 --> 00:01:07.159 line:78% position:50% align:center size:90%
 orders, called limit orders,
 
-00:01:06.000 --> 00:01:07.487 line:78% position:50% align:center size:90%
+00:01:07.159 --> 00:01:08.646 line:78% position:50% align:center size:90%
 built for that bouncing.
 
-00:01:08.007 --> 00:01:09.850 line:78% position:50% align:center size:90%
+00:01:09.166 --> 00:01:11.010 line:78% position:50% align:center size:90%
 When price runs one way and stays
 
-00:01:09.850 --> 00:01:12.029 line:78% position:50% align:center size:90%
+00:01:11.010 --> 00:01:13.188 line:78% position:50% align:center size:90%
 there, the grid has nothing left to do.
 
-00:01:12.410 --> 00:01:14.163 line:78% position:50% align:center size:90%
+00:01:13.569 --> 00:01:15.322 line:78% position:50% align:center size:90%
 And if price falls through the
 
-00:01:14.163 --> 00:01:15.846 line:78% position:50% align:center size:90%
+00:01:15.322 --> 00:01:17.005 line:78% position:50% align:center size:90%
 bottom, coin means the crypto
 
-00:01:15.846 --> 00:01:17.669 line:78% position:50% align:center size:90%
+00:01:17.005 --> 00:01:18.828 line:78% position:50% align:center size:90%
 itself, and you are left holding
 
-00:01:17.669 --> 00:01:19.401 line:78% position:50% align:center size:90%
+00:01:18.828 --> 00:01:20.560 line:78% position:50% align:center size:90%
 the coin, and it is worth less.
 
-00:01:20.331 --> 00:01:21.672 line:78% position:50% align:center size:90%
+00:01:21.491 --> 00:01:22.831 line:78% position:50% align:center size:90%
 By the end you will know
 
-00:01:21.672 --> 00:01:22.957 line:78% position:50% align:center size:90%
+00:01:22.831 --> 00:01:24.116 line:78% position:50% align:center size:90%
 what a grid bot places.
 
-00:01:24.086 --> 00:01:26.165 line:78% position:50% align:center size:90%
+00:01:25.246 --> 00:01:27.324 line:78% position:50% align:center size:90%
 You will see that idea on
 
-00:01:26.165 --> 00:01:28.140 line:78% position:50% align:center size:90%
+00:01:27.324 --> 00:01:29.299 line:78% position:50% align:center size:90%
 one real path from 2023.
 
-00:01:29.340 --> 00:01:30.848 line:78% position:50% align:center size:90%
+00:01:30.499 --> 00:01:32.008 line:78% position:50% align:center size:90%
 You will be able to say the
 
-00:01:30.848 --> 00:01:32.301 line:78% position:50% align:center size:90%
+00:01:32.008 --> 00:01:33.460 line:78% position:50% align:center size:90%
 stop rule in one sentence.
 
-00:01:33.255 --> 00:01:35.101 line:78% position:50% align:center size:90%
+00:01:34.414 --> 00:01:36.260 line:78% position:50% align:center size:90%
 When a chart says Example, it
 
-00:01:35.101 --> 00:01:36.946 line:78% position:50% align:center size:90%
+00:01:36.260 --> 00:01:38.106 line:78% position:50% align:center size:90%
 means a real past price used
 
-00:01:36.946 --> 00:01:38.792 line:78% position:50% align:center size:90%
+00:01:38.106 --> 00:01:39.952 line:78% position:50% align:center size:90%
 as an example, not a forecast.
 
-00:01:39.842 --> 00:01:41.084 line:78% position:50% align:center size:90%
+00:01:41.002 --> 00:01:42.243 line:78% position:50% align:center size:90%
 Crypto is a digital
 
-00:01:41.084 --> 00:01:42.481 line:78% position:50% align:center size:90%
+00:01:42.243 --> 00:01:43.641 line:78% position:50% align:center size:90%
 asset, such as bitcoin.
 
-00:01:43.001 --> 00:01:44.677 line:78% position:50% align:center size:90%
+00:01:44.161 --> 00:01:45.837 line:78% position:50% align:center size:90%
 You do not need to have bought
 
-00:01:44.677 --> 00:01:45.962 line:78% position:50% align:center size:90%
+00:01:45.837 --> 00:01:47.122 line:78% position:50% align:center size:90%
 any before this lesson.
 
-00:01:46.341 --> 00:01:48.308 line:78% position:50% align:center size:90%
+00:01:47.500 --> 00:01:49.467 line:78% position:50% align:center size:90%
 An exchange is the website or app
 
-00:01:48.308 --> 00:01:50.640 line:78% position:50% align:center size:90%
+00:01:49.467 --> 00:01:51.799 line:78% position:50% align:center size:90%
 where you swap Australian dollars for
 
-00:01:50.640 --> 00:01:52.681 line:78% position:50% align:center size:90%
+00:01:51.799 --> 00:01:53.840 line:78% position:50% align:center size:90%
 crypto, and crypto back to dollars.
 
-00:01:53.201 --> 00:01:54.877 line:78% position:50% align:center size:90%
+00:01:54.360 --> 00:01:56.036 line:78% position:50% align:center size:90%
 This course does not name one,
 
-00:01:54.877 --> 00:01:56.553 line:78% position:50% align:center size:90%
+00:01:56.036 --> 00:01:57.712 line:78% position:50% align:center size:90%
 and it does not send an order.
 
-00:01:57.298 --> 00:01:58.862 line:78% position:50% align:center size:90%
+00:01:58.457 --> 00:02:00.021 line:78% position:50% align:center size:90%
 Cash is money you can spend.
 
-00:01:59.264 --> 00:02:00.886 line:78% position:50% align:center size:90%
+00:02:00.423 --> 00:02:02.259 line:78% position:50% align:center size:90%
 Here that means dollars, or a
 
-00:02:00.886 --> 00:02:02.650 line:78% position:50% align:center size:90%
-dollar-pegged token, treated
+00:02:02.259 --> 00:02:04.334 line:78% position:50% align:center size:90%
+stablecoin, a crypto coin built
 
-00:02:02.650 --> 00:02:04.060 line:78% position:50% align:center size:90%
-like cash in this lesson.
+00:02:04.334 --> 00:02:05.850 line:78% position:50% align:center size:90%
+to stay at one US dollar.
 
-00:02:04.580 --> 00:02:05.596 line:78% position:50% align:center size:90%
-The peg can break.
+00:02:06.370 --> 00:02:08.437 line:78% position:50% align:center size:90%
+We treat it like cash in this lesson,
 
-00:02:06.116 --> 00:02:08.308 line:78% position:50% align:center size:90%
+00:02:08.437 --> 00:02:10.169 line:78% position:50% align:center size:90%
+but it can drop below a dollar.
+
+00:02:10.598 --> 00:02:12.789 line:78% position:50% align:center size:90%
 Coin is the crypto, such as bitcoin.
 
-00:02:09.358 --> 00:02:11.704 line:78% position:50% align:center size:90%
+00:02:13.839 --> 00:02:16.186 line:78% position:50% align:center size:90%
 An order is an instruction to buy or sell.
 
-00:02:12.156 --> 00:02:13.964 line:78% position:50% align:center size:90%
+00:02:16.638 --> 00:02:18.445 line:78% position:50% align:center size:90%
 A buy order swaps cash for coin.
 
-00:02:14.484 --> 00:02:16.386 line:78% position:50% align:center size:90%
+00:02:18.965 --> 00:02:20.868 line:78% position:50% align:center size:90%
 A sell order swaps coin back to
 
-00:02:16.386 --> 00:02:18.518 line:78% position:50% align:center size:90%
+00:02:20.868 --> 00:02:22.999 line:78% position:50% align:center size:90%
 cash, and you can only sell coin you
 
-00:02:18.518 --> 00:02:20.420 line:78% position:50% align:center size:90%
+00:02:22.999 --> 00:02:24.902 line:78% position:50% align:center size:90%
 already hold, on a spot account.
 
-00:02:20.940 --> 00:02:22.577 line:78% position:50% align:center size:90%
+00:02:25.422 --> 00:02:27.058 line:78% position:50% align:center size:90%
 A spot account is the normal
 
-00:02:22.577 --> 00:02:23.929 line:78% position:50% align:center size:90%
+00:02:27.058 --> 00:02:28.411 line:78% position:50% align:center size:90%
 account on an exchange.
 
-00:02:24.449 --> 00:02:25.846 line:78% position:50% align:center size:90%
+00:02:28.931 --> 00:02:30.327 line:78% position:50% align:center size:90%
 You own the coin you buy,
 
-00:02:25.846 --> 00:02:27.187 line:78% position:50% align:center size:90%
+00:02:30.327 --> 00:02:31.668 line:78% position:50% align:center size:90%
 and nothing is borrowed.
 
-00:02:28.069 --> 00:02:29.838 line:78% position:50% align:center size:90%
+00:02:32.550 --> 00:02:34.320 line:78% position:50% align:center size:90%
 A bot is software that places
 
-00:02:29.838 --> 00:02:31.460 line:78% position:50% align:center size:90%
+00:02:34.320 --> 00:02:35.942 line:78% position:50% align:center size:90%
 and refills orders for you.
 
-00:02:31.980 --> 00:02:33.824 line:78% position:50% align:center size:90%
+00:02:36.462 --> 00:02:38.305 line:78% position:50% align:center size:90%
 You start with some cash and some
 
-00:02:33.824 --> 00:02:35.500 line:78% position:50% align:center size:90%
+00:02:38.305 --> 00:02:39.981 line:78% position:50% align:center size:90%
 coin, so there is something to
 
-00:02:35.500 --> 00:02:37.232 line:78% position:50% align:center size:90%
+00:02:39.981 --> 00:02:41.713 line:78% position:50% align:center size:90%
 buy with and something to sell.
 
-00:02:37.281 --> 00:02:39.645 line:78% position:50% align:center size:90%
+00:02:41.762 --> 00:02:44.114 line:78% position:50% align:center size:90%
 A grid bot places waiting buy orders
 
-00:02:39.645 --> 00:02:41.774 line:78% position:50% align:center size:90%
-on lines below the price and sell
+00:02:44.114 --> 00:02:46.466 line:78% position:50% align:center size:90%
+on lines below the current price and
 
-00:02:41.774 --> 00:02:43.902 line:78% position:50% align:center size:90%
-orders on lines above it, inside a
+00:02:46.466 --> 00:02:48.819 line:78% position:50% align:center size:90%
+sell orders on lines above it, inside
 
-00:02:43.902 --> 00:02:45.636 line:78% position:50% align:center size:90%
-top and a bottom you choose.
+00:02:48.819 --> 00:02:50.622 line:78% position:50% align:center size:90%
+a top and a bottom you choose.
 
-00:02:46.156 --> 00:02:47.832 line:78% position:50% align:center size:90%
+00:02:51.142 --> 00:02:52.818 line:78% position:50% align:center size:90%
 The space between your top and
 
-00:02:47.832 --> 00:02:49.620 line:78% position:50% align:center size:90%
+00:02:52.818 --> 00:02:54.606 line:78% position:50% align:center size:90%
 your bottom is called the range.
 
-00:02:49.714 --> 00:02:51.819 line:78% position:50% align:center size:90%
+00:02:54.699 --> 00:02:56.805 line:78% position:50% align:center size:90%
 The sells need some coin, so a grid
 
-00:02:51.819 --> 00:02:53.768 line:78% position:50% align:center size:90%
+00:02:56.805 --> 00:02:58.754 line:78% position:50% align:center size:90%
 starts with part cash and part
 
-00:02:53.768 --> 00:02:55.718 line:78% position:50% align:center size:90%
+00:02:58.754 --> 00:03:00.704 line:78% position:50% align:center size:90%
 coin, and that is a description,
 
-00:02:55.718 --> 00:02:57.589 line:78% position:50% align:center size:90%
+00:03:00.704 --> 00:03:02.575 line:78% position:50% align:center size:90%
 not advice about what to hold.
 
-00:02:58.639 --> 00:03:00.345 line:78% position:50% align:center size:90%
+00:03:03.625 --> 00:03:05.331 line:78% position:50% align:center size:90%
 A limit order is an order that
 
-00:03:00.345 --> 00:03:01.910 line:78% position:50% align:center size:90%
+00:03:05.331 --> 00:03:06.895 line:78% position:50% align:center size:90%
 waits at a price you choose.
 
-00:03:02.429 --> 00:03:03.993 line:78% position:50% align:center size:90%
+00:03:07.415 --> 00:03:08.979 line:78% position:50% align:center size:90%
 It does not chase the price.
 
-00:03:04.413 --> 00:03:05.977 line:78% position:50% align:center size:90%
+00:03:09.399 --> 00:03:10.963 line:78% position:50% align:center size:90%
 Chasing the price would mean
 
-00:03:05.977 --> 00:03:07.430 line:78% position:50% align:center size:90%
+00:03:10.963 --> 00:03:12.415 line:78% position:50% align:center size:90%
 moving the order to follow
 
-00:03:07.430 --> 00:03:08.994 line:78% position:50% align:center size:90%
+00:03:12.415 --> 00:03:13.980 line:78% position:50% align:center size:90%
 wherever the price has gone.
 
-00:03:09.843 --> 00:03:11.918 line:78% position:50% align:center size:90%
+00:03:14.829 --> 00:03:16.904 line:78% position:50% align:center size:90%
 An order fills when the price reaches
 
-00:03:11.918 --> 00:03:13.650 line:78% position:50% align:center size:90%
+00:03:16.904 --> 00:03:18.636 line:78% position:50% align:center size:90%
 its line and the trade happens.
 
-00:03:14.111 --> 00:03:16.318 line:78% position:50% align:center size:90%
+00:03:19.097 --> 00:03:21.304 line:78% position:50% align:center size:90%
 Until then, the order is only waiting.
 
-00:03:17.368 --> 00:03:19.323 line:78% position:50% align:center size:90%
+00:03:22.354 --> 00:03:24.309 line:78% position:50% align:center size:90%
 Think of a ladder leaned on a wall.
 
-00:03:19.465 --> 00:03:21.811 line:78% position:50% align:center size:90%
+00:03:24.451 --> 00:03:26.797 line:78% position:50% align:center size:90%
 The rungs wait, and they do not chase you.
 
-00:03:22.087 --> 00:03:24.377 line:78% position:50% align:center size:90%
+00:03:27.073 --> 00:03:29.363 line:78% position:50% align:center size:90%
 A rung is one price where an order waits.
 
-00:03:24.784 --> 00:03:26.963 line:78% position:50% align:center size:90%
+00:03:29.770 --> 00:03:31.949 line:78% position:50% align:center size:90%
 The gap is the space between two rungs.
 
-00:03:27.252 --> 00:03:29.297 line:78% position:50% align:center size:90%
+00:03:32.238 --> 00:03:34.282 line:78% position:50% align:center size:90%
 The ladder is the analogy, and the
 
-00:03:29.297 --> 00:03:31.568 line:78% position:50% align:center size:90%
+00:03:34.282 --> 00:03:36.554 line:78% position:50% align:center size:90%
 chart beside it is the real past path.
 
-00:03:32.618 --> 00:03:34.029 line:78% position:50% align:center size:90%
+00:03:37.604 --> 00:03:39.015 line:78% position:50% align:center size:90%
 The range is the top rung
 
-00:03:34.029 --> 00:03:35.158 line:78% position:50% align:center size:90%
+00:03:39.015 --> 00:03:40.144 line:78% position:50% align:center size:90%
 and the bottom rung.
 
-00:03:35.678 --> 00:03:37.801 line:78% position:50% align:center size:90%
+00:03:40.664 --> 00:03:42.787 line:78% position:50% align:center size:90%
 The levels are the rungs between them.
 
-00:03:38.151 --> 00:03:40.441 line:78% position:50% align:center size:90%
+00:03:43.136 --> 00:03:45.427 line:78% position:50% align:center size:90%
 The stop is the written rule for leaving.
 
-00:03:41.290 --> 00:03:43.134 line:78% position:50% align:center size:90%
+00:03:46.276 --> 00:03:48.119 line:78% position:50% align:center size:90%
 The range is the top line and the
 
-00:03:43.134 --> 00:03:44.977 line:78% position:50% align:center size:90%
+00:03:48.119 --> 00:03:49.963 line:78% position:50% align:center size:90%
 bottom line, taken from the path.
 
-00:03:45.456 --> 00:03:46.944 line:78% position:50% align:center size:90%
+00:03:50.442 --> 00:03:51.930 line:78% position:50% align:center size:90%
 Hindsight: this range is
 
-00:03:46.944 --> 00:03:48.209 line:78% position:50% align:center size:90%
+00:03:51.930 --> 00:03:53.195 line:78% position:50% align:center size:90%
 drawn after the fact.
 
-00:03:48.729 --> 00:03:51.953 line:78% position:50% align:center size:90%
+00:03:53.715 --> 00:03:56.939 line:78% position:50% align:center size:90%
 The chart is bitcoin's real daily
 
-00:03:51.953 --> 00:03:55.523 line:78% position:50% align:center size:90%
+00:03:56.939 --> 00:04:00.509 line:78% position:50% align:center size:90%
 closes from 19 July to 16 October 2023.
 
-00:03:56.043 --> 00:03:57.495 line:78% position:50% align:center size:90%
+00:04:01.029 --> 00:04:02.481 line:78% position:50% align:center size:90%
 Every close in this window
 
-00:03:57.495 --> 00:03:59.227 line:78% position:50% align:center size:90%
+00:04:02.481 --> 00:04:04.213 line:78% position:50% align:center size:90%
 stayed between those two lines.
 
-00:04:00.013 --> 00:04:02.419 line:78% position:50% align:center size:90%
+00:04:04.999 --> 00:04:07.405 line:78% position:50% align:center size:90%
 Six gaps of about 900 dollars each sit
 
-00:04:02.419 --> 00:04:04.980 line:78% position:50% align:center size:90%
+00:04:07.405 --> 00:04:09.966 line:78% position:50% align:center size:90%
 between the bottom line and the top line.
 
-00:04:05.500 --> 00:04:07.727 line:78% position:50% align:center size:90%
+00:04:10.486 --> 00:04:12.713 line:78% position:50% align:center size:90%
 Each gap is about 900 dollars:
 
-00:04:07.727 --> 00:04:09.954 line:78% position:50% align:center size:90%
+00:04:12.713 --> 00:04:14.940 line:78% position:50% align:center size:90%
 the top line minus the bottom
 
-00:04:09.954 --> 00:04:11.439 line:78% position:50% align:center size:90%
+00:04:14.940 --> 00:04:16.424 line:78% position:50% align:center size:90%
 line, divided by six.
 
-00:04:11.959 --> 00:04:13.304 line:78% position:50% align:center size:90%
+00:04:16.944 --> 00:04:18.289 line:78% position:50% align:center size:90%
 It is one step between
 
-00:04:13.304 --> 00:04:14.873 line:78% position:50% align:center size:90%
+00:04:18.289 --> 00:04:19.858 line:78% position:50% align:center size:90%
 lines, not the whole range.
 
-00:04:15.393 --> 00:04:17.231 line:78% position:50% align:center size:90%
+00:04:20.378 --> 00:04:22.217 line:78% position:50% align:center size:90%
 Seven lines make those six gaps.
 
-00:04:17.751 --> 00:04:19.539 line:78% position:50% align:center size:90%
+00:04:22.737 --> 00:04:24.525 line:78% position:50% align:center size:90%
 The levels are the prices on the
 
-00:04:19.539 --> 00:04:21.215 line:78% position:50% align:center size:90%
+00:04:24.525 --> 00:04:26.201 line:78% position:50% align:center size:90%
 rungs where limit orders wait.
 
-00:04:22.202 --> 00:04:24.492 line:78% position:50% align:center size:90%
-Buy orders wait on lines below the price.
+00:04:27.187 --> 00:04:28.545 line:78% position:50% align:center size:90%
+Buy orders wait on lines
 
-00:04:24.928 --> 00:04:26.883 line:78% position:50% align:center size:90%
+00:04:28.545 --> 00:04:29.903 line:78% position:50% align:center size:90%
+below the current price.
+
+00:04:30.423 --> 00:04:32.379 line:78% position:50% align:center size:90%
 Sell orders wait on lines above it.
 
-00:04:27.365 --> 00:04:29.864 line:78% position:50% align:center size:90%
+00:04:32.860 --> 00:04:35.359 line:78% position:50% align:center size:90%
 Each fill changes what you hold: a buy
 
-00:04:29.864 --> 00:04:32.530 line:78% position:50% align:center size:90%
+00:04:35.359 --> 00:04:38.025 line:78% position:50% align:center size:90%
 fill adds coin, and a sell fill adds cash.
 
-00:04:33.050 --> 00:04:34.223 line:78% position:50% align:center size:90%
+00:04:38.545 --> 00:04:39.718 line:78% position:50% align:center size:90%
 You choose the range,
 
-00:04:34.223 --> 00:04:35.508 line:78% position:50% align:center size:90%
+00:04:39.718 --> 00:04:41.003 line:78% position:50% align:center size:90%
 the gaps and the money.
 
-00:04:35.817 --> 00:04:37.269 line:78% position:50% align:center size:90%
+00:04:41.312 --> 00:04:42.765 line:78% position:50% align:center size:90%
 The bot places each order.
 
-00:04:38.276 --> 00:04:40.069 line:78% position:50% align:center size:90%
+00:04:43.771 --> 00:04:45.621 line:78% position:50% align:center size:90%
 After a fill, the bot places the
 
-00:04:40.069 --> 00:04:41.790 line:78% position:50% align:center size:90%
-opposite order one rung away.
+00:04:45.621 --> 00:04:47.694 line:78% position:50% align:center size:90%
+opposite order one rung up or down.
 
-00:04:42.310 --> 00:04:44.488 line:78% position:50% align:center size:90%
+00:04:48.214 --> 00:04:50.392 line:78% position:50% align:center size:90%
 A buy fill gets a sell one rung higher.
 
-00:04:44.875 --> 00:04:47.105 line:78% position:50% align:center size:90%
+00:04:50.779 --> 00:04:53.008 line:78% position:50% align:center size:90%
 A sell fill gets a buy one rung lower.
 
-00:04:47.625 --> 00:04:49.245 line:78% position:50% align:center size:90%
+00:04:53.528 --> 00:04:55.148 line:78% position:50% align:center size:90%
 You still write the stop, and
 
-00:04:49.245 --> 00:04:50.921 line:78% position:50% align:center size:90%
+00:04:55.148 --> 00:04:56.824 line:78% position:50% align:center size:90%
 you act when that rule is met.
 
-00:04:51.152 --> 00:04:53.387 line:78% position:50% align:center size:90%
+00:04:57.056 --> 00:04:59.291 line:78% position:50% align:center size:90%
 The bot does not decide the stop for you
 
-00:04:53.387 --> 00:04:55.510 line:78% position:50% align:center size:90%
+00:04:59.291 --> 00:05:01.414 line:78% position:50% align:center size:90%
 unless you turned that setting on, and
 
-00:04:55.510 --> 00:04:57.577 line:78% position:50% align:center size:90%
+00:05:01.414 --> 00:05:03.481 line:78% position:50% align:center size:90%
 you write which one before you start.
 
-00:04:58.311 --> 00:04:59.652 line:78% position:50% align:center size:90%
+00:05:04.215 --> 00:05:05.556 line:78% position:50% align:center size:90%
 Think of a market stall.
 
-00:05:00.084 --> 00:05:02.198 line:78% position:50% align:center size:90%
+00:05:05.988 --> 00:05:08.102 line:78% position:50% align:center size:90%
 The stallholder buys stock a little
 
-00:05:02.198 --> 00:05:04.312 line:78% position:50% align:center size:90%
+00:05:08.102 --> 00:05:10.216 line:78% position:50% align:center size:90%
 cheaper and sells it a little dearer,
 
-00:05:04.312 --> 00:05:05.932 line:78% position:50% align:center size:90%
+00:05:10.216 --> 00:05:11.836 line:78% position:50% align:center size:90%
 and pays a fee on every sale.
 
-00:05:06.383 --> 00:05:07.952 line:78% position:50% align:center size:90%
+00:05:12.286 --> 00:05:13.856 line:78% position:50% align:center size:90%
 Exchanges charge a small
 
-00:05:07.952 --> 00:05:08.998 line:78% position:50% align:center size:90%
+00:05:13.856 --> 00:05:14.902 line:78% position:50% align:center size:90%
 fee on each trade.
 
-00:05:09.518 --> 00:05:11.261 line:78% position:50% align:center size:90%
+00:05:15.422 --> 00:05:17.165 line:78% position:50% align:center size:90%
 A grid can do that while price
 
-00:05:11.261 --> 00:05:12.787 line:78% position:50% align:center size:90%
+00:05:17.165 --> 00:05:18.691 line:78% position:50% align:center size:90%
 bounces inside the range.
 
-00:05:13.307 --> 00:05:15.828 line:78% position:50% align:center size:90%
+00:05:19.211 --> 00:05:21.732 line:78% position:50% align:center size:90%
 A bounce means price moves down and back
 
-00:05:15.828 --> 00:05:18.197 line:78% position:50% align:center size:90%
+00:05:21.732 --> 00:05:24.101 line:78% position:50% align:center size:90%
 up, or up and back down, and stays inside.
 
-00:05:18.717 --> 00:05:20.953 line:78% position:50% align:center size:90%
+00:05:24.621 --> 00:05:26.857 line:78% position:50% align:center size:90%
 One buy at a lower line and the later
 
-00:05:20.953 --> 00:05:23.036 line:78% position:50% align:center size:90%
+00:05:26.857 --> 00:05:28.940 line:78% position:50% align:center size:90%
 sell of that same coin is one pair.
 
-00:05:23.556 --> 00:05:25.708 line:78% position:50% align:center size:90%
+00:05:29.460 --> 00:05:31.640 line:78% position:50% align:center size:90%
 On these daily closes, the July to
 
-00:05:25.708 --> 00:05:27.940 line:78% position:50% align:center size:90%
+00:05:31.640 --> 00:05:33.900 line:78% position:50% align:center size:90%
 October example window finished
 
-00:05:27.940 --> 00:05:30.012 line:78% position:50% align:center size:90%
-only three pairs one rung apart.
+00:05:33.900 --> 00:05:36.000 line:78% position:50% align:center size:90%
+only three pairs, each a buy and a
 
-00:05:30.532 --> 00:05:32.264 line:78% position:50% align:center size:90%
+00:05:36.000 --> 00:05:38.099 line:78% position:50% align:center size:90%
+sell on lines next to each other.
+
+00:05:38.619 --> 00:05:40.351 line:78% position:50% align:center size:90%
 The sell line is higher, so the
 
-00:05:32.264 --> 00:05:34.108 line:78% position:50% align:center size:90%
+00:05:40.351 --> 00:05:42.195 line:78% position:50% align:center size:90%
 cash that comes back is more than
 
-00:05:34.108 --> 00:05:36.063 line:78% position:50% align:center size:90%
+00:05:42.195 --> 00:05:44.150 line:78% position:50% align:center size:90%
 the cash that left, before the fee.
 
-00:05:36.356 --> 00:05:37.809 line:78% position:50% align:center size:90%
+00:05:44.443 --> 00:05:45.896 line:78% position:50% align:center size:90%
 A fee is what the exchange
 
-00:05:37.809 --> 00:05:39.373 line:78% position:50% align:center size:90%
+00:05:45.896 --> 00:05:47.460 line:78% position:50% align:center size:90%
 charges when an order fills.
 
-00:05:39.554 --> 00:05:41.174 line:78% position:50% align:center size:90%
-The fee comes out of the gap.
+00:05:47.641 --> 00:05:49.931 line:78% position:50% align:center size:90%
+The fees come out of what the pair makes.
 
-00:05:41.401 --> 00:05:43.133 line:78% position:50% align:center size:90%
-If the fees are larger than the
+00:05:49.993 --> 00:05:51.501 line:78% position:50% align:center size:90%
+If the fees are larger than
 
-00:05:43.133 --> 00:05:44.697 line:78% position:50% align:center size:90%
-gap, the pair keeps nothing.
+00:05:51.501 --> 00:05:53.121 line:78% position:50% align:center size:90%
+that, the pair keeps nothing.
 
-00:05:44.878 --> 00:05:46.121 line:78% position:50% align:center size:90%
+00:05:53.295 --> 00:05:54.538 line:78% position:50% align:center size:90%
 This is not a promise.
 
-00:05:46.641 --> 00:05:48.445 line:78% position:50% align:center size:90%
+00:05:55.058 --> 00:05:56.862 line:78% position:50% align:center size:90%
 The pair finishes only if price
 
-00:05:48.445 --> 00:05:50.318 line:78% position:50% align:center size:90%
+00:05:56.862 --> 00:05:58.735 line:78% position:50% align:center size:90%
 does bounce and both orders fill.
 
-00:05:51.368 --> 00:05:52.597 line:78% position:50% align:center size:90%
+00:05:59.785 --> 00:06:01.014 line:78% position:50% align:center size:90%
 The daily close is the
 
-00:05:52.597 --> 00:05:53.826 line:78% position:50% align:center size:90%
+00:06:01.014 --> 00:06:02.243 line:78% position:50% align:center size:90%
 last price of the day.
 
-00:05:54.247 --> 00:05:56.047 line:78% position:50% align:center size:90%
+00:06:02.664 --> 00:06:04.464 line:78% position:50% align:center size:90%
 Crypto trades all day, so the
 
-00:05:56.047 --> 00:05:57.456 line:78% position:50% align:center size:90%
+00:06:04.464 --> 00:06:05.872 line:78% position:50% align:center size:90%
 day is cut at a set time.
 
-00:05:57.976 --> 00:06:00.835 line:78% position:50% align:center size:90%
-The exchange's day ends at 11am Sydney
+00:06:06.392 --> 00:06:08.714 line:78% position:50% align:center size:90%
+This lesson uses the end of each
 
-00:06:00.835 --> 00:06:03.783 line:78% position:50% align:center size:90%
-time in daylight saving, 10am otherwise.
+00:06:08.714 --> 00:06:10.857 line:78% position:50% align:center size:90%
+UTC day, the world's standard
 
-00:06:04.303 --> 00:06:06.287 line:78% position:50% align:center size:90%
+00:06:10.857 --> 00:06:13.358 line:78% position:50% align:center size:90%
+clock, which is 11am Sydney time in
+
+00:06:13.358 --> 00:06:15.769 line:78% position:50% align:center size:90%
+daylight saving, 10am otherwise.
+
+00:06:16.289 --> 00:06:18.273 line:78% position:50% align:center size:90%
 This is a simple candle that shows
 
-00:06:06.287 --> 00:06:07.963 line:78% position:50% align:center size:90%
+00:06:18.273 --> 00:06:19.949 line:78% position:50% align:center size:90%
 the day's high, low and close.
 
-00:06:08.437 --> 00:06:10.366 line:78% position:50% align:center size:90%
+00:06:20.422 --> 00:06:22.352 line:78% position:50% align:center size:90%
 Traders call it a candle because
 
-00:06:10.366 --> 00:06:12.295 line:78% position:50% align:center size:90%
+00:06:22.352 --> 00:06:24.281 line:78% position:50% align:center size:90%
 the full version has a thick body
 
-00:06:12.295 --> 00:06:14.027 line:78% position:50% align:center size:90%
+00:06:24.281 --> 00:06:26.013 line:78% position:50% align:center size:90%
 and a thin wick, like a candle.
 
-00:06:14.459 --> 00:06:15.967 line:78% position:50% align:center size:90%
+00:06:26.445 --> 00:06:27.953 line:78% position:50% align:center size:90%
 Here we only need the high,
 
-00:06:15.967 --> 00:06:17.196 line:78% position:50% align:center size:90%
+00:06:27.953 --> 00:06:29.182 line:78% position:50% align:center size:90%
 the low and the close.
 
-00:06:17.530 --> 00:06:20.709 line:78% position:50% align:center size:90%
+00:06:29.516 --> 00:06:32.695 line:78% position:50% align:center size:90%
 This candle is 19 July 2023.
 
-00:06:21.229 --> 00:06:22.459 line:78% position:50% align:center size:90%
+00:06:33.215 --> 00:06:34.444 line:78% position:50% align:center size:90%
 The high, the low, and
 
-00:06:22.459 --> 00:06:23.743 line:78% position:50% align:center size:90%
+00:06:34.444 --> 00:06:35.729 line:78% position:50% align:center size:90%
 the close are labelled.
 
-00:06:24.636 --> 00:06:26.766 line:78% position:50% align:center size:90%
+00:06:36.622 --> 00:06:38.751 line:78% position:50% align:center size:90%
 The example is Bitcoin's public
 
-00:06:26.766 --> 00:06:28.421 line:78% position:50% align:center size:90%
+00:06:38.751 --> 00:06:40.407 line:78% position:50% align:center size:90%
 daily price in US dollars.
 
-00:06:28.941 --> 00:06:32.119 line:78% position:50% align:center size:90%
+00:06:40.927 --> 00:06:44.105 line:78% position:50% align:center size:90%
 From 19 July 2023 to 16 October
 
-00:06:32.119 --> 00:06:35.042 line:78% position:50% align:center size:90%
+00:06:44.105 --> 00:06:47.028 line:78% position:50% align:center size:90%
 2023, every one of those days
 
-00:06:35.042 --> 00:06:37.585 line:78% position:50% align:center size:90%
+00:06:47.028 --> 00:06:49.570 line:78% position:50% align:center size:90%
 closed inside the range.
 
-00:06:38.105 --> 00:06:39.778 line:78% position:50% align:center size:90%
+00:06:50.090 --> 00:06:51.763 line:78% position:50% align:center size:90%
 The close crossed the seven
 
-00:06:39.778 --> 00:06:41.524 line:78% position:50% align:center size:90%
+00:06:51.763 --> 00:06:53.509 line:78% position:50% align:center size:90%
 lines 28 times in that window.
 
-00:06:42.044 --> 00:06:44.355 line:78% position:50% align:center size:90%
+00:06:54.029 --> 00:06:56.341 line:78% position:50% align:center size:90%
 The count is an example, not a forecast.
 
-00:06:44.875 --> 00:06:46.663 line:78% position:50% align:center size:90%
+00:06:56.861 --> 00:06:58.649 line:78% position:50% align:center size:90%
 We do not need to read each day.
 
-00:06:46.929 --> 00:06:48.272 line:78% position:50% align:center size:90%
+00:06:58.915 --> 00:07:00.257 line:78% position:50% align:center size:90%
 The shape is the lesson,
 
-00:06:48.272 --> 00:06:49.685 line:78% position:50% align:center size:90%
+00:07:00.257 --> 00:07:01.671 line:78% position:50% align:center size:90%
 and it is marked Example.
 
-00:06:50.205 --> 00:06:52.961 line:78% position:50% align:center size:90%
+00:07:02.191 --> 00:07:04.947 line:78% position:50% align:center size:90%
 Worked check: 19 July
 
-00:06:52.961 --> 00:06:56.042 line:78% position:50% align:center size:90%
+00:07:04.947 --> 00:07:08.027 line:78% position:50% align:center size:90%
 2023 to 16 October 2023.
 
-00:06:56.562 --> 00:06:58.070 line:78% position:50% align:center size:90%
+00:07:08.547 --> 00:07:10.056 line:78% position:50% align:center size:90%
 The low is the bottom line.
 
-00:06:58.550 --> 00:07:00.016 line:78% position:50% align:center size:90%
+00:07:10.536 --> 00:07:12.002 line:78% position:50% align:center size:90%
 The high is the top line.
 
-00:07:00.536 --> 00:07:02.380 line:78% position:50% align:center size:90%
+00:07:12.522 --> 00:07:14.366 line:78% position:50% align:center size:90%
 Nothing on this card is an order.
 
-00:07:03.343 --> 00:07:06.186 line:78% position:50% align:center size:90%
+00:07:15.329 --> 00:07:18.172 line:78% position:50% align:center size:90%
 Those 28 crossings, each time the price
 
-00:07:06.186 --> 00:07:08.585 line:78% position:50% align:center size:90%
+00:07:18.172 --> 00:07:20.571 line:78% position:50% align:center size:90%
 crosses a line, are not 28 results.
 
-00:07:09.105 --> 00:07:11.307 line:78% position:50% align:center size:90%
+00:07:21.091 --> 00:07:23.293 line:78% position:50% align:center size:90%
 A crossing only means the close moved
 
-00:07:11.307 --> 00:07:13.374 line:78% position:50% align:center size:90%
+00:07:23.293 --> 00:07:25.360 line:78% position:50% align:center size:90%
 from one side of a line to the other.
 
-00:07:13.816 --> 00:07:15.528 line:78% position:50% align:center size:90%
+00:07:25.802 --> 00:07:27.513 line:78% position:50% align:center size:90%
 A pair is finished only when a
 
-00:07:15.528 --> 00:07:17.382 line:78% position:50% align:center size:90%
+00:07:27.513 --> 00:07:29.367 line:78% position:50% align:center size:90%
 buy and its later sell have both
 
-00:07:17.382 --> 00:07:19.113 line:78% position:50% align:center size:90%
+00:07:29.367 --> 00:07:31.099 line:78% position:50% align:center size:90%
 filled, and only after the fee.
 
-00:07:19.613 --> 00:07:21.512 line:78% position:50% align:center size:90%
+00:07:31.599 --> 00:07:33.498 line:78% position:50% align:center size:90%
 The price can cross many lines and
 
-00:07:21.512 --> 00:07:23.412 line:78% position:50% align:center size:90%
+00:07:33.498 --> 00:07:35.397 line:78% position:50% align:center size:90%
 still leave you holding coin if it
 
-00:07:23.412 --> 00:07:25.032 line:78% position:50% align:center size:90%
+00:07:35.397 --> 00:07:37.018 line:78% position:50% align:center size:90%
 walks out through the bottom.
 
-00:07:25.568 --> 00:07:27.077 line:78% position:50% align:center size:90%
+00:07:37.554 --> 00:07:39.062 line:78% position:50% align:center size:90%
 You can buy part of a coin.
 
-00:07:27.626 --> 00:07:30.585 line:78% position:50% align:center size:90%
+00:07:39.611 --> 00:07:42.571 line:78% position:50% align:center size:90%
 Here we buy one hundredth
 
-00:07:30.626 --> 00:07:31.687 line:78% position:50% align:center size:90%
+00:07:42.612 --> 00:07:43.673 line:78% position:50% align:center size:90%
 of a bitcoin, 0.01.
 
-00:07:31.687 --> 00:07:34.950 line:78% position:50% align:center size:90%
+00:07:43.673 --> 00:07:46.936 line:78% position:50% align:center size:90%
 900 dollars times 0.01 bitcoin
 
-00:07:34.950 --> 00:07:37.474 line:78% position:50% align:center size:90%
+00:07:46.936 --> 00:07:49.459 line:78% position:50% align:center size:90%
 is 9 dollars before fees.
 
-00:07:37.994 --> 00:07:40.975 line:78% position:50% align:center size:90%
+00:07:49.979 --> 00:07:52.960 line:78% position:50% align:center size:90%
 In this example a buy waiting at the
 
-00:07:40.975 --> 00:07:44.264 line:78% position:50% align:center size:90%
+00:07:52.960 --> 00:07:56.250 line:78% position:50% align:center size:90%
 lower of these two lines was reached on
 
-00:07:44.264 --> 00:07:47.245 line:78% position:50% align:center size:90%
+00:07:56.250 --> 00:07:59.231 line:78% position:50% align:center size:90%
 17 August 2023, and the sell one line
 
-00:07:47.245 --> 00:07:50.226 line:78% position:50% align:center size:90%
+00:07:59.231 --> 00:08:02.212 line:78% position:50% align:center size:90%
 above was reached on 29 August 2023.
 
-00:07:50.746 --> 00:07:52.534 line:78% position:50% align:center size:90%
+00:08:02.732 --> 00:08:04.520 line:78% position:50% align:center size:90%
 The card shows the gap, then the
 
-00:07:52.534 --> 00:07:54.098 line:78% position:50% align:center size:90%
+00:08:04.520 --> 00:08:06.084 line:78% position:50% align:center size:90%
 two fees, then what is left.
 
-00:07:54.407 --> 00:07:56.231 line:78% position:50% align:center size:90%
+00:08:06.393 --> 00:08:09.721 line:78% position:50% align:center size:90%
+Each fee is 0.1 percent of the whole
+
+00:08:09.721 --> 00:08:13.280 line:78% position:50% align:center size:90%
+trade, not of the profit: about 27 cents
+
+00:08:13.280 --> 00:08:16.608 line:78% position:50% align:center size:90%
+on the 267 dollar buy and 28 cents on
+
+00:08:16.608 --> 00:08:20.167 line:78% position:50% align:center size:90%
+the 276 dollar sell, 54 cents together.
+
+00:08:20.687 --> 00:08:22.511 line:78% position:50% align:center size:90%
 That is about 8 dollars 46
 
-00:07:56.231 --> 00:07:58.317 line:78% position:50% align:center size:90%
+00:08:22.511 --> 00:08:24.596 line:78% position:50% align:center size:90%
 after fees, for one small pair.
 
-00:07:58.837 --> 00:08:00.736 line:78% position:50% align:center size:90%
+00:08:25.116 --> 00:08:27.016 line:78% position:50% align:center size:90%
 It happens only if the price comes
 
-00:08:00.736 --> 00:08:02.412 line:78% position:50% align:center size:90%
+00:08:27.016 --> 00:08:28.692 line:78% position:50% align:center size:90%
 back up through the sell line.
 
-00:08:02.516 --> 00:08:04.248 line:78% position:50% align:center size:90%
+00:08:28.796 --> 00:08:30.528 line:78% position:50% align:center size:90%
 If the price leaves through the
 
-00:08:04.248 --> 00:08:06.036 line:78% position:50% align:center size:90%
+00:08:30.528 --> 00:08:32.315 line:78% position:50% align:center size:90%
 bottom, you still hold the coin,
 
-00:08:06.036 --> 00:08:07.600 line:78% position:50% align:center size:90%
+00:08:32.315 --> 00:08:33.880 line:78% position:50% align:center size:90%
 and the pair never finishes.
 
-00:08:07.792 --> 00:08:09.580 line:78% position:50% align:center size:90%
+00:08:34.072 --> 00:08:35.859 line:78% position:50% align:center size:90%
 This card is not money you made.
 
-00:08:09.978 --> 00:08:12.324 line:78% position:50% align:center size:90%
+00:08:36.257 --> 00:08:38.604 line:78% position:50% align:center size:90%
 Past results don't predict future results.
 
-00:08:19.312 --> 00:08:21.100 line:78% position:50% align:center size:90%
+00:08:45.592 --> 00:08:47.380 line:78% position:50% align:center size:90%
 Now watch what you hold when the
 
-00:08:21.100 --> 00:08:23.167 line:78% position:50% align:center size:90%
+00:08:47.380 --> 00:08:49.447 line:78% position:50% align:center size:90%
 price leaves the range and stays out.
 
-00:08:23.547 --> 00:08:25.223 line:78% position:50% align:center size:90%
+00:08:49.826 --> 00:08:51.502 line:78% position:50% align:center size:90%
 Above the range the sells have
 
-00:08:25.223 --> 00:08:27.010 line:78% position:50% align:center size:90%
+00:08:51.502 --> 00:08:53.290 line:78% position:50% align:center size:90%
 filled and you are holding cash,
 
-00:08:27.010 --> 00:08:28.463 line:78% position:50% align:center size:90%
+00:08:53.290 --> 00:08:54.742 line:78% position:50% align:center size:90%
 with nothing left to sell.
 
-00:08:28.785 --> 00:08:30.405 line:78% position:50% align:center size:90%
+00:08:55.064 --> 00:08:56.684 line:78% position:50% align:center size:90%
 Below the range the buys have
 
-00:08:30.405 --> 00:08:31.857 line:78% position:50% align:center size:90%
+00:08:56.684 --> 00:08:58.137 line:78% position:50% align:center size:90%
 filled and you are holding
 
-00:08:31.857 --> 00:08:33.589 line:78% position:50% align:center size:90%
+00:08:58.137 --> 00:08:59.869 line:78% position:50% align:center size:90%
 coin, with nothing left to buy.
 
-00:08:33.967 --> 00:08:35.359 line:78% position:50% align:center size:90%
+00:09:00.246 --> 00:09:01.638 line:78% position:50% align:center size:90%
 That is why the way down
 
-00:08:35.359 --> 00:08:37.117 line:78% position:50% align:center size:90%
+00:09:01.638 --> 00:09:03.397 line:78% position:50% align:center size:90%
 matters most: every buy fills,
 
-00:08:37.117 --> 00:08:38.875 line:78% position:50% align:center size:90%
+00:09:03.397 --> 00:09:05.155 line:78% position:50% align:center size:90%
 and you are left holding coin.
 
-00:08:40.925 --> 00:08:43.160 line:78% position:50% align:center size:90%
+00:09:07.205 --> 00:09:09.440 line:78% position:50% align:center size:90%
 Here is that stop rule on the real path.
 
-00:08:43.581 --> 00:08:45.926 line:78% position:50% align:center size:90%
+00:09:09.860 --> 00:09:12.205 line:78% position:50% align:center size:90%
 It triggers if a daily close is outside
 
-00:08:45.926 --> 00:08:48.271 line:78% position:50% align:center size:90%
+00:09:12.205 --> 00:09:14.550 line:78% position:50% align:center size:90%
 the range, through the top or the bottom,
 
-00:08:48.271 --> 00:08:50.762 line:78% position:50% align:center size:90%
+00:09:14.550 --> 00:09:17.042 line:78% position:50% align:center size:90%
 and the next daily close is still outside.
 
-00:08:51.282 --> 00:08:52.735 line:78% position:50% align:center size:90%
+00:09:17.562 --> 00:09:19.014 line:78% position:50% align:center size:90%
 Then the idea is finished.
 
-00:08:53.115 --> 00:08:55.208 line:78% position:50% align:center size:90%
+00:09:19.394 --> 00:09:21.488 line:78% position:50% align:center size:90%
 You stop the bot, which cancels the
 
-00:08:55.208 --> 00:08:57.078 line:78% position:50% align:center size:90%
+00:09:21.488 --> 00:09:23.357 line:78% position:50% align:center size:90%
 waiting orders, and do what you
 
-00:08:57.078 --> 00:08:59.172 line:78% position:50% align:center size:90%
+00:09:23.357 --> 00:09:25.451 line:78% position:50% align:center size:90%
 wrote: keep the coin or swap to cash.
 
-00:08:59.692 --> 00:09:01.673 line:78% position:50% align:center size:90%
+00:09:25.971 --> 00:09:27.953 line:78% position:50% align:center size:90%
 A bot's automatic stop is a price
 
-00:09:01.673 --> 00:09:03.361 line:78% position:50% align:center size:90%
+00:09:27.953 --> 00:09:29.641 line:78% position:50% align:center size:90%
 that can fire during the day.
 
-00:09:03.881 --> 00:09:05.581 line:78% position:50% align:center size:90%
+00:09:30.161 --> 00:09:31.860 line:78% position:50% align:center size:90%
 This course uses the two daily
 
-00:09:05.581 --> 00:09:07.416 line:78% position:50% align:center size:90%
+00:09:31.860 --> 00:09:33.696 line:78% position:50% align:center size:90%
 closes, unless your written plan
 
-00:09:07.416 --> 00:09:09.204 line:78% position:50% align:center size:90%
+00:09:33.696 --> 00:09:35.484 line:78% position:50% align:center size:90%
 says you turned on a price stop.
 
-00:09:09.636 --> 00:09:10.977 line:78% position:50% align:center size:90%
+00:09:35.916 --> 00:09:37.256 line:78% position:50% align:center size:90%
 This is a teaching rule,
 
-00:09:10.977 --> 00:09:12.155 line:78% position:50% align:center size:90%
+00:09:37.256 --> 00:09:38.434 line:78% position:50% align:center size:90%
 not a recommendation.
 
-00:09:12.675 --> 00:09:14.295 line:78% position:50% align:center size:90%
+00:09:38.954 --> 00:09:40.574 line:78% position:50% align:center size:90%
 The stop is your written rule
 
-00:09:14.295 --> 00:09:15.747 line:78% position:50% align:center size:90%
+00:09:40.574 --> 00:09:42.027 line:78% position:50% align:center size:90%
 for when you stop the bot.
 
-00:09:15.980 --> 00:09:18.114 line:78% position:50% align:center size:90%
+00:09:42.259 --> 00:09:44.393 line:78% position:50% align:center size:90%
 On 23 October 2023 the close
 
-00:09:18.114 --> 00:09:20.526 line:78% position:50% align:center size:90%
+00:09:44.393 --> 00:09:46.805 line:78% position:50% align:center size:90%
 finished above the top line, and
 
-00:09:20.526 --> 00:09:22.845 line:78% position:50% align:center size:90%
+00:09:46.805 --> 00:09:49.124 line:78% position:50% align:center size:90%
 the next day was still above it.
 
-00:09:27.895 --> 00:09:29.347 line:78% position:50% align:center size:90%
+00:09:54.174 --> 00:09:55.627 line:78% position:50% align:center size:90%
 Through the top, the sells
 
-00:09:29.347 --> 00:09:31.023 line:78% position:50% align:center size:90%
+00:09:55.627 --> 00:09:57.303 line:78% position:50% align:center size:90%
 have filled and you hold cash.
 
-00:09:31.132 --> 00:09:32.976 line:78% position:50% align:center size:90%
+00:09:57.412 --> 00:09:59.255 line:78% position:50% align:center size:90%
 Through the bottom, the buys have
 
-00:09:32.976 --> 00:09:34.819 line:78% position:50% align:center size:90%
+00:09:59.255 --> 00:10:01.099 line:78% position:50% align:center size:90%
 filled and you hold coin that you
 
-00:09:34.819 --> 00:09:36.831 line:78% position:50% align:center size:90%
+00:10:01.099 --> 00:10:03.110 line:78% position:50% align:center size:90%
 bought above where the price is now.
 
-00:09:37.190 --> 00:09:38.642 line:78% position:50% align:center size:90%
+00:10:03.469 --> 00:10:04.922 line:78% position:50% align:center size:90%
 That loss can keep growing
 
-00:09:38.642 --> 00:09:39.759 line:78% position:50% align:center size:90%
+00:10:04.922 --> 00:10:06.039 line:78% position:50% align:center size:90%
 until the stop acts.
 
-00:09:40.064 --> 00:09:41.908 line:78% position:50% align:center size:90%
+00:10:06.344 --> 00:10:08.188 line:78% position:50% align:center size:90%
 You stop the bot either way, then
 
-00:09:41.908 --> 00:09:43.472 line:78% position:50% align:center size:90%
+00:10:08.188 --> 00:10:09.752 line:78% position:50% align:center size:90%
 you follow the written rule.
 
-00:09:43.581 --> 00:09:45.369 line:78% position:50% align:center size:90%
+00:10:09.861 --> 00:10:11.649 line:78% position:50% align:center size:90%
 The bot does not decide the stop
 
-00:09:45.369 --> 00:09:47.268 line:78% position:50% align:center size:90%
+00:10:11.649 --> 00:10:13.548 line:78% position:50% align:center size:90%
 unless you turned that setting on.
 
-00:09:47.541 --> 00:09:48.963 line:78% position:50% align:center size:90%
+00:10:13.820 --> 00:10:15.242 line:78% position:50% align:center size:90%
 EXAMPLE, made up: three
 
-00:09:48.963 --> 00:09:50.542 line:78% position:50% align:center size:90%
+00:10:15.242 --> 00:10:16.822 line:78% position:50% align:center size:90%
 buys fill on the way down.
 
-00:09:51.062 --> 00:09:54.362 line:78% position:50% align:center size:90%
+00:10:17.342 --> 00:10:20.641 line:78% position:50% align:center size:90%
 One hundredth of a bitcoin
 
-00:09:54.362 --> 00:09:57.661 line:78% position:50% align:center size:90%
+00:10:20.641 --> 00:10:23.941 line:78% position:50% align:center size:90%
 at 27,630 is 276 dollars 30.
 
-00:09:58.515 --> 00:10:04.049 line:78% position:50% align:center size:90%
+00:10:24.795 --> 00:10:30.329 line:78% position:50% align:center size:90%
 One hundredth at 26,730 is 267 dollars 30.
 
-00:10:04.901 --> 00:10:10.083 line:78% position:50% align:center size:90%
+00:10:31.181 --> 00:10:36.363 line:78% position:50% align:center size:90%
 One hundredth at 25,830 is 258 dollars 30.
 
-00:10:10.603 --> 00:10:13.243 line:78% position:50% align:center size:90%
+00:10:36.883 --> 00:10:39.522 line:78% position:50% align:center size:90%
 Together that is 801 dollars 90.
 
-00:10:14.006 --> 00:10:18.213 line:78% position:50% align:center size:90%
+00:10:40.285 --> 00:10:44.493 line:78% position:50% align:center size:90%
 Three buys of 0.01 is 0.03 bitcoin.
 
-00:10:18.837 --> 00:10:22.023 line:78% position:50% align:center size:90%
+00:10:45.116 --> 00:10:48.302 line:78% position:50% align:center size:90%
 At 24,000, that is 720 dollars.
 
-00:10:22.543 --> 00:10:24.809 line:78% position:50% align:center size:90%
+00:10:48.822 --> 00:10:51.089 line:78% position:50% align:center size:90%
 A little below the range, at a
 
-00:10:24.809 --> 00:10:27.175 line:78% position:50% align:center size:90%
+00:10:51.089 --> 00:10:53.454 line:78% position:50% align:center size:90%
 made-up price of 24,000, that
 
-00:10:27.175 --> 00:10:29.245 line:78% position:50% align:center size:90%
+00:10:53.454 --> 00:10:55.524 line:78% position:50% align:center size:90%
 coin is worth 720 dollars.
 
-00:10:29.765 --> 00:10:31.391 line:78% position:50% align:center size:90%
+00:10:56.044 --> 00:10:57.670 line:78% position:50% align:center size:90%
 You are down 81 dollars 90
 
-00:10:31.391 --> 00:10:33.326 line:78% position:50% align:center size:90%
+00:10:57.670 --> 00:10:59.606 line:78% position:50% align:center size:90%
 before fees, and the loss keeps
 
-00:10:33.326 --> 00:10:35.185 line:78% position:50% align:center size:90%
+00:10:59.606 --> 00:11:01.464 line:78% position:50% align:center size:90%
 growing until your stop acts.
 
-00:10:36.235 --> 00:10:37.810 line:78% position:50% align:center size:90%
+00:11:02.514 --> 00:11:04.090 line:78% position:50% align:center size:90%
 A common mistake is thinking
 
-00:10:37.810 --> 00:10:39.318 line:78% position:50% align:center size:90%
+00:11:04.090 --> 00:11:05.598 line:78% position:50% align:center size:90%
 the bot predicts the price.
 
-00:10:40.107 --> 00:10:40.857 line:78% position:50% align:center size:90%
+00:11:06.387 --> 00:11:07.137 line:78% position:50% align:center size:90%
 It does not.
 
-00:10:41.423 --> 00:10:42.205 line:78% position:50% align:center size:90%
+00:11:07.703 --> 00:11:08.485 line:78% position:50% align:center size:90%
 It only waits.
 
-00:10:42.575 --> 00:10:44.083 line:78% position:50% align:center size:90%
+00:11:08.855 --> 00:11:10.363 line:78% position:50% align:center size:90%
 Another mistake is starting
 
-00:10:44.083 --> 00:10:45.257 line:78% position:50% align:center size:90%
+00:11:10.363 --> 00:11:11.536 line:78% position:50% align:center size:90%
 with no written stop.
 
-00:10:45.671 --> 00:10:46.900 line:78% position:50% align:center size:90%
+00:11:11.951 --> 00:11:13.180 line:78% position:50% align:center size:90%
 There is no promise of
 
-00:10:46.900 --> 00:10:48.185 line:78% position:50% align:center size:90%
+00:11:13.180 --> 00:11:14.465 line:78% position:50% align:center size:90%
 results in this lesson.
 
-00:10:48.376 --> 00:10:49.984 line:78% position:50% align:center size:90%
+00:11:14.656 --> 00:11:16.264 line:78% position:50% align:center size:90%
 Numbers marked Example are
 
-00:10:49.984 --> 00:10:51.662 line:78% position:50% align:center size:90%
+00:11:16.264 --> 00:11:17.942 line:78% position:50% align:center size:90%
 teaching numbers, not advice.
 
-00:10:52.712 --> 00:10:54.976 line:78% position:50% align:center size:90%
+00:11:18.992 --> 00:11:21.255 line:78% position:50% align:center size:90%
 Paper or demo trading is like driving
 
-00:10:54.976 --> 00:10:56.947 line:78% position:50% align:center size:90%
+00:11:21.255 --> 00:11:23.227 line:78% position:50% align:center size:90%
 with learner plates, or training
 
-00:10:56.947 --> 00:10:58.992 line:78% position:50% align:center size:90%
+00:11:23.227 --> 00:11:25.271 line:78% position:50% align:center size:90%
 wheels: you practise with pretend
 
-00:10:58.992 --> 00:11:00.817 line:78% position:50% align:center size:90%
+00:11:25.271 --> 00:11:27.097 line:78% position:50% align:center size:90%
 money before anything is real.
 
-00:11:01.337 --> 00:11:02.854 line:78% position:50% align:center size:90%
+00:11:27.617 --> 00:11:29.134 line:78% position:50% align:center size:90%
 Lesson 7 shows you how.
 
-00:11:03.911 --> 00:11:05.038 line:78% position:50% align:center size:90%
+00:11:30.191 --> 00:11:31.318 line:78% position:50% align:center size:90%
 Steps one to six.
 
-00:11:05.738 --> 00:11:07.426 line:78% position:50% align:center size:90%
+00:11:32.018 --> 00:11:33.706 line:78% position:50% align:center size:90%
 This introduction is step one.
 
-00:11:08.126 --> 00:11:09.188 line:78% position:50% align:center size:90%
+00:11:34.406 --> 00:11:35.467 line:78% position:50% align:center size:90%
 Then what you need.
 
-00:11:09.818 --> 00:11:11.345 line:78% position:50% align:center size:90%
+00:11:36.097 --> 00:11:37.625 line:78% position:50% align:center size:90%
 Then exactly what a grid
 
-00:11:11.345 --> 00:11:12.796 line:78% position:50% align:center size:90%
+00:11:37.625 --> 00:11:39.076 line:78% position:50% align:center size:90%
 bot does, order by order.
 
-00:11:13.796 --> 00:11:14.913 line:78% position:50% align:center size:90%
+00:11:40.075 --> 00:11:41.192 line:78% position:50% align:center size:90%
 Then market regimes.
 
-00:11:15.489 --> 00:11:17.556 line:78% position:50% align:center size:90%
+00:11:41.769 --> 00:11:43.836 line:78% position:50% align:center size:90%
 Then choosing grid spacing and range.
 
-00:11:18.195 --> 00:11:19.802 line:78% position:50% align:center size:90%
+00:11:44.475 --> 00:11:46.082 line:78% position:50% align:center size:90%
 Then entry and exit rules.
 
-00:11:20.517 --> 00:11:21.817 line:78% position:50% align:center size:90%
+00:11:46.797 --> 00:11:48.097 line:78% position:50% align:center size:90%
 Steps seven to eleven.
 
-00:11:22.517 --> 00:11:23.601 line:78% position:50% align:center size:90%
+00:11:48.797 --> 00:11:49.881 line:78% position:50% align:center size:90%
 Then a paper test.
 
-00:11:24.322 --> 00:11:25.384 line:78% position:50% align:center size:90%
+00:11:50.602 --> 00:11:51.663 line:78% position:50% align:center size:90%
 Then weekly checks.
 
-00:11:26.121 --> 00:11:27.309 line:78% position:50% align:center size:90%
+00:11:52.400 --> 00:11:53.589 line:78% position:50% align:center size:90%
 Then common mistakes.
 
-00:11:28.009 --> 00:11:30.020 line:78% position:50% align:center size:90%
+00:11:54.289 --> 00:11:56.300 line:78% position:50% align:center size:90%
 Then scaling up under written rules.
 
-00:11:30.481 --> 00:11:31.871 line:78% position:50% align:center size:90%
+00:11:56.760 --> 00:11:58.151 line:78% position:50% align:center size:90%
 Then an opt-in lesson on
 
-00:11:31.871 --> 00:11:33.957 line:78% position:50% align:center size:90%
+00:11:58.151 --> 00:12:00.237 line:78% position:50% align:center size:90%
 liquidation and your complete plan.
 
-00:11:35.007 --> 00:11:36.907 line:78% position:50% align:center size:90%
+00:12:01.287 --> 00:12:03.186 line:78% position:50% align:center size:90%
 The next lesson is a checklist you
 
-00:11:36.907 --> 00:11:38.806 line:78% position:50% align:center size:90%
+00:12:03.186 --> 00:12:05.086 line:78% position:50% align:center size:90%
 write on paper, before any screen.
 
-00:11:39.828 --> 00:11:42.205 line:78% position:50% align:center size:90%
+00:12:06.108 --> 00:12:08.438 line:78% position:50% align:center size:90%
 In short: a grid waits, it buys lower and
 
-00:11:42.205 --> 00:11:44.582 line:78% position:50% align:center size:90%
-sells higher while price bounces, the
+00:12:08.438 --> 00:12:11.069 line:78% position:50% align:center size:90%
+sells higher while price bounces, the fees
 
-00:11:44.582 --> 00:11:46.882 line:78% position:50% align:center size:90%
-fees come out of the gap, and if a daily
+00:12:11.069 --> 00:12:13.399 line:78% position:50% align:center size:90%
+come out of what the pair makes, and if a
 
-00:11:46.882 --> 00:11:49.335 line:78% position:50% align:center size:90%
-close leaves and stays out, you stop the
+00:12:13.399 --> 00:12:15.955 line:78% position:50% align:center size:90%
+daily close leaves and stays out, you stop
 
-00:11:49.335 --> 00:11:51.406 line:78% position:50% align:center size:90%
-bot and follow the rule you wrote.
+00:12:15.955 --> 00:12:18.210 line:78% position:50% align:center size:90%
+the bot and follow the rule you wrote.
 
-00:11:52.490 --> 00:11:53.356 line:78% position:50% align:center size:90%
+00:12:19.294 --> 00:12:20.161 line:78% position:50% align:center size:90%
 Check yourself.
 
-00:11:53.876 --> 00:11:55.328 line:78% position:50% align:center size:90%
+00:12:20.681 --> 00:12:22.133 line:78% position:50% align:center size:90%
 Why does a grid start with
 
-00:11:55.328 --> 00:11:56.781 line:78% position:50% align:center size:90%
+00:12:22.133 --> 00:12:23.586 line:78% position:50% align:center size:90%
 some coin as well as cash?
 
-00:11:56.944 --> 00:11:58.229 line:78% position:50% align:center size:90%
+00:12:23.749 --> 00:12:25.034 line:78% position:50% align:center size:90%
 Because the sell orders
 
-00:11:58.229 --> 00:11:59.738 line:78% position:50% align:center size:90%
+00:12:25.034 --> 00:12:26.542 line:78% position:50% align:center size:90%
 need coin you already hold.
 
-00:12:00.755 --> 00:12:03.477 line:78% position:50% align:center size:90%
+00:12:27.560 --> 00:12:30.407 line:78% position:50% align:center size:90%
 In the example pair, why is the net about
 
-00:12:03.477 --> 00:12:05.773 line:78% position:50% align:center size:90%
-8 dollars 46 and not the whole gap?
+00:12:30.407 --> 00:12:33.166 line:78% position:50% align:center size:90%
+8 dollars 46 and not the full 9 dollars?
 
-00:12:06.293 --> 00:12:07.857 line:78% position:50% align:center size:90%
+00:12:33.686 --> 00:12:35.250 line:78% position:50% align:center size:90%
 The two fees come out first.
 
-00:12:09.020 --> 00:12:11.087 line:78% position:50% align:center size:90%
+00:12:36.413 --> 00:12:38.480 line:78% position:50% align:center size:90%
 Price closes above your top line, and
 
-00:12:11.087 --> 00:12:13.265 line:78% position:50% align:center size:90%
+00:12:38.480 --> 00:12:40.658 line:78% position:50% align:center size:90%
 the next day's close is still above it.
 
-00:12:13.573 --> 00:12:15.361 line:78% position:50% align:center size:90%
+00:12:40.966 --> 00:12:42.754 line:78% position:50% align:center size:90%
 What do you do, and who does it?
 
-00:12:15.681 --> 00:12:17.469 line:78% position:50% align:center size:90%
+00:12:43.074 --> 00:12:44.862 line:78% position:50% align:center size:90%
 You stop the bot and follow your
 
-00:12:17.469 --> 00:12:19.313 line:78% position:50% align:center size:90%
+00:12:44.862 --> 00:12:46.706 line:78% position:50% align:center size:90%
 written rule, by hand, unless you
 
-00:12:19.313 --> 00:12:21.156 line:78% position:50% align:center size:90%
+00:12:46.706 --> 00:12:48.549 line:78% position:50% align:center size:90%
 turned on the bot's stop setting.
 
-00:12:22.213 --> 00:12:22.963 line:78% position:50% align:center size:90%
+00:12:49.606 --> 00:12:50.356 line:78% position:50% align:center size:90%
 Your turn.
 
-00:12:23.409 --> 00:12:25.141 line:78% position:50% align:center size:90%
+00:12:50.802 --> 00:12:52.534 line:78% position:50% align:center size:90%
 On paper, write the top and the
 
-00:12:25.141 --> 00:12:27.096 line:78% position:50% align:center size:90%
+00:12:52.534 --> 00:12:54.489 line:78% position:50% align:center size:90%
 bottom, one gap, and the stop rule.
 
-00:12:28.200 --> 00:12:29.932 line:78% position:50% align:center size:90%
+00:12:55.593 --> 00:12:57.325 line:78% position:50% align:center size:90%
 Say what you will do if a daily
 
-00:12:29.932 --> 00:12:31.608 line:78% position:50% align:center size:90%
+00:12:57.325 --> 00:12:59.001 line:78% position:50% align:center size:90%
 close leaves the range and the
 
-00:12:31.608 --> 00:12:33.172 line:78% position:50% align:center size:90%
+00:12:59.001 --> 00:13:00.565 line:78% position:50% align:center size:90%
 next close is still outside.
 
-00:12:33.546 --> 00:12:34.943 line:78% position:50% align:center size:90%
+00:13:00.939 --> 00:13:02.336 line:78% position:50% align:center size:90%
 Pause the video and write
 
-00:12:34.943 --> 00:12:36.563 line:78% position:50% align:center size:90%
+00:13:02.336 --> 00:13:03.956 line:78% position:50% align:center size:90%
 your answer before you go on.
 
-00:12:37.596 --> 00:12:39.663 line:78% position:50% align:center size:90%
+00:13:04.989 --> 00:13:07.056 line:78% position:50% align:center size:90%
 No real order is sent in this lesson.
 
-00:12:40.150 --> 00:12:42.053 line:78% position:50% align:center size:90%
+00:13:07.543 --> 00:13:09.446 line:78% position:50% align:center size:90%
 Paper practice comes in Lesson
 
-00:12:42.053 --> 00:12:43.663 line:78% position:50% align:center size:90%
+00:13:09.446 --> 00:13:11.056 line:78% position:50% align:center size:90%
 7, and real money only after
 
-00:12:43.663 --> 00:12:45.493 line:78% position:50% align:center size:90%
+00:13:11.056 --> 00:13:12.886 line:78% position:50% align:center size:90%
 your written graduation rule.
 
-00:12:46.013 --> 00:12:48.020 line:78% position:50% align:center size:90%
+00:13:13.406 --> 00:13:15.413 line:78% position:50% align:center size:90%
 A graduation rule is the written
 
-00:12:48.020 --> 00:12:49.729 line:78% position:50% align:center size:90%
+00:13:15.413 --> 00:13:17.122 line:78% position:50% align:center size:90%
 test you pass on paper first.
 
-00:12:50.262 --> 00:12:51.271 line:78% position:50% align:center size:90%
+00:13:17.655 --> 00:13:18.664 line:78% position:50% align:center size:90%
 You draw the idea.
 
-00:12:51.791 --> 00:12:53.585 line:78% position:50% align:center size:90%
+00:13:19.184 --> 00:13:20.978 line:78% position:50% align:center size:90%
 If a screen appears later, it
 
-00:12:53.585 --> 00:12:55.300 line:78% position:50% align:center size:90%
+00:13:20.978 --> 00:13:22.693 line:78% position:50% align:center size:90%
 should be a copy of the page,
 
-00:12:55.300 --> 00:12:56.860 line:78% position:50% align:center size:90%
+00:13:22.693 --> 00:13:24.253 line:78% position:50% align:center size:90%
 and only on paper or demo.
 
-00:12:58.060 --> 00:13:00.421 line:78% position:50% align:center size:90%
+00:13:25.453 --> 00:13:27.814 line:78% position:50% align:center size:90%
 Bring a notebook, and no secrets: no
 
-00:13:00.421 --> 00:13:03.035 line:78% position:50% align:center size:90%
+00:13:27.814 --> 00:13:30.428 line:78% position:50% align:center size:90%
 seed phrase, private key or API secret.
 
-00:13:03.555 --> 00:13:05.664 line:78% position:50% align:center size:90%
+00:13:30.948 --> 00:13:33.057 line:78% position:50% align:center size:90%
 A seed phrase or private key is the
 
-00:13:05.664 --> 00:13:07.848 line:78% position:50% align:center size:90%
+00:13:33.057 --> 00:13:35.241 line:78% position:50% align:center size:90%
 master password to a crypto wallet.
 
-00:13:08.368 --> 00:13:10.433 line:78% position:50% align:center size:90%
+00:13:35.761 --> 00:13:37.717 line:78% position:50% align:center size:90%
 An API secret is a key that lets an
 
-00:13:10.433 --> 00:13:12.498 line:78% position:50% align:center size:90%
-app place trades on your account.
+00:13:37.717 --> 00:13:39.660 line:78% position:50% align:center size:90%
+app place trades on your account,
 
-00:13:13.548 --> 00:13:15.240 line:78% position:50% align:center size:90%
+00:13:39.660 --> 00:13:41.681 line:78% position:50% align:center size:90%
+and sometimes move money out of it.
+
+00:13:42.731 --> 00:13:44.423 line:78% position:50% align:center size:90%
 The pair, in the next lesson,
 
-00:13:15.240 --> 00:13:16.855 line:78% position:50% align:center size:90%
+00:13:44.423 --> 00:13:46.038 line:78% position:50% align:center size:90%
 is the two things you swap,
 
-00:13:16.855 --> 00:13:18.624 line:78% position:50% align:center size:90%
+00:13:46.038 --> 00:13:47.807 line:78% position:50% align:center size:90%
 like bitcoin and US dollars.
 
-00:13:19.674 --> 00:13:21.903 line:78% position:50% align:center size:90%
+00:13:48.857 --> 00:13:51.098 line:78% position:50% align:center size:90%
 A grid bot places waiting buys below
 
-00:13:21.903 --> 00:13:23.982 line:78% position:50% align:center size:90%
-the price and waiting sells above
+00:13:51.098 --> 00:13:53.339 line:78% position:50% align:center size:90%
+the current price and waiting sells
 
-00:13:23.982 --> 00:13:25.691 line:78% position:50% align:center size:90%
-it, inside a range you choose.
+00:13:53.339 --> 00:13:55.431 line:78% position:50% align:center size:90%
+above it, inside a range you choose.
 
-00:13:26.891 --> 00:13:28.008 line:78% position:50% align:center size:90%
+00:13:56.631 --> 00:13:57.748 line:78% position:50% align:center size:90%
 A finished pair buys
 
-00:13:28.008 --> 00:13:29.293 line:78% position:50% align:center size:90%
+00:13:57.748 --> 00:13:59.033 line:78% position:50% align:center size:90%
 lower and sells higher.
 
-00:13:29.499 --> 00:13:31.119 line:78% position:50% align:center size:90%
-The fees come out of the gap.
+00:13:59.239 --> 00:14:01.530 line:78% position:50% align:center size:90%
+The fees come out of what the pair makes.
 
-00:13:31.409 --> 00:13:33.467 line:78% position:50% align:center size:90%
+00:14:01.591 --> 00:14:03.649 line:78% position:50% align:center size:90%
 In the example that was about 8
 
-00:13:33.467 --> 00:13:35.689 line:78% position:50% align:center size:90%
+00:14:03.649 --> 00:14:05.872 line:78% position:50% align:center size:90%
 dollars 46, and it is not a promise.
 
-00:13:36.889 --> 00:13:38.286 line:78% position:50% align:center size:90%
+00:14:07.072 --> 00:14:08.468 line:78% position:50% align:center size:90%
 Leave through the top and
 
-00:13:38.286 --> 00:13:39.459 line:78% position:50% align:center size:90%
+00:14:08.468 --> 00:14:09.642 line:78% position:50% align:center size:90%
 you hold mostly cash.
 
-00:13:39.908 --> 00:13:41.249 line:78% position:50% align:center size:90%
+00:14:10.091 --> 00:14:11.432 line:78% position:50% align:center size:90%
 Leave through the bottom
 
-00:13:41.249 --> 00:13:42.646 line:78% position:50% align:center size:90%
+00:14:11.432 --> 00:14:12.828 line:78% position:50% align:center size:90%
 and you hold mostly coin.
 
-00:13:43.687 --> 00:13:45.996 line:78% position:50% align:center size:90%
+00:14:13.869 --> 00:14:16.179 line:78% position:50% align:center size:90%
 If a daily close leaves the range and the
 
-00:13:45.996 --> 00:13:48.305 line:78% position:50% align:center size:90%
+00:14:16.179 --> 00:14:18.488 line:78% position:50% align:center size:90%
 next close is still outside, you stop the
 
-00:13:48.305 --> 00:13:50.205 line:78% position:50% align:center size:90%
+00:14:18.488 --> 00:14:20.387 line:78% position:50% align:center size:90%
 bot and follow the rule you wrote.
 
-00:13:51.395 --> 00:13:53.629 line:78% position:50% align:center size:90%
+00:14:21.577 --> 00:14:23.812 line:78% position:50% align:center size:90%
 Next lesson: What you are going to need.
 
-00:13:54.018 --> 00:13:55.638 line:78% position:50% align:center size:90%
+00:14:24.201 --> 00:14:25.821 line:78% position:50% align:center size:90%
 Bring your notes: your range,
 
-00:13:55.638 --> 00:13:57.258 line:78% position:50% align:center size:90%
+00:14:25.821 --> 00:14:27.441 line:78% position:50% align:center size:90%
 your gaps and your stop rule.
 
-00:13:57.500 --> 00:13:58.858 line:78% position:50% align:center size:90%
+00:14:27.683 --> 00:14:29.040 line:78% position:50% align:center size:90%
 Keep the word Example on
 
-00:13:58.858 --> 00:14:00.148 line:78% position:50% align:center size:90%
+00:14:29.040 --> 00:14:30.330 line:78% position:50% align:center size:90%
 every practice figure.
 
-00:14:00.668 --> 00:14:02.623 line:78% position:50% align:center size:90%
+00:14:30.850 --> 00:14:32.806 line:78% position:50% align:center size:90%
 Next lesson you will write the page
 
-00:14:02.623 --> 00:14:04.634 line:78% position:50% align:center size:90%
+00:14:32.806 --> 00:14:34.817 line:78% position:50% align:center size:90%
 of what you need, before any screen.
 

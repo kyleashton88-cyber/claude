@@ -571,3 +571,10 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
                 font=ui.font(26),
                 fill=ui.CYAN,
             )
+    if chapter == "The stop" and shot.get("lesson_id") == "bp-01-introduction":
+        october_at = ui._word_at(shot, "october")
+        if october_at is None or local < october_at:
+            slot = int(local // 8) % 2
+            bar_y = 560 if slot == 0 else 640
+            draw.rounded_rectangle([ui.MX, bar_y, ui.RIGHT, bar_y + 56], 10, fill=ui.CYAN)
+            draw.text((ui.MX + 24, bar_y + 12), "Two daily closes. The second one still outside.", font=ui.font(28), fill=ui.NAVY)

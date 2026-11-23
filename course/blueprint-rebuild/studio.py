@@ -3219,15 +3219,22 @@ def paint_lesson_still(base: Image.Image, shot: dict, local: float, dur: float) 
                 [(MX + 180, 570), (MX + 360, 520), (MX + 540, 590), (MX + 720, 520), (MX + 900, 580)],
                 fill=WHITE, width=4,
             )
-        elif local >= 0.4:
-            # The still would otherwise sit for the whole hook. MOVES stays at the top.
-            card = (MX + 48, 500, RIGHT - 48, 700)
-            d.rounded_rectangle(card, 16, fill=NAVY, outline=CYAN, width=3)
-            d.text((card[0] + 28, card[1] + 20), "Bouncing inside", font=font(32), fill=CYAN)
-            d.line([(card[0] + 40, card[1] + 120), (card[0] + 140, card[1] + 70),
-                    (card[0] + 240, card[1] + 120), (card[0] + 340, card[1] + 70)], fill=CYAN, width=4)
-            d.text((card[0] + 620, card[1] + 20), "One way, then it stays", font=font(32), fill=WHITE)
-            d.line([(card[0] + 640, card[1] + 130), (card[0] + 980, card[1] + 70)], fill=WHITE, width=4)
+        elif local >= 0.2:
+            # What you will learn, one line at a time, until the sideways line.
+            d.rounded_rectangle([MX + 80, 300, RIGHT - 80, 700], 16, fill=NAVY, outline=CYAN, width=3)
+            d.text((MX + 110, 330), "What you will learn", font=font(36), fill=CYAN)
+            lessons = (
+                "What a grid bot does",
+                "When it can capture bounces",
+                "Where it loses",
+            )
+            y = 420
+            for index, line in enumerate(lessons):
+                if local < index * 7:
+                    break
+                d.rounded_rectangle([MX + 120, y, RIGHT - 120, y + 64], 12, fill=CYAN if index == int(local // 7) else GLASS)
+                d.text((MX + 144, y + 14), line, font=font(32), fill=NAVY if index == int(local // 7) else WHITE)
+                y += 80
         if local >= 34:
             # This band is inside the measured picture, so the second hold stays under 20s.
             d.rounded_rectangle([MX + 70, 508, RIGHT - 70, 575], 12, fill=CYAN)
@@ -3460,7 +3467,6 @@ def paint(shot: dict, local: float, progress: float) -> np.ndarray:
         (
             shot.get("lesson_id") == "bp-01-introduction"
             and (shot.get("chapter") or "") == "The stop"
-            and (_word_at(shot, "october") or 10**9) <= local
         )
         or not (shot.get("lesson_still") and local >= 16)
     ):
