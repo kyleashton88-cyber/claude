@@ -48,3 +48,54 @@
 - bp-01-introduction / Buy and sell / kept: 57 words (the old cap would have left 47).
 - bp-02-what-you-need / The pair / kept: 117 words (the old cap would have left 57).
 - bp-02-what-you-need / Fees / kept: 156 words (the old cap would have left 48).
+- bp-01-introduction / Hook / kept: 141 words (the old cap would have left 65).
+- bp-01-introduction / The idea / kept: 96 words (the old cap would have left 70).
+- bp-01-introduction / Buys and sells / kept: 47 words (the old cap would have left 42).
+- bp-02-what-you-need / Seven items / kept: 133 words (the old cap would have left 56).
+- bp-02-what-you-need / Account in Australia / kept: 168 words (the old cap would have left 53).
+- bp-02-what-you-need / Fees / kept: 188 words (the old cap would have left 48).
+
+# bp-03-what-is-a-grid-bot
+- bp-03-what-is-a-grid-bot / Lesson / kept: 79 words (the old cap would have left 31).
+- bp-03-what-is-a-grid-bot / Lesson / kept: 77 words (the old cap would have left 47).
+- bp-03-what-is-a-grid-bot / Lesson / kept: 69 words (the old cap would have left 52).
+- bp-03-what-is-a-grid-bot / Lesson / kept: 79 words (the old cap would have left 38).
+- bp-03-what-is-a-grid-bot / Lesson / kept: 65 words (the old cap would have left 53).
+- bp-03-what-is-a-grid-bot / Lesson / kept: 90 words (the old cap would have left 27).
+- bp-03-what-is-a-grid-bot / Lesson / kept: 138 words (the old cap would have left 63).
+- bp-03-what-is-a-grid-bot / Lesson / kept: 82 words (the old cap would have left 37).
+- bp-03-what-is-a-grid-bot / Lesson / kept: 51 words (the old cap would have left 42).
+- bp-03-what-is-a-grid-bot / Lesson / kept: 56 words (the old cap would have left 43).
+- bp-03-what-is-a-grid-bot / Lesson / kept: 82 words (the old cap would have left 36).
+- bp-03-what-is-a-grid-bot / Lesson / kept: 235 words (the old cap would have left 40).
+- bp-03-what-is-a-grid-bot / Lesson / kept: 154 words (the old cap would have left 50).
+- bp-03-what-is-a-grid-bot / Lesson / kept: 128 words (the old cap would have left 51).
+- bp-03-what-is-a-grid-bot / Lesson / kept: 105 words (the old cap would have left 40).
+- bp-03-what-is-a-grid-bot / Lesson / kept: 117 words (the old cap would have left 34).
+- bp-03-what-is-a-grid-bot / Lesson / kept: 90 words (the old cap would have left 50).
+- bp-03-what-is-a-grid-bot / Lesson / kept: 167 words (the old cap would have left 29).
+- bp-03-what-is-a-grid-bot / Lesson / kept: 70 words (the old cap would have left 27).
+- bp-03-what-is-a-grid-bot / Lesson / kept: 67 words (the old cap would have left 38).
+- bp-03-what-is-a-grid-bot / Lesson / kept: 75 words (the old cap would have left 30).
+
+# bp-11-advanced-liquidation
+- bp-11-advanced-liquidation / Lesson / kept: 92 words (the old cap would have left 31).
+- bp-11-advanced-liquidation / Lesson / kept: 144 words (the old cap would have left 42).
+- bp-11-advanced-liquidation / Lesson / kept: 76 words (the old cap would have left 60).
+- bp-11-advanced-liquidation / Lesson / kept: 96 words (the old cap would have left 45).
+- bp-11-advanced-liquidation / Lesson / kept: 52 words (the old cap would have left 46).
+- bp-11-advanced-liquidation / Lesson / kept: 85 words (the old cap would have left 41).
+- bp-11-advanced-liquidation / Lesson / kept: 79 words (the old cap would have left 30).
+- bp-11-advanced-liquidation / Lesson / kept: 82 words (the old cap would have left 57).
+- bp-11-advanced-liquidation / Lesson / kept: 67 words (the old cap would have left 45).
+- bp-11-advanced-liquidation / Lesson / kept: 80 words (the old cap would have left 59).
+- bp-11-advanced-liquidation / Lesson / kept: 88 words (the old cap would have left 52).
+- bp-11-advanced-liquidation / Lesson / kept: 121 words (the old cap would have left 56).
+- bp-11-advanced-liquidation / Lesson / kept: 80 words (the old cap would have left 49).
+- bp-11-advanced-liquidation / Lesson / kept: 125 words (the old cap would have left 68).
+- bp-11-advanced-liquidation / Lesson / kept: 96 words (the old cap would have left 54).
+- bp-11-advanced-liquidation / Lesson / kept: 120 words (the old cap would have left 39).
+- bp-11-advanced-liquidation / Lesson / kept: 78 words (the old cap would have left 49).
+- bp-11-advanced-liquidation / Lesson / kept: 147 words (the old cap would have left 25).
+- bp-11-advanced-liquidation / Lesson / kept: 70 words (the old cap would have left 40).
+- bp-11-advanced-liquidation / Lesson / kept: 107 words (the old cap would have left 35).
