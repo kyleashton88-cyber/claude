@@ -109,7 +109,7 @@ def text_heights(path: Path) -> list[str]:
             except ValueError:
                 continue
             # 28px at 1080p is 14px at 540p. Flag glyphs clearly under that.
-            if 0 < h < 12 and top > 40:
+            if 0 < h < 14 and top > 40:
                 problems.append(f"{index * 10}s {text[:40]!r} height {h}px at 540p")
                 if len(problems) > 30:
                     return problems
@@ -302,6 +302,11 @@ def main() -> None:
         lines = frame_diff(master, Path(args.previous), stamps, out / "frames")
         (out / "D1-frame-diff.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(out)
+    if holds or headers or small:
+        raise SystemExit(
+            f"content gate failed: {len(holds)} stretches over 8s, "
+            f"{len(headers)} header-only runs, {len(small)} text blocks under 28px"
+        )
 
 
 if __name__ == "__main__":

@@ -620,7 +620,7 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         [
             {"cue": "", "kind": "chart", "stage": "range", "title": "Range"},
             {"cue": "an order", "title": "Order", "lines": ["An order is an instruction to buy or sell that can wait for a price."]},
-            {"cue": "levels are", "kind": "chart", "stage": "gaps", "title": "Levels"},
+            {"cue": "levels are", "kind": "chart", "stage": "levels", "title": "Levels"},
             {"cue": "a stop is", "kind": "chart", "stage": "stop", "title": "Stop"},
             {"cue": "the figures", "kind": "chart", "stage": "gaps", "title": "Lesson 1 figures"},
             {"cue": "missing a", "kind": "chart", "stage": "stop", "title": "All three"},
@@ -707,7 +707,7 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "Then write one gap, and how you got it: the top minus the bottom, divided by the number of gaps.",
         [
             {"cue": "", "kind": "chart", "stage": "range", "title": "Range"},
-            {"cue": "levels are", "kind": "chart", "stage": "gaps", "title": "Levels"},
+            {"cue": "levels are", "kind": "chart", "stage": "levels", "title": "Levels"},
             {"cue": "write the top", "kind": "chart", "stage": "page", "title": "Range"},
         ],
     ),

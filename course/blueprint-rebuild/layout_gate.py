@@ -36,8 +36,8 @@ class LayoutLog:
         self.chips: list[tuple[float, float, float, float]] = []
         self.diagrams: list[tuple[float, float, float, float]] = []
 
-    def text(self, box: tuple[float, float, float, float], text: str) -> None:
-        self.texts.append((box, " ".join(text.split())))
+    def text(self, box: tuple[float, float, float, float], text: str, size: int = 32) -> None:
+        self.texts.append((box, " ".join(text.split()), int(size)))
 
     def shape(self, box: tuple[float, float, float, float], fill, kind: str) -> None:
         x0, y0, x1, y1 = box
@@ -56,7 +56,7 @@ class LayoutLog:
     def problems(self) -> list[str]:
         found: list[str] = []
         for bar in self.bars:
-            for box, text in self.texts:
+            for box, text, _size in self.texts:
                 if not text or _inside(bar, box):
                     continue
                 if intersects(bar, box):
@@ -67,17 +67,21 @@ class LayoutLog:
                 if intersects(bar, box):
                     found.append("cyan bar covers a diagram line")
                     break
-        for box, text in self.texts:
+        for box, text, size in self.texts:
+            if len(text.strip()) >= 3 and size < 28:
+                found.append(f"text under 28px: {text[:40]} at {size}px")
+                return found
+        for box, text, _size in self.texts:
             if text.upper() != "EXAMPLE":
                 continue
             chip = (box[0] - 20, box[1] - 8, box[2] + 20, box[3] + 12)
-            for other, other_text in self.texts:
+            for other, other_text, _other_size in self.texts:
                 if other_text.upper() == "EXAMPLE":
                     continue
                 if intersects(chip, other):
                     found.append(f"EXAMPLE chip covers header: {other_text[:80]}")
         seen: dict[str, int] = {}
-        for _box, text in self.texts:
+        for _box, text, _size in self.texts:
             key = text.strip().lower()
             if len(key) < 40 or key == "example":
                 continue
@@ -86,10 +90,10 @@ class LayoutLog:
             if count > 1:
                 found.append(f"sentence repeated {count} times: {key[:80]}")
         # Two different lines of teaching text must not sit on each other.
-        for index, (box, text) in enumerate(self.texts):
+        for index, (box, text, _size) in enumerate(self.texts):
             if len(text) < 8:
                 continue
-            for other, other_text in self.texts[index + 1:]:
+            for other, other_text, _other_size in self.texts[index + 1:]:
                 if len(other_text) < 8 or text == other_text:
                     continue
                 if intersects(box, other):
@@ -115,7 +119,8 @@ class TrackingDraw:
         else:
             width = int(font.getlength(str(text)))
             height = int(getattr(font, "size", 32))
-        self._log.text((x, y, x + width, y + height), str(text))
+        size = int(getattr(font, "size", 32) or 32)
+        self._log.text((x, y, x + width, y + height), str(text), size)
 
     def rectangle(self, box, fill=None, outline=None, width=1):
         self._inner.rectangle(box, fill=fill, outline=outline, width=width)

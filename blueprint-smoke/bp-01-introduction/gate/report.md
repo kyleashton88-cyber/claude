@@ -27,7 +27,7 @@ Blueprint lessons keep the 6-minute minimum. The 10-minute upper cap is removed.
 | resolution | PASS | 1920x1080 |
 | fps | PASS | 30.000 fps |
 | codec | PASS | video h264, audio aac, yuv420p |
-| captions | PASS | 397 cues, at most 42 characters and 20 per second |
+| captions | PASS | 398 cues, at most 42 characters and 20 per second |
 | text_recognition | PASS | tesseract read the sampled frames |
 | brands | PASS | no exchange or banned brand name |
 | safe_margins | PASS | sampled words sit inside the 5% margin |
