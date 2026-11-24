@@ -2505,12 +2505,14 @@ def _paint_bp01_picture(base: Image.Image, shot: dict, local: float) -> bool:
         return True
     if chapter == "Buy and sell":
         frame("Buy and sell")
-        draw.rounded_rectangle([box[0] + 80, 280, box[0] + 360, 400], 12, outline=CYAN, width=3)
-        draw.text((box[0] + 120, 320), "Cash", font=font(36), fill=WHITE)
+        cash_on = _spoken(shot, local, "buy")
+        coin_on = _spoken(shot, local, "sell") or _spoken(shot, local, "spot")
+        draw.rounded_rectangle([box[0] + 80, 280, box[0] + 360, 400], 12, fill=CYAN if cash_on else GLASS, outline=CYAN, width=3)
+        draw.text((box[0] + 120, 320), "Cash", font=font(36), fill=NAVY if cash_on else WHITE)
         draw.line([(box[0] + 380, 330), (box[0] + 560, 330)], fill=CYAN, width=6)
         draw.polygon([(box[0] + 540, 310), (box[0] + 580, 330), (box[0] + 540, 350)], fill=CYAN)
-        draw.rounded_rectangle([box[0] + 600, 280, box[0] + 880, 400], 12, outline=CYAN, width=3)
-        draw.text((box[0] + 640, 320), "Coin", font=font(36), fill=CYAN)
+        draw.rounded_rectangle([box[0] + 600, 280, box[0] + 880, 400], 12, fill=CYAN if coin_on else GLASS, outline=CYAN, width=3)
+        draw.text((box[0] + 640, 320), "Coin", font=font(36), fill=NAVY if coin_on else CYAN)
         draw.line([(box[0] + 560, 460), (box[0] + 380, 460)], fill=WHITE, width=6)
         draw.polygon([(box[0] + 400, 440), (box[0] + 360, 460), (box[0] + 400, 480)], fill=WHITE)
         draw.text((box[0] + 80, 500), "Buy: cash to coin", font=font(28), fill=CYAN)
@@ -3957,6 +3959,11 @@ def _narrate_shot(speaker, shot: dict) -> tuple[np.ndarray, int, list]:
             sr = rate
         elif rate != sr:
             raise SystemExit("voice sample rate changed mid-lesson")
+        # Align first, then replace coin, close, ASIC and API with the
+        # tokens that pass the acoustic check. The written words stay.
+        local_words = _time_sentence(speaker, pace, sentence, audio, sr, 0.0)
+        from speech_splice import splice_sentence
+        audio, local_words = splice_sentence(audio, sr, local_words)
         if buf is None:
             offset = 0.0
             buf = audio
@@ -3964,7 +3971,10 @@ def _narrate_shot(speaker, shot: dict) -> tuple[np.ndarray, int, list]:
             offset = max(0.0, len(buf) / sr - JOIN_FADE)
             buf = _xfade(buf, audio, sr)
         spans.append((offset, len(buf) / sr))
-        timed.extend(_time_sentence(speaker, pace, sentence, audio, sr, offset))
+        for word in local_words:
+            word.start += offset
+            word.end += offset
+        timed.extend(local_words)
         if index < len(sentences) - 1:
             # The course map reads eleven steps. A short pause keeps them from running together.
             gap = SENTENCE_GAP
@@ -4022,6 +4032,10 @@ def synth_voice(shots: list[dict], dest: Path) -> tuple[float, list]:
     pace = 197.0 / mood_preset("calm-teacher")["wpm"]
     if abs(kokoro_speed("calm-teacher", pace) - 1.0) > 1e-6:
         raise SystemExit("natural pace did not land on Kokoro speed 1.0")
+    from speech_splice import token_problems
+    token_fail = token_problems()
+    if token_fail:
+        raise SystemExit("pronunciation tokens failed: " + "; ".join(token_fail))
     speaker = Speaker(engine="kokoro", mood="calm-teacher")
     pieces: list[np.ndarray] = []
     timed: list[Word] = []
@@ -4432,6 +4446,12 @@ def render(
     print(f"GATE {report_dir / 'report.md'}")
     if code != 0:
         raise SystemExit(f"quality gate failed for {sid}. The build stops.")
+    from speech_splice import master_problems
+    # The music bed is loud enough in a quiet fricative to hide the coda on a
+    # mixed measurement. The check uses the narration stem that was muxed in.
+    said = master_problems(voice_path, timed)
+    if said:
+        raise SystemExit("pronunciation check failed on the master: " + "; ".join(said[:8]))
     return final_path
 
 

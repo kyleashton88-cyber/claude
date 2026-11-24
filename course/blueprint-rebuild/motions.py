@@ -461,7 +461,6 @@ def _paint_stop_card(draw, shot: dict, local: float, ui) -> None:
     draw.text((box[0] + 28, box[1] + 268), "Write it before you start", font=ui.font(24), fill=ui.WHITE)
     draw.text((box[0] + 28, box[1] + 304), "The stop is your written rule", font=ui.font(24), fill=ui.CYAN)
     inside, outside = _summer_closes(ui)
-    shown = min(len(inside), 8 + int(local // 6) * 16)
     october_at = ui._word_at(shot, "october")
     show_out = october_at is not None and local >= october_at
     plot = (box[0] + 620, box[1] + 64, box[2] - 28, box[3] - 28)
@@ -478,9 +477,8 @@ def _paint_stop_card(draw, shot: dict, local: float, ui) -> None:
     draw.text((plot[2] - 120, top_y - 26), "30,331", font=ui.font(22), fill=ui.CYAN)
     draw.text((plot[2] - 120, bot_y + 6), "24,930", font=ui.font(22), fill=ui.CYAN)
     ui._example(draw, plot[2] - 200, plot[1] + 8)
-    closes = inside[:shown]
-    if show_out:
-        closes = closes + outside
+    # The whole daily path is the picture. The two outside closes join when October is spoken.
+    closes = list(inside) + (list(outside) if show_out else [])
     if len(closes) >= 2:
         step = (plot[2] - plot[0] - 36) / max(1, len(inside) + 2 - 1)
         pts = []
@@ -488,9 +486,9 @@ def _paint_stop_card(draw, shot: dict, local: float, ui) -> None:
             pts.append((plot[0] + 18 + step * index, y_of(float(row["close"]))))
         draw.line(pts, fill=ui.WHITE, width=5)
         for index, (x, y) in enumerate(pts):
-            radius_dot = 8 if index >= len(pts) - 2 else 4
+            radius_dot = 8 if show_out and index >= len(pts) - 2 else 4
             draw.ellipse([x - radius_dot, y - radius_dot, x + radius_dot, y + radius_dot], fill=ui.WHITE)
-        last = closes[min(len(closes) - 1, max(0, int(local // 6) * 16))]
+        last = closes[-1]
         label = f"{last['date'][8:10]} {last['date'][5:7]}  {round(float(last['close'])):,}"
         if show_out:
             label = "23 Oct 33,086    24 Oct 33,902"
@@ -500,18 +498,30 @@ def _paint_stop_card(draw, shot: dict, local: float, ui) -> None:
         py = plot[1] + 8
         draw.rounded_rectangle([px, py, px + pill_w, py + 36], 8, fill=ui.CYAN)
         draw.text((px + 12, py + 6), label, font=face, fill=ui.NAVY)
-        if not show_out:
-            mark = pts[min(len(pts) - 1, max(0, int(local // 6) * 12))][0]
-            # Left of the latest close, so the bar never sits on the dot.
-            draw.rectangle([mark - 56, plot[1] + 52, mark - 12, plot[3] - 16], fill=ui.CYAN)
-        else:
-            # Number the two closes that finish outside, clear of the spike.
+        if show_out:
             for index, (x, y) in enumerate(pts[-2:]):
                 draw.ellipse([x - 14, y - 14, x + 14, y + 14], outline=ui.WHITE, width=3)
                 draw.text((x - 40, y - 30), str(index + 1), font=ui.font(28), fill=ui.WHITE)
-            if october_at is not None and local >= october_at + 4:
-                draw.rounded_rectangle([plot[0] + 12, plot[3] - 52, plot[0] + 460, plot[3] - 12], 8, fill=ui.CYAN)
-                draw.text((plot[0] + 24, plot[3] - 44), "1 outside, then 2 still outside", font=ui.font(22), fill=ui.NAVY)
+    # The rule sits in the left of the card, under the written line, and it
+    # comes and goes as each point is spoken. It does not cross the chart.
+    next_at = ui._word_at(shot, "next") or 10**9
+    keep_at = ui._word_at(shot, "keep") or 10**9
+    two_at = ui._word_at(shot, "two") or 10**9
+    shown_rule = None
+    if local >= 0:
+        shown_rule = "A daily close outside"
+    if local >= next_at:
+        shown_rule = None
+    if local >= keep_at:
+        shown_rule = "Keep the coin or swap"
+    if local >= two_at:
+        shown_rule = None
+    if show_out:
+        shown_rule = "1 outside, then 2 still outside"
+    if shown_rule:
+        band_y = box[1] + 348
+        draw.rounded_rectangle([box[0] + 28, band_y, plot[0] - 24, band_y + 72], 8, fill=ui.CYAN)
+        draw.text((box[0] + 40, band_y + 22), shown_rule, font=ui.font(22), fill=ui.NAVY)
 
 
 def paint_visual(base, shot: dict, local: float, ui) -> None:
@@ -648,7 +658,10 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
                 break
             draw.rounded_rectangle([ui.MX, y, ui.RIGHT, y + 56], 12, outline=ui.CYAN, width=2)
             draw.text((ui.MX + 28, y + 12), name, font=ui.font(28), fill=ui.CYAN)
-            if at is not None and local >= at:
+            # The three buys are the card. Waiting for the first number left a
+            # header on screen for the whole opening of the example.
+            show_value = name.startswith("Buy") or (at is not None and local >= at)
+            if show_value:
                 draw.text((ui.MX + 280, y + 12), "EXAMPLE  " + value, font=ui.font(28), fill=ui.WHITE)
             y += 64
         if local >= (ui._phrase_at(shot, "0.03") or 10**9):
