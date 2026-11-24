@@ -161,3 +161,24 @@ Caption commit `7a322cc`. Audio and pictures `cca1d5b`. No spoken word changed. 
 Join: `cat master.mp4.part01 master.mp4.part02 master.mp4.part03 > master.mp4`
 
 `SHA256SUMS` lists only the files that are in the folder. The joined master matches `e75f289efc58baeb2b0344f08cc483f0d581652fd5e40b0a201f8be88a7f8a8a`.
+
+## BP-01 and BP-02 after fix order 16, 24 Nov
+
+Source commit `205aea3`. No spoken word, title, or lesson order changed. The BP-01 liquidation line is unchanged. One voice, af_heart, whole-sentence phonemes. No cross-voice splice and no word splice. Gate PASS on both. Google Drive cannot take these files, so there is no Drive link. The 720p copy for BP-01 is split because it is over 100 MiB.
+
+| Lesson | Commit | File | Duration | Bytes | SHA-256 | Where it lives |
+|---|---|---|---|---|---|---|
+| BP-01 fix 16 | `205aea3` | `master.mp4` | 880.5s | 313087991 | `fefd0587f9c4a9541365c3de8733d0d9668b2dbe0555985fbcc72470916ddd4f` | Agent store `/cursor/stores/self/artifacts/bp-23nov/bp01-205aea3/` |
+| BP-01 fix 16 | `205aea3` | `master.mp4.part01` | | 104857600 | `39b08ff76b90d0e94448a5f4a6e6f64006edf15899b6acc9a7fc1aea4ba191fc` | Same folder |
+| BP-01 fix 16 | `205aea3` | `master.mp4.part02` | | 104857600 | `3504b8fcaff12cfcdd30aeaf292ffe905c4ad5ff6ff1007def37514d281ca3a2` | Same folder |
+| BP-01 fix 16 | `205aea3` | `master.mp4.part03` | | 103372791 | `5bdb4b51c36d5458ceb74ab28afb791234d4be8a5f83d3656b34bf67758bea6c` | Same folder |
+| BP-01 fix 16 | `205aea3` | `watch-720p.mp4` | 880.5s | 142160287 | | Join the two part files in that folder |
+| BP-01 fix 16 | `205aea3` | `watch-720p.mp4.part01` | | 104857600 | `8a3d9b6372efeca8a6a42ca5bbe4816f66ce5a3df0e33f43fda897c2414754cd` | Same folder |
+| BP-01 fix 16 | `205aea3` | `watch-720p.mp4.part02` | | 37302687 | `64af0abbf37ed3f6d075464d2be22bb2483f678f3f3b2a5e5bcbe28f07d4ff31` | Same folder |
+| BP-02 fix 16 | `205aea3` | `master.mp4` | 664.2s | 213605369 | `d5de24dccbb95e736b76fc33d9ffeaeefb1508396007be257c22358ea9643df2` | Agent store `/cursor/stores/self/artifacts/bp-23nov/bp02-205aea3/` |
+| BP-02 fix 16 | `205aea3` | `master.mp4.part01` | | 104857600 | `c41692f18adb771ce65eec62f09e49a1b552a4cb90e8e82ac58dff46a955f49a` | Same folder |
+| BP-02 fix 16 | `205aea3` | `master.mp4.part02` | | 104857600 | `5d51a5510bb74c8f2c1b38ca8d69a6235545110b85b4f1d48e8a51172059f495` | Same folder |
+| BP-02 fix 16 | `205aea3` | `master.mp4.part03` | | 3890169 | `b5b34ca0aefb35c625fc3ce0499392e5b5834705c0be88f2af709981b3321a93` | Same folder |
+| BP-02 fix 16 | `205aea3` | `watch-720p.mp4` | 664.2s | 100469523 | `e13a1bd08fc31a92cfddbc6ab51aa01341ddc82e7416002e42dc59f40b1ae492` | Same folder |
+
+Join each master with `cat master.mp4.part01 master.mp4.part02 master.mp4.part03 > master.mp4`. Join the BP-01 720p copy the same way from its two part files. `SHA256SUMS` lists only the files in each folder. The joined masters match the hashes in this table. D1–D5 gate text is in each folder.
