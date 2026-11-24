@@ -129,3 +129,19 @@ Source commit `229bdae`. The spoken script is the canonical script from `b958dff
 Join: `cat master.mp4.part01 master.mp4.part02 > master.mp4`
 
 `SHA256SUMS` lists only the files that are in the folder. The joined master matches `82b3a9b783c620a7caac9aa58f19a6169041061c54e64700e775c41f62bb41f2`.
+
+## BP-01 after fix order 15, 24 Nov
+
+Source commit `cca1d5b`. No spoken word changed. Duration 891.8s. Gate PASS: −14.4 LUFS, −3.6 dBTP. The narration stem passes the coin, close and API acoustic check. The 720p copy is in the same folder. Google Drive's file tool cannot take a video this size, so there is no Drive link.
+
+| Lesson | Commit | File | Duration | Bytes | SHA-256 | Where it lives |
+|---|---|---|---|---|---|---|
+| BP-01 fix 15 | `cca1d5b` | `master.mp4` | 891.8s | 313300015 | `83bf6f787f8e8a2cdd9e54d558516e1f2b825cd377e65c7962c0467e8f74344a` | Agent store `/cursor/stores/self/artifacts/bp-23nov/bp01-cca1d5b/` |
+| BP-01 fix 15 | `cca1d5b` | `master.mp4.part01` | | 104857600 | `e6c1d73b7f794b3663d524e1fc32e80ebc3a6e83a8af235cc3ccf74a7da09187` | Same folder |
+| BP-01 fix 15 | `cca1d5b` | `master.mp4.part02` | | 104857600 | `5e19357253f0e17cced5d663fee3cd1292eb43b8e0e81c4f8cb9e4c1d73a4d14` | Same folder |
+| BP-01 fix 15 | `cca1d5b` | `master.mp4.part03` | | 103584815 | `cf00d26a63288f50c76d6aab5f6f70082cde61558f0ed24531dd82486e9a7129` | Same folder |
+| BP-01 fix 15 | `cca1d5b` | `watch-720p.mp4` | 891.8s | 70863698 | `306791a6a703c23631cb441e6a540fa22b107c2906cd5920f37fcb0fe8367f11` | Same folder |
+
+Join: `cat master.mp4.part01 master.mp4.part02 master.mp4.part03 > master.mp4`
+
+`SHA256SUMS` lists only the files that are in the folder. The joined master matches `83bf6f787f8e8a2cdd9e54d558516e1f2b825cd377e65c7962c0467e8f74344a`.
