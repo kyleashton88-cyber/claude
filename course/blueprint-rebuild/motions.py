@@ -503,14 +503,15 @@ def _paint_stop_card(draw, shot: dict, local: float, ui) -> None:
         if not show_out:
             mark = pts[min(len(pts) - 1, max(0, int(local // 6) * 12))][0]
             # Left of the latest close, so the bar never sits on the dot.
-            draw.rectangle([mark - 28, plot[1] + 52, mark - 16, plot[3] - 16], fill=ui.CYAN)
+            draw.rectangle([mark - 56, plot[1] + 52, mark - 12, plot[3] - 16], fill=ui.CYAN)
         else:
             # Number the two closes that finish outside, clear of the spike.
             for index, (x, y) in enumerate(pts[-2:]):
-                draw.ellipse([x - 14, y - 14, x + 14, y + 14], outline=ui.CYAN, width=3)
-                draw.text((x - 36, y - 28), str(index + 1), font=ui.font(28), fill=ui.WHITE)
+                draw.ellipse([x - 14, y - 14, x + 14, y + 14], outline=ui.WHITE, width=3)
+                draw.text((x - 40, y - 30), str(index + 1), font=ui.font(28), fill=ui.WHITE)
             if october_at is not None and local >= october_at + 4:
-                draw.text((plot[0] + 16, plot[3] - 36), "1 outside, then 2 still outside", font=ui.font(22), fill=ui.WHITE)
+                draw.rounded_rectangle([plot[0] + 12, plot[3] - 52, plot[0] + 460, plot[3] - 12], 8, fill=ui.CYAN)
+                draw.text((plot[0] + 24, plot[3] - 44), "1 outside, then 2 still outside", font=ui.font(22), fill=ui.NAVY)
 
 
 def paint_visual(base, shot: dict, local: float, ui) -> None:
