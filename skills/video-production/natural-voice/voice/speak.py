@@ -60,7 +60,10 @@ class Speaker:
             self.engine = PiperEngine(voice=self.preset["piper_voice"])
 
     def _cache_key(self, text: str, rate: float) -> str:
-        blob = json.dumps({"e": self.engine_name, "m": self.mood_name, "r": round(rate, 3), "t": text}, sort_keys=True)
+        blob = json.dumps(
+            {"e": self.engine_name, "m": self.mood_name, "r": round(rate, 3), "t": text, "v": "af-heart-sentence-phonemes-2"},
+            sort_keys=True,
+        )
         return hashlib.sha256(blob.encode()).hexdigest()[:24]
 
     def say(self, text: str, rate: float = 1.0) -> tuple[np.ndarray, int]:

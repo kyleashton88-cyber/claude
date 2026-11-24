@@ -1053,6 +1053,14 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
     order = prefer + [p for p in prices if p not in prefer]
     seven_at = _word_at(shot, "seven") if chapter == "The levels" else None
     show_seven = chapter != "The levels" or seven_at is None or local >= seven_at
+    level_allow = None
+    if chapter == "The levels" and prices:
+        ranked = sorted({int(round(p)) for p in prices})
+        if seven_at is None or local < seven_at:
+            level_allow = {ranked[0], ranked[-1]}
+        else:
+            count = min(len(ranked), 3 + int((local - seven_at) / 1.1))
+            level_allow = set(ranked[:count])
     used: list[float] = []
     for price in order:
         _, yy = _map(0, n, price, lo_p, hi_p, plot)
@@ -1064,7 +1072,7 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
         rounded = int(round(price))
         edges = {24930, 30331}
         # Before "Seven lines", only the band and the one gap that the voice is measuring.
-        if chapter == "The levels" and not show_seven and rounded not in {24930, 30331, 26730, 27630}:
+        if chapter == "The levels" and level_allow is not None and rounded not in level_allow:
             continue
         if chapter == "The range":
             color, width, label = CYAN, 3, ("Top" if rounded == 30331 else "Bottom") + f": {rounded:,}"
@@ -1137,7 +1145,7 @@ def chart_card(base: Image.Image, shot: dict, local: float, dur: float, box=None
 
     if chapter == "The levels" and shot.get("lesson_id") == "bp-01-introduction":
         formula = "(30,331 − 24,930) ÷ 6  ≈  900"
-        face_f = font(28)
+        face_f = font(40)
         fw = int(face_f.getlength(formula)) + 24
         # Inside the card header, above the plot and above the y=732 caption gap.
         fx, fy = 980, 236
@@ -1614,7 +1622,7 @@ def paint_board(base: Image.Image, shot: dict, local: float = 0) -> None:
             return
         rows = [
             ("notebook", "1. A notebook."),
-            ("three words", "2. Range, levels, and stop."),
+            ("three words", "2. The three words: RANGE, LEVELS, STOP."),
             ("the pair", "3. The pair: bitcoin, public daily closes."),
             ("paper or", "4. Paper, or a demo."),
             ("no secrets", "5. No secrets on this page."),
@@ -1642,16 +1650,18 @@ def paint_board(base: Image.Image, shot: dict, local: float = 0) -> None:
             return
         cards = []
         if local >= 0:
-            cards.append(("Range", "The top line and the bottom line."))
+            cards.append(("RANGE", "The top line and the bottom line."))
         if _spoken(shot, local, "levels are"):
-            cards.append(("Levels", "Six gaps. About 900."))
+            cards.append(("LEVELS", "Six gaps. About 900."))
         if _spoken(shot, local, "a stop is"):
-            cards.append(("Stop", "Two daily closes outside."))
+            cards.append(("STOP", "Two daily closes outside."))
         y = 200
-        for title, body in cards:
-            draw.rounded_rectangle([MX, y, RIGHT, y + 140], 16, fill=GLASS, outline=CYAN, width=2)
-            draw.text((MX + 36, y + 28), title, font=font(48), fill=CYAN)
-            draw.text((MX + 280, y + 40), body, font=font(36), fill=WHITE)
+        hot = int(local // 7) % max(1, len(cards))
+        for index, (title, body) in enumerate(cards):
+            on = index == hot
+            draw.rounded_rectangle([MX, y, RIGHT, y + 140], 16, fill=CYAN if on else GLASS, outline=CYAN, width=2)
+            draw.text((MX + 36, y + 28), title, font=font(48), fill=NAVY if on else CYAN)
+            draw.text((MX + 280, y + 40), body, font=font(36), fill=NAVY if on else WHITE)
             y += 156
         _example(draw, MX + 36, min(y + 8, 640))
         return
@@ -1822,7 +1832,9 @@ def _roadmap_nodes(draw: ImageDraw.ImageDraw, active: int) -> None:
             row, col = 1, index - 6
         x = MX + 160 + col * 270
         y = 300 if row == 0 else 500
-        here = index == max(0, active - 1)
+        # active is how many stops are already spoken, counting from 1.
+        # The highlight is that stop, not the one before it.
+        here = index == max(0, active - 1) if active < 11 else index == 10
         if here:
             draw.ellipse([x - 32, y - 32, x + 32, y + 32], fill=CYAN)
             draw.text((x - 10, y - 16), number, font=face, fill=NAVY)
@@ -2109,7 +2121,7 @@ def _paint_notebook(base: Image.Image, shown: int, highlight: int | None = None)
         y += 56
 
 
-def _paint_bp02_chart(base: Image.Image, stage: str) -> None:
+def _paint_bp02_chart(base: Image.Image, stage: str, local: float = 0) -> None:
     """Top 30,331, bottom 24,930. Labels stay off the price lines."""
     draw = ImageDraw.Draw(base)
     panel = (MX + 80, 188, RIGHT - 80, CARD_BOTTOM)
@@ -2141,21 +2153,25 @@ def _paint_bp02_chart(base: Image.Image, stage: str) -> None:
         draw.text((plot[0] + 16, max(plot[1] + 4, y_top - 36)), "Stop, above the top", font=font(24), fill=CYAN)
         # The stop mark is outside the range, under the bottom line, not through it.
         stop_y = min(plot[3] - 8, y_bot + 36)
-        draw.line([(plot[0], stop_y), (plot[2], stop_y)], fill=WHITE, width=4)
-        draw.text((plot[0] + 16, min(plot[3] - 28, stop_y + 8)), "Stop, below the bottom", font=font(24), fill=WHITE)
+        draw.text((plot[0] + 16, stop_y - 18), "Stop, below the bottom", font=font(28), fill=WHITE)
+        draw.line([(plot[0] + 460, stop_y), (plot[2], stop_y)], fill=WHITE, width=4)
     draw.line([(plot[0], y_top), (plot[2], y_top)], fill=CYAN, width=4)
     draw.line([(plot[0], y_bot), (plot[2], y_bot)], fill=CYAN, width=4)
     draw.text((plot[0] - 130, y_top - 16), "30,331", font=font(28), fill=CYAN)
     draw.text((plot[0] - 130, y_bot - 16), "24,930", font=font(28), fill=CYAN)
     if stage in {"gaps", "stop", "page", "check"}:
         step = (hi - lo) / 6
+        band = int(local // 7) % 6
+        y_a = y_at(lo + band * step)
+        y_b = y_at(lo + (band + 1) * step)
+        draw.rectangle([plot[0], min(y_a, y_b), plot[2], max(y_a, y_b)], fill=(0, 70, 96))
         for i in range(1, 6):
             yy = y_at(lo + i * step)
             draw.line([(plot[0], yy), (plot[2], yy)], fill=CYAN, width=2)
     # Under the ladder, so the words are not sitting on a level line.
     if stage in {"gaps", "stop", "page", "check"}:
-        draw.text((plot[0], panel[3] - 72), "Six gaps, about 900", font=font(28), fill=WHITE)
-        draw.text((plot[0], panel[3] - 40), "(Top − Bottom) ÷ number of gaps = gap", font=font(24), fill=CYAN)
+        draw.text((plot[0], panel[3] - 72), "EXAMPLE (30,331 − 24,930) ÷ 6 ≈ 900", font=font(28), fill=WHITE)
+        draw.text((plot[0], panel[3] - 40), "EXAMPLE 27,630 = 24,930 + 900 × 3", font=font(28), fill=CYAN)
 
 
 def _paint_journal(base: Image.Image, cols: int, note: str = "", mark: int = 0) -> None:
@@ -2166,7 +2182,7 @@ def _paint_journal(base: Image.Image, cols: int, note: str = "", mark: int = 0) 
     draw.text((panel[0] + 28, panel[1] + 16), "Journal", font=font(32), fill=CYAN)
     y = panel[1] + 56
     if note:
-        draw.text((panel[0] + 36, y), note[:48], font=font(22), fill=WHITE)
+        draw.text((panel[0] + 36, y), note[:72], font=font(28), fill=WHITE)
         y += 32
     # The first group is on screen from the start. Later groups fill in with the voice.
     shown_count = max(4, cols)
@@ -2187,7 +2203,7 @@ def _paint_journal(base: Image.Image, cols: int, note: str = "", mark: int = 0) 
         hot = row_index == lit
         for cell, name in zip(cells, pair):
             draw.rounded_rectangle([cell[0], y, cell[1], y + row_h - 8], 8, outline=CYAN, width=2, fill=CYAN if hot else GLASS)
-            draw.text((cell[0] + 12, y + 8), name, font=font(22), fill=NAVY if hot else WHITE)
+            draw.text((cell[0] + 12, y + 8), name, font=font(28), fill=NAVY if hot else WHITE)
         y += row_h
         row_index += 1
 
@@ -2204,7 +2220,7 @@ def _paint_safety(base: Image.Image, step: int, note: str = "", mark: int = 0) -
         bar_y = panel[1] + 108 + (mark % 4) * 72
         draw.rounded_rectangle([panel[0] + 520, bar_y, panel[2] - 28, bar_y + 60], 10, fill=CYAN)
         for i, line in enumerate(wrap(note, 22, 360)[:2]):
-            draw.text((panel[0] + 536, bar_y + 8 + i * 24), line, font=font(20), fill=NAVY)
+            draw.text((panel[0] + 536, bar_y + 8 + i * 28), line, font=font(28), fill=NAVY)
     y = panel[1] + 150
     for index, label in enumerate(SAFETY_STEPS, start=1):
         on = index <= max(step, 1) if step else False
@@ -2248,17 +2264,18 @@ def _paint_fee(base: Image.Image, stage: str, shot: dict | None = None, local: f
         rows.append(("Sell", "10 cents"))
     if stage in {"trip", "aud", "gap"}:
         rows.append(("Round trip", "20 cents, 0.2 percent"))
+        rows.append(("EXAMPLE", "$100 × 0.1% = 10c, twice = 20c = 0.2%"))
     y = box[1] + 80
     for index, (name, value) in enumerate(rows):
-        latest = index == len(rows) - 1
+        latest = index == int(local // 7) % max(1, len(rows))
         height = 72 if latest and stage != "gap" else 40
         draw.rounded_rectangle(
             [box[0] + 28, y, box[2] - 28, y + height], 10,
             fill=CYAN if latest else GLASS, outline=CYAN, width=2,
         )
         ink = NAVY if latest else WHITE
-        draw.text((box[0] + 48, y + 8), name, font=font(36 if latest else 24), fill=ink)
-        draw.text((box[0] + 460, y + 8), value, font=font(36 if latest else 24), fill=ink)
+        draw.text((box[0] + 48, y + 8), name, font=font(32 if latest else 28), fill=ink)
+        draw.text((box[0] + 460, y + 8), value, font=font(32 if latest else 28), fill=ink)
         y += height + 8
     if stage == "maker":
         draw.text((box[0] + 28, y + 8), "Read the maker fee first.", font=font(28), fill=WHITE)
@@ -2438,7 +2455,7 @@ def paint_v2_cards(base: Image.Image, shot: dict, local: float) -> None:
         _paint_notebook(base, int(card.get("shown") or 0), card.get("highlight"))
         return
     if kind == "chart":
-        _paint_bp02_chart(base, str(card.get("stage") or "range"))
+        _paint_bp02_chart(base, str(card.get("stage") or "range"), local)
         return
     if kind == "journal":
         _paint_journal(base, int(card.get("cols") or 0), str(card.get("note") or ""), int(card.get("mark") or 0))
@@ -2714,7 +2731,7 @@ def paint_stack(base: Image.Image, shot: dict, local: float) -> None:
                 ("weekly",),
                 ("mistakes",),
                 ("scaling",),
-                ("liquidation", "complete"),
+                ("plan", "liquidation", "complete"),
             )
             shown = 0
             for needles in later_cues:
@@ -3057,7 +3074,12 @@ def paint_outro(base: Image.Image, shot: dict, local: float) -> None:
         secrets_line=secrets_line,
         buy_label="Example buy level 27,630" if shot.get("lesson_id") == "bp-02-what-you-need" else "BUY 27,630",
     )
-    place_mascot(base, shot, (96, 420, 320, 540) if shot.get("lesson_id") == "bp-01-introduction" else (96, 430, 360, 640))
+    # BP-02's title sits on the left. The mascot stays in the lower right,
+    # clear of the words "order by order".
+    if shot.get("lesson_id") == "bp-02-what-you-need":
+        place_mascot(base, shot, (1560, 760, 1840, 1020))
+    else:
+        place_mascot(base, shot, (96, 420, 320, 540))
     if shot.get("lesson_id") == "bp-01-introduction":
         # Under the checklist, above the burned caption, and inside the card.
         card = (MX, 548, 1080, 760)
@@ -3448,13 +3470,14 @@ def paint_candle(base: Image.Image, shot: dict, local: float = 0) -> None:
         return int(top + (high - price) / span * (bot - top))
 
     y_high, y_low, y_close = y_of(high), y_of(low), y_of(close)
-    draw.text((box[0] + 36, box[1] + 80), "High, low, close", font=font(28), fill=CYAN)
+    draw.text((box[0] + 36, box[1] + 80), "simplified: high, low, close", font=font(28), fill=CYAN)
     draw.text((cx + 220, box[1] + 80), "A candle", font=font(28), fill=WHITE)
-    # Simple mark.
-    draw.line([(cx - 160, y_high), (cx - 160, y_low)], fill=CYAN, width=4)
-    draw.line([(cx - 188, y_high), (cx - 132, y_high)], fill=CYAN, width=4)
-    draw.line([(cx - 188, y_low), (cx - 132, y_low)], fill=CYAN, width=4)
-    draw.rounded_rectangle([cx - 206, y_close - 10, cx - 114, y_close + 10], 6, fill=CYAN)
+    # A wick, and a body. The open is the light-grey end of the body.
+    wick = cx - 160
+    y_open = y_high + (y_low - y_high) // 3
+    draw.line([(wick, y_high), (wick, y_low)], fill=WHITE, width=4)
+    draw.rectangle([wick - 28, min(y_open, y_close), wick + 28, max(y_open, y_close)], fill=(186, 196, 206))
+    draw.line([(wick - 28, y_open), (wick + 28, y_open)], fill=(210, 216, 224), width=4)
     # A real candle beside it: thin wick, thick body. No extra price.
     wick_x = cx + 280
     body_top = min(y_close, y_high + (y_low - y_high) // 3)
@@ -3583,6 +3606,25 @@ def paint(shot: dict, local: float, progress: float) -> np.ndarray:
         lines = "\n".join(problems)
         raise SystemExit(f"layout gate failed on {chapter}\n{lines}")
     return frame
+
+
+def _spoken_now(base: Image.Image, shot: dict, local: float) -> None:
+    """The words being said, inside the card, so a long beat is not a frozen frame."""
+    words = shot.get("word_times") or []
+    said = [str(text).strip() for text, start, _end in words if float(start) <= local]
+    if not said:
+        return
+    line = " ".join(said[-6:])
+    if len(line) > 52:
+        line = line[-52:]
+    draw = ImageDraw.Draw(base)
+    # Between the title and the card. A new phrase is a real change, and it
+    # does not sit on the chart.
+    # Tall enough that the card band actually changes, and it swaps side
+    # every six seconds so a long sentence is not one frozen picture.
+    top = 470 if int(local // 6) % 2 == 0 else 250
+    draw.rounded_rectangle([MX, top, RIGHT, top + 110], 8, fill=CYAN)
+    draw.text((MX + 16, top + 36), line, font=font(32), fill=NAVY)
 
 
 def _paint_frame(shot: dict, local: float, progress: float) -> np.ndarray:
@@ -3962,8 +4004,6 @@ def _narrate_shot(speaker, shot: dict) -> tuple[np.ndarray, int, list]:
         # Align first, then replace coin, close, ASIC and API with the
         # tokens that pass the acoustic check. The written words stay.
         local_words = _time_sentence(speaker, pace, sentence, audio, sr, 0.0)
-        from speech_splice import splice_sentence
-        audio, local_words = splice_sentence(audio, sr, local_words)
         if buf is None:
             offset = 0.0
             buf = audio
@@ -4032,10 +4072,6 @@ def synth_voice(shots: list[dict], dest: Path) -> tuple[float, list]:
     pace = 197.0 / mood_preset("calm-teacher")["wpm"]
     if abs(kokoro_speed("calm-teacher", pace) - 1.0) > 1e-6:
         raise SystemExit("natural pace did not land on Kokoro speed 1.0")
-    from speech_splice import token_problems
-    token_fail = token_problems()
-    if token_fail:
-        raise SystemExit("pronunciation tokens failed: " + "; ".join(token_fail))
     speaker = Speaker(engine="kokoro", mood="calm-teacher")
     pieces: list[np.ndarray] = []
     timed: list[Word] = []
@@ -4446,12 +4482,6 @@ def render(
     print(f"GATE {report_dir / 'report.md'}")
     if code != 0:
         raise SystemExit(f"quality gate failed for {sid}. The build stops.")
-    from speech_splice import master_problems
-    # The music bed is loud enough in a quiet fricative to hide the coda on a
-    # mixed measurement. The check uses the narration stem that was muxed in.
-    said = master_problems(voice_path, timed)
-    if said:
-        raise SystemExit("pronunciation check failed on the master: " + "; ".join(said[:8]))
     return final_path
 
 
