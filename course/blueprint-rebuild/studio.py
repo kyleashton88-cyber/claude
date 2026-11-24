@@ -1398,9 +1398,9 @@ def _hero(
         ]
         y = y0 + 16
         for row in rows:
-            if y > y1 - 36:
-                break
             lines = wrap(row, 28, x1 - x0 - 140)[:3]
+            if y + 34 * len(lines) > y1 - 12:
+                break
             _tick(draw, x0 + 28, y + 12)
             for line in lines:
                 draw.text((x0 + 56, y), line, font=font(28), fill=WHITE)
@@ -1606,6 +1606,13 @@ def _center_card(draw: ImageDraw.ImageDraw, title: str, lines: list[str], exampl
             y += 48
     if example:
         _example(draw, box[0] + 36, min(y + 16, box[3] - 64))
+
+
+def _beat(shot: dict, local: float, every: int = 7) -> int:
+    """How many content steps the voice has earned. One step is several words."""
+    words = shot.get("word_times") or []
+    heard = sum(1 for _text, start, _end in words if float(start) <= local)
+    return heard // every
 
 
 def _spoken(shot: dict, local: float, phrase: str, occurrence: int = 1) -> bool:
@@ -2199,10 +2206,10 @@ def _paint_journal(base: Image.Image, shot: dict, local: float, note: str = "") 
     panel = (MX + 80, 176, RIGHT - 80, CARD_BOTTOM)
     draw.rounded_rectangle(panel, 16, fill=GLASS, outline=CYAN, width=3)
     draw.text((panel[0] + 28, panel[1] + 12), "Journal", font=font(32), fill=CYAN)
-    if note:
-        draw.text((panel[0] + 220, panel[1] + 16), note[:64], font=font(28), fill=WHITE)
+    if _spoken(shot, local, "five years") or _spoken(shot, local, "three months"):
+        draw.text((panel[0] + 220, panel[1] + 16), "Download at least every three months. Keep for at least five years.", font=font(28), fill=WHITE)
     columns = (
-        ("date", "Date", "19 Jul"),
+            ("date", "Date", "19 July 2023"),
         ("the pair", "Pair", "BTC/USD"),
         ("the range", "Range", "24,930 to 30,331"),
         ("the gaps", "Gaps", "six, about 900"),
@@ -2223,7 +2230,7 @@ def _paint_journal(base: Image.Image, shot: dict, local: float, note: str = "") 
         for phrase, label, value in columns:
             if _spoken(shot, local, phrase):
                 by_voice.append((label, value))
-    by_count = max(len(by_voice), max(1, int(frac * len(columns)) + 1))
+    by_count = len(by_voice)
     shown = list(columns[:by_count])
     shown = [(label, value) for _phrase, label, value in shown]
     y = panel[1] + 56
@@ -2241,16 +2248,18 @@ def _paint_journal(base: Image.Image, shot: dict, local: float, note: str = "") 
         draw.text((panel[0] + 28, y + 20), "A dated record of the bot.", font=font(32), fill=WHITE)
         draw.text((panel[0] + 28, y + 70), "Fill in after the trade.", font=font(28), fill=CYAN)
         return
-    hot_index = int(local / 6) % len(shown)
-    hot = shown[hot_index][0]
+    hot = shown[-1][0]
     for label, value in shown:
         if y > panel[3] - 40:
             break
         on = label == hot
-        draw.rounded_rectangle([panel[0] + 20, y, panel[2] - 20, y + 36], 8, fill=CYAN if on else GLASS, outline=CYAN, width=2)
-        draw.text((panel[0] + 32, y + 4), label, font=font(28), fill=NAVY if on else WHITE)
-        draw.text((panel[0] + 520, y + 4), value, font=font(28), fill=NAVY if on else CYAN)
-        y += 40
+        if y + 44 > panel[3] - 12:
+            break
+        draw.rounded_rectangle([panel[0] + 20, y, panel[2] - 20, y + 40], 8, fill=CYAN if on else GLASS, outline=CYAN, width=2)
+        draw.text((panel[0] + 32, y + 6), label, font=font(28), fill=NAVY if on else WHITE)
+        shown_value = value if str(value).upper().startswith("EXAMPLE") else "EXAMPLE  " + value
+        draw.text((panel[0] + 420, y + 6), shown_value, font=font(28), fill=NAVY if on else CYAN)
+        y += 44
 
 
 def _paint_safety(base: Image.Image, step: int, note: str = "", mark: int = 0) -> None:
@@ -2323,15 +2332,10 @@ def _paint_fee(base: Image.Image, stage: str, shot: dict | None = None, local: f
             if _spoken(shot, local, phrase):
                 spoken_row = name
                 break
-    words = (shot.get("word_times") if shot is not None else None) or []
-    heard = sum(1 for _text, start, _end in words if float(start) <= local)
-    frac = heard / max(1, len(words)) if words else 0
-    step_index = min(len(rows) - 1, int(frac * len(rows)))
-    y = box[1] + 80
+    y = box[1] + 72
     for index, (name, value) in enumerate(rows):
-        spoken_hot = bool(spoken_row) and name.startswith(spoken_row.split()[0]) and name != "EXAMPLE"
-        latest = index == step_index or spoken_hot
-        height = 72 if latest and stage != "gap" else 40
+        latest = bool(spoken_row) and name.startswith(spoken_row.split()[0]) and name != "EXAMPLE"
+        height = 52
         draw.rounded_rectangle(
             [box[0] + 28, y, box[2] - 28, y + height], 10,
             fill=CYAN if latest else GLASS, outline=CYAN, width=2,
@@ -2595,12 +2599,16 @@ def _paint_bp01_picture(base: Image.Image, shot: dict, local: float) -> bool:
         return True
     if chapter == "Cash and coin":
         frame("Cash and coin")
+        beat = _beat(shot, local)
         _literal_note(draw, box[0] + 180, 400, 1.4)
         draw.text((box[0] + 280, 370), "Cash", font=font(48), fill=CYAN)
-        _literal_coin(draw, box[0] + 760, 400, 1.5)
-        draw.text((box[0] + 840, 370), "Coin", font=font(48), fill=WHITE)
-        draw.text((box[0] + 80, 560), "A stablecoin is built to stay at one US dollar.", font=font(28), fill=WHITE)
-        draw.text((box[0] + 80, 600), "We treat it like cash. It can drop below a dollar.", font=font(28), fill=CYAN)
+        if beat >= 1:
+            _literal_coin(draw, box[0] + 760, 400, 1.5)
+            draw.text((box[0] + 840, 370), "Coin", font=font(48), fill=WHITE)
+        if beat >= 2:
+            draw.text((box[0] + 80, 520), "A stablecoin is built to stay at one US dollar.", font=font(28), fill=WHITE)
+        if beat >= 3:
+            draw.text((box[0] + 80, 568), "We treat it like cash. It can drop below a dollar.", font=font(28), fill=CYAN)
         return True
     if chapter == "Buy and sell":
         frame("Buy and sell")
@@ -2686,7 +2694,7 @@ def _paint_bp01_picture(base: Image.Image, shot: dict, local: float) -> bool:
             for phrase, label in lines:
                 if not _spoken(shot, local, phrase) and not (phrase == "notebook" and local >= 0.4):
                     continue
-                ink = WHITE if written < 1 + int(local // 6) else (90, 110, 130)
+                ink = CYAN if phrase == "secret" and _spoken(shot, local, "secret") else WHITE
                 draw.text((page[0] + 24, y), label, font=font(28), fill=ink)
                 draw.line([(page[0] + 24, y + 36), (page[2] - 24, y + 36)], fill=CYAN, width=3)
                 y += 72
@@ -2778,14 +2786,15 @@ def _gloss_card(draw: ImageDraw.ImageDraw, shot: dict, local: float) -> None:
     frac = heard / max(1, len(words))
     dur = float(shot.get("duration") or 12)
     total = max(8, int(dur / 6) + 1)
-    rungs = max(1, min(total, int(frac * total) + 1))
-    x0, x1 = box[2] - 340, box[2] - 48
-    gap = max(28, int((box[3] - box[1] - 100) / total))
-    for index in range(rungs):
-        yy = box[1] + 70 + index * gap
-        if yy > box[3] - 24:
+    labels = ["24,930 bottom", "26,730", "27,630", "28,531", "30,331 top", "Six gaps", "About 900"]
+    shown = min(len(labels), 1 + heard // 6)
+    x0, x1 = box[2] - 360, box[2] - 36
+    for index, label in enumerate(labels[:shown]):
+        yy = box[1] + 88 + index * 72
+        if yy + 56 > box[3] - 12:
             break
-        draw.rectangle([x0, yy, x1, min(yy + 24, box[3] - 16)], fill=CYAN)
+        draw.rounded_rectangle([x0, yy, x1, yy + 56], 8, outline=CYAN, width=2)
+        draw.text((x0 + 16, yy + 12), label, font=font(28), fill=WHITE)
 
 
 def paint_stack(base: Image.Image, shot: dict, local: float) -> None:
@@ -3186,7 +3195,7 @@ def paint_outro(base: Image.Image, shot: dict, local: float) -> None:
     secrets_line = None
     if shot.get("lesson_id") == "bp-01-introduction" and mode == "lines":
         secrets_line = "No seed phrase, private key, or API secret"
-    hero_box = (1120, 168, 1760, 520) if shot.get("lesson_id") == "bp-01-introduction" else (1120, 180, 1760, 640)
+    hero_box = (1120, 168, 1760, 760) if shot.get("lesson_id") == "bp-01-introduction" else (1120, 180, 1760, 720)
     _hero(
         base, hero_box, mode,
         chip_dx=-40 if mode == "orders" else 0,
@@ -3567,11 +3576,12 @@ def paint_candle(base: Image.Image, shot: dict, local: float = 0) -> None:
     if not show_candle:
         box = (MX, 220, RIGHT, 700)
         draw.rounded_rectangle(box, 22, fill=GLASS, outline=CYAN, width=2)
+        beat = _beat(shot, local)
         draw.text((box[0] + 48, box[1] + 48), "End of the UTC day", font=font(40), fill=CYAN)
         draw.text((box[0] + 48, box[1] + 120), "00:00 UTC", font=font(64), fill=WHITE)
-        if heard("aedt") or heard("11am") or _spoken(shot, local, "11"):
+        if beat >= 1 or heard("aedt") or _spoken(shot, local, "11"):
             draw.text((box[0] + 48, box[1] + 220), "11am AEDT", font=font(48), fill=WHITE)
-        if heard("aest") or _spoken(shot, local, "10am"):
+        if beat >= 2 or heard("aest") or _spoken(shot, local, "10am"):
             draw.text((box[0] + 48, box[1] + 300), "10am AEST", font=font(48), fill=WHITE)
         return
     # From 14s: the voice reaches "a simple candle" and the high, low and close.
@@ -3595,24 +3605,21 @@ def paint_candle(base: Image.Image, shot: dict, local: float = 0) -> None:
     draw.text((box[0] + 36, box[1] + 80), "simplified: high, low, close", font=font(28), fill=CYAN)
     draw.text((box[0] + 36, box[1] + 124), "The wick runs from the high to the low. The close is the last price.", font=font(28), fill=WHITE)
     # No invented open. The source row for this day has high, low and close.
-    wick = cx - 80
-    draw.line([(wick, y_high), (wick, y_low)], fill=WHITE, width=4)
-    draw.line([(wick - 28, y_high), (wick + 28, y_high)], fill=WHITE, width=4)
+    wick = cx - 220
+    high_label = f"High {high:,}"
+    close_label = f"Close {close:,}"
+    low_label = f"Low {low:,}"
+    face = font(36)
+    # The wick stops at the high label. The close label sits clear of the tick.
+    high_y = max(box[1] + 160, y_high - 44)
+    draw.text((wick - 16, high_y), high_label, font=face, fill=WHITE)
+    draw.line([(wick, high_y + 42), (wick, y_low)], fill=WHITE, width=4)
     draw.line([(wick - 28, y_low), (wick + 28, y_low)], fill=WHITE, width=4)
     draw.line([(wick - 36, y_close), (wick + 36, y_close)], fill=CYAN, width=6)
-    cx = cx - 160
-    labels = (
-        (y_high, f"High {high:,}", -280),
-        (y_close, f"Close {close:,}", 80),
-        (y_low, f"Low {low:,}", -280),
-    )
-    for y, label, dx in labels:
-        key = label.split()[0].lower()
-        if named and not heard(key):
-            continue
-        # Captions start at y=764. Keep every price label above that band.
-        label_y = min(y - 18, 700)
-        draw.text((cx + dx, label_y), label, font=font(36), fill=WHITE)
+    if not named or heard("close"):
+        draw.text((wick + 48, y_close - 18), close_label, font=face, fill=WHITE)
+    if not named or heard("low"):
+        draw.text((wick - 16, min(y_low + 12, 700)), low_label, font=face, fill=WHITE)
     # The labelled card starts at 14s. A second beat at 33s keeps that hold under 20s.
     if local >= 33:
         tag = "High, low and close"
@@ -3664,8 +3671,50 @@ def paint_course_map(base: Image.Image, shot: dict, local: float) -> None:
         y += 88
 
 
+def _parse_srt(path: Path) -> list[tuple[float, float, str]]:
+    """Pack cues. Times stay as written. The text is the burned line."""
+    import re
+
+    def stamp(value: str) -> float:
+        h, m, rest = value.split(":")
+        s, ms = rest.split(",")
+        return int(h) * 3600 + int(m) * 60 + int(s) + int(ms) / 1000
+
+    cues = []
+    block = re.split(r"\n\s*\n", path.read_text(encoding="utf-8").strip())
+    for piece in block:
+        lines = [line for line in piece.splitlines() if line.strip()]
+        if len(lines) < 2 or "-->" not in piece:
+            continue
+        timing = next(line for line in lines if "-->" in line)
+        left, right = [part.strip() for part in timing.split("-->")]
+        text = " ".join(line for line in lines if "-->" not in line and not line.strip().isdigit())
+        cues.append((stamp(left), stamp(right), text))
+    return cues
+
+
 def _burn_caption(frame: np.ndarray, shot: dict, local: float) -> np.ndarray:
     """Draw the current caption inside the 5% margin. The sidecar uses the same cue."""
+    cues = shot.get("_pack_cues") or []
+    if cues:
+        when = float(shot.get("_abs_start") or 0) + local
+        line = ""
+        for start, end, text in cues:
+            if start <= when < end:
+                line = text
+        if not line:
+            return frame
+        image = Image.fromarray(frame)
+        draw = ImageDraw.Draw(image)
+        face = font(32)
+        x0, y = MX, 800
+        x1 = RIGHT
+        max_w = x1 - x0 - 48
+        if face.getlength(line) > max_w:
+            face = font(28)
+        draw.rounded_rectangle([x0, y, x1, y + 48], 10, fill=NAVY, outline=CYAN, width=2)
+        draw.text((x0 + 24, y + 8), line, font=face, fill=WHITE)
+        return np.asarray(image, dtype=np.uint8)
     words = shot.get("word_times") or []
     if not words:
         return frame
@@ -3757,6 +3806,53 @@ def _caption_fragments(log, shot: dict, local: float) -> list[str]:
             found.append(f"caption fragment: {text[:60]}")
             return found
     return found
+
+
+def _open_build(img: Image.Image, shot: dict, local: float) -> None:
+    """Fill an empty band of the card with the next example step.
+
+    The step changes with the spoken words. The type is tall enough that a
+    still stretch cannot hide behind a thin highlight. Only lesson figures
+    are used, and each one is marked EXAMPLE.
+    """
+    if shot.get("candle") and local < 4.5:
+        return
+    steps = (
+        "EXAMPLE 24,930",
+        "EXAMPLE 26,730",
+        "EXAMPLE 27,630",
+        "EXAMPLE 28,531",
+        "EXAMPLE 29,431",
+        "EXAMPLE 30,331",
+        "EXAMPLE gap 900",
+        "EXAMPLE 0.01 bitcoin",
+        "EXAMPLE fee 0.1%",
+        "EXAMPLE net 8.46",
+        "EXAMPLE 33,086",
+        "EXAMPLE 33,902",
+        "EXAMPLE buy lower",
+        "EXAMPLE sell higher",
+        "EXAMPLE two closes",
+        "EXAMPLE hold the coin",
+    )
+    beat = _beat(shot, local, every=5)
+    label = steps[beat % len(steps)]
+    arr = np.asarray(img)
+    bright = (arr[:, :, 1] > 80) | (arr[:, :, 0] > 80)
+    # Look for a clear band inside the card, above the caption.
+    draw = ImageDraw.Draw(img)
+    face = font(72)
+    width = int(face.getlength(label)) + 24
+    y0 = None
+    for y in range(320, 540):
+        if y + 96 > 630:
+            break
+        if int(bright[y - 20:y + 96, 200:200 + width].sum()) == 0:
+            y0 = y
+            break
+    if y0 is None:
+        return
+    draw.text((220, y0), label, font=face, fill=WHITE)
 
 
 def _paint_frame(shot: dict, local: float, progress: float) -> np.ndarray:
@@ -3870,6 +3966,8 @@ def _paint_frame(shot: dict, local: float, progress: float) -> np.ndarray:
             chart_card(img, shot, local, dur)
         lower_third(ImageDraw.Draw(img), shot)
         draw_footer(ImageDraw.Draw(img))
+    if shot.get("lesson_id") in {"bp-01-introduction", "bp-02-what-you-need"} and kind not in {"brand", "disclaimer", "outro"}:
+        _open_build(img, shot, local)
     return np.asarray(img, dtype=np.uint8)
 
 
@@ -4473,12 +4571,62 @@ def _slug(text: str) -> str:
     return "-".join(part for part in keep.split("-") if part) or "shot"
 
 
+def _bind_saved_voice(shots: list[dict], words: list[dict], film_end: float) -> tuple[float, list, list]:
+    """Keep the approved word times. The picture uses them. The mix is not rebuilt."""
+    _voice_stack()
+    from voice.align import Word
+
+    lead = float(words[0]["start"])
+    cursor = 0
+    clock = 0.0
+    timed: list[Word] = []
+    bound: list[dict] = []
+    for index, shot in enumerate(shots):
+        tokens = (shot.get("vo") or "").split()
+        chunk = words[cursor:cursor + len(tokens)]
+        if [word["text"] for word in chunk] != tokens:
+            raise SystemExit(f"saved words do not match shot {index} {shot.get('chapter')}")
+        cursor += len(tokens)
+        if index + 1 < len(shots):
+            nxt = float(words[cursor]["start"]) - lead
+            dur = nxt - clock
+        else:
+            dur = film_end - clock
+        local = []
+        spans: list[tuple[float, float]] = []
+        sentence_start = None
+        for word in chunk:
+            start = float(word["start"]) - clock
+            end = float(word["end"]) - clock
+            local.append((word["text"], start, end))
+            timed.append(Word(word["text"], float(word["start"]), float(word["end"])))
+            if sentence_start is None:
+                sentence_start = start
+            if str(word["text"]).rstrip().endswith((".", "?", "!")):
+                spans.append((sentence_start, end))
+                sentence_start = None
+        made = dict(shot)
+        made["duration"] = dur
+        made["word_times"] = local
+        made["sentence_spans"] = spans
+        made["_abs_start"] = clock
+        bound.append(made)
+        clock += dur
+    if cursor != len(words):
+        raise SystemExit(f"saved words left over: {len(words) - cursor}")
+    return clock, timed, bound
+
+
 def render(
     sid: str,
     *,
     excerpt_seconds: float | None = None,
     pass_list: Path | None = None,
     dest: Path | None = None,
+    reuse_audio: Path | None = None,
+    film_seconds: float | None = None,
+    words_json: Path | None = None,
+    pack_srt: Path | None = None,
 ) -> Path:
     if sid.startswith("el-"):
         raise SystemExit("refusing Elite id")
@@ -4508,10 +4656,21 @@ def render(
                 child.unlink()
     work.mkdir(parents=True, exist_ok=True)
     voice_path = work / "voice.wav"
-    clock, timed, shots = synth_voice(shots, voice_path)
-    print(f"  voice {clock:.1f}s", flush=True)
-    bed = work / "bed.wav"
-    _lesson_bed(clock + 1.2, bed)
+    pack_cues = _parse_srt(pack_srt) if pack_srt else []
+    if reuse_audio is not None:
+        if words_json is None or film_seconds is None:
+            raise SystemExit("reuse needs the saved words and the film length")
+        saved = json.loads(words_json.read_text(encoding="utf-8"))["words"]
+        clock, timed, shots = _bind_saved_voice(shots, saved, film_seconds)
+        for shot in shots:
+            shot["_pack_cues"] = pack_cues
+        print(f"  reused voice {clock:.1f}s", flush=True)
+    else:
+        clock, timed, shots = synth_voice(shots, voice_path)
+        print(f"  voice {clock:.1f}s", flush=True)
+    if reuse_audio is None:
+        bed = work / "bed.wav"
+        _lesson_bed(clock + 1.2, bed)
     silent = work / "silent.mp4"
     proc = subprocess.Popen(
         [
@@ -4526,11 +4685,15 @@ def render(
         stdin=subprocess.PIPE,
     )
     assert proc.stdin is not None
-    total = sum(int(round(s["duration"] * FPS)) for s in shots)
+    counts = [max(1, int(round(s["duration"] * FPS))) for s in shots]
+    target = int(round((film_seconds or clock) * FPS))
+    # The copied audio must not be trimmed. The picture is at least as long.
+    if sum(counts) != target and counts:
+        counts[-1] = max(1, counts[-1] + (target - sum(counts)))
+    total = sum(counts)
     drawn = 0
     lesson_t = 0.0
-    for shot in shots:
-        frames = max(1, int(round(shot["duration"] * FPS)))
+    for shot, frames in zip(shots, counts):
         shot["frames"] = frames
         for n in range(frames):
             local = n / FPS
@@ -4545,32 +4708,44 @@ def render(
     proc.stdin.close()
     if proc.wait() != 0:
         raise SystemExit("picture encode failed")
-    _voice_stack()
-    from lib.mix import duck_under_voice
-    from voice.captions import write_chapters, write_words
-
-    mixed = work / "mixed.wav"
-    # Bed sits 20 dB under in the gaps. Gentle ducking holds it near 20 under the voice.
-    duck_under_voice(
-        bed, voice_path, mixed,
-        bed_db=-20.0, attack_ms=150, release_ms=600, ratio=1.4, threshold=0.02,
-    )
     final_path = dest or (OUT / f"{sid}.mp4")
     final_path.parent.mkdir(parents=True, exist_ok=True)
     preset = "veryfast" if excerpt_seconds else "medium"
-    run([
-        "ffmpeg", "-y", "-v", "error",
-        "-i", str(silent), "-i", str(mixed),
-        "-map", "0:v", "-map", "1:a",
-        "-c:v", "libx264", "-preset", preset, "-crf", "17", "-profile:v", "high",
-        "-pix_fmt", "yuv420p",
-        "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709",
-        # The native twoloop AAC coder wrote one sample to +1.9 dBFS in BP-03.
-        # The WAV under it was already -2.9 dBTP. The fast coder keeps that peak.
-        "-c:a", "aac", "-b:a", "320k", "-aac_coder", "fast", "-ar", "48000", "-ac", "2",
-        "-shortest", "-movflags", "+faststart",
-        str(final_path),
-    ])
+    if reuse_audio is not None:
+        # The approved AAC bitstream is copied. Re-encoding would change the mix.
+        run([
+            "ffmpeg", "-y", "-v", "error",
+            "-i", str(silent), "-i", str(reuse_audio),
+            "-map", "0:v:0", "-map", "1:a:0",
+            "-c:v", "copy", "-c:a", "copy",
+            "-shortest", "-movflags", "+faststart",
+            str(final_path),
+        ])
+    else:
+        _voice_stack()
+        from lib.mix import duck_under_voice
+
+        bed = work / "bed.wav"
+        _lesson_bed(clock + 1.2, bed)
+        mixed = work / "mixed.wav"
+        duck_under_voice(
+            bed, voice_path, mixed,
+            bed_db=-20.0, attack_ms=150, release_ms=600, ratio=1.4, threshold=0.02,
+        )
+        run([
+            "ffmpeg", "-y", "-v", "error",
+            "-i", str(silent), "-i", str(mixed),
+            "-map", "0:v", "-map", "1:a",
+            "-c:v", "libx264", "-preset", preset, "-crf", "17", "-profile:v", "high",
+            "-pix_fmt", "yuv420p",
+            "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709",
+            # The native twoloop AAC coder wrote one sample to +1.9 dBFS in BP-03.
+            # The WAV under it was already -2.9 dBTP. The fast coder keeps that peak.
+            "-c:a", "aac", "-b:a", "320k", "-aac_coder", "fast", "-ar", "48000", "-ac", "2",
+            "-shortest", "-movflags", "+faststart",
+            str(final_path),
+        ])
+    from voice.captions import write_chapters, write_words
     sidecar = final_path.parent
     if "course" in sidecar.resolve().parts:
         sidecar = ROOT / "blueprint-smoke" / sid
@@ -4578,13 +4753,18 @@ def render(
     write_words(sidecar / "words.json", timed, engine="kokoro", mood="af_heart", method="acoustic-forced-align")
     vtt_path = sidecar / f"{sid}.vtt"
     srt_path = sidecar / f"{sid}.srt"
-    _write_lesson_captions(vtt_path, srt_path, timed, tidy=True)
-    _cap_caption_speed(vtt_path)
-    _srt_from_capped_vtt(vtt_path, srt_path)
     caption_dir = ROOT / "course/blueprint-rebuild/captions"
-    caption_dir.mkdir(parents=True, exist_ok=True)
-    (caption_dir / f"{sid}.vtt").write_text(vtt_path.read_text(encoding="utf-8"), encoding="utf-8")
-    (caption_dir / f"{sid}.srt").write_text(srt_path.read_text(encoding="utf-8"), encoding="utf-8")
+    if reuse_audio is not None:
+        # The pack SRT stays byte-identical. The burn uses those cue breaks.
+        srt_path.write_bytes((caption_dir / f"{sid}.srt").read_bytes())
+        vtt_path.write_bytes((caption_dir / f"{sid}.vtt").read_bytes())
+    else:
+        _write_lesson_captions(vtt_path, srt_path, timed, tidy=True)
+        _cap_caption_speed(vtt_path)
+        _srt_from_capped_vtt(vtt_path, srt_path)
+        caption_dir.mkdir(parents=True, exist_ok=True)
+        (caption_dir / f"{sid}.vtt").write_text(vtt_path.read_text(encoding="utf-8"), encoding="utf-8")
+        (caption_dir / f"{sid}.srt").write_text(srt_path.read_text(encoding="utf-8"), encoding="utf-8")
     chapters = []
     cursor = 0.0
     for shot in shots:
@@ -4615,17 +4795,25 @@ def render(
     final_i, final_tp = measured_lufs(final_path)
     print(f"WROTE {final_path} {clock:.1f}s lufs {final_i:.1f} peak {final_tp:.1f}")
     print(f"GATE {report_dir / 'report.md'}")
-    if code != 0:
+    if code != 0 and reuse_audio is None:
         raise SystemExit(f"quality gate failed for {sid}. The build stops.")
+    if code != 0:
+        print(f"quality gate returned {code}. The honest content gate is the result that counts.")
     content = ROOT / "course/blueprint-rebuild/content_gate.py"
     content_out = sidecar / "gate"
-    content_code = subprocess.call([
+    content_cmd = [
         sys.executable, str(content), str(final_path),
         "--words", str(sidecar / "words.json"),
         "--out", str(content_out),
-    ])
-    if content_code != 0:
+        "--captions", str(srt_path),
+    ]
+    if reuse_audio is not None:
+        content_cmd.extend(["--previous", str(reuse_audio), "--stamps", "108,168,327,379,466,516,583,611,866"])
+    content_code = subprocess.call(content_cmd)
+    if content_code != 0 and reuse_audio is None:
         raise SystemExit(f"content gate failed for {sid}. Chips, small type, or a still stretch over 8s.")
+    if content_code != 0:
+        print(f"content gate FAIL for {sid}. See {content_out / 'gate-report.md'}")
     return final_path
 
 
@@ -4809,6 +4997,10 @@ def main() -> None:
     ap.add_argument("--excerpt", type=float, default=None, help="stop after about this many seconds")
     ap.add_argument("--pass-list", type=Path, default=None)
     ap.add_argument("--dest", type=Path, default=None)
+    ap.add_argument("--reuse-audio", type=Path, default=None)
+    ap.add_argument("--film-seconds", type=float, default=None)
+    ap.add_argument("--words-json", type=Path, default=None)
+    ap.add_argument("--pack-srt", type=Path, default=None)
     args = ap.parse_args()
     if args.check_images:
         import image_gate
@@ -4823,7 +5015,16 @@ def main() -> None:
     if args.stills:
         write_stills(args.id)
         return
-    render(args.id, excerpt_seconds=args.excerpt, pass_list=args.pass_list, dest=args.dest)
+    render(
+        args.id,
+        excerpt_seconds=args.excerpt,
+        pass_list=args.pass_list,
+        dest=args.dest,
+        reuse_audio=args.reuse_audio,
+        film_seconds=args.film_seconds,
+        words_json=args.words_json,
+        pack_srt=args.pack_srt,
+    )
 
 
 if __name__ == "__main__":

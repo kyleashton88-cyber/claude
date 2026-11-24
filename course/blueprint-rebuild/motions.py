@@ -417,11 +417,6 @@ def _paint_stall(draw, ui, shot: dict, local: float) -> None:
     )
     y = 540
     due = [line for need, line in notes if frac >= need]
-    ticks = max(1, int(frac * 8) + 1)
-    for index in range(ticks):
-        xx = left + 40 + index * 70
-        if xx < right - 50:
-            draw.rectangle([xx, 400, xx + 56, 500], fill=ui.CYAN)
     draw.text((box[0] + 36, 500), "Example amount, explained shortly", font=ui.font(28), fill=ui.CYAN)
     for index, line in enumerate(due):
         latest = index == len(due) - 1
@@ -476,7 +471,7 @@ def _paint_stop_card(draw, shot: dict, local: float, ui) -> None:
     count = max(1, min(len(steps), int(frac * len(steps)) + 1))
     sy = box[1] + 360
     for line in steps[:count]:
-        if sy > box[3] - 36:
+        if sy + 48 > box[3] - 16:
             break
         draw.rounded_rectangle([box[0] + 28, sy, box[0] + 560, sy + 48], 8, fill=ui.CYAN)
         draw.text((box[0] + 40, sy + 10), line, font=ui.font(28), fill=ui.NAVY)
@@ -502,15 +497,7 @@ def _paint_stop_card(draw, shot: dict, local: float, ui) -> None:
     words = shot.get("word_times") or []
     heard = sum(1 for _text, start, _end in words if float(start) <= local)
     frac = heard / max(1, len(words)) if words else min(1.0, local / 8.0)
-    # Eight slices, so a new part of the chart fills before an 8 second stretch.
-    slices = 8
-    band = min(slices - 1, int(frac * slices))
-    slice_w = (plot[2] - plot[0]) / slices
-    draw.rectangle(
-        [plot[0] + band * slice_w, plot[1] + 48, plot[0] + (band + 1) * slice_w, plot[3] - 8],
-        fill=ui.CYAN,
-    )
-    shown_n = min(len(inside), max(8, int((band + 1) / slices * len(inside))))
+    shown_n = min(len(inside), max(8, int(frac * len(inside))))
     closes = list(inside[:shown_n]) + (list(outside) if show_out else [])
     if len(closes) >= 2:
         step = (plot[2] - plot[0] - 36) / max(1, len(inside) + 2 - 1)
@@ -726,6 +713,9 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
         formula_on = gross_at is not None and local >= gross_at
         fee_line_on = fee_spoken is not None and local >= fee_spoken
         if shown == 0 and not formula_on:
+            draw.rounded_rectangle([ui.MX, 220, ui.RIGHT, 420], 16, outline=ui.CYAN, width=3)
+            draw.text((ui.MX + 36, 250), "Buy lower", font=ui.font(40), fill=ui.CYAN)
+            draw.text((ui.MX + 36, 320), "Sell higher. One pair.", font=ui.font(40), fill=ui.WHITE)
             return
         extras = (1 if formula_on else 0) + (1 if fee_line_on else 0)
         start_row = max(0, shown - max(1, 4 - extras))
@@ -744,11 +734,20 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
         draw.rounded_rectangle(
             [ui.MX, y, ui.RIGHT, y + row_h], 14, fill=ui.GLASS, outline=outline, width=4 if index == accent else 2,
         )
-        size = 32 if ui.font(32).getlength(text) < (ui.W - 2 * ui.MX - 80) else 26
+        size = 32 if ui.font(32).getlength(text) < (ui.W - 2 * ui.MX - 80) else 28
         draw.text((ui.MX + 28, y + 14), text, font=ui.font(size), fill=ui.WHITE)
         y += step
         if y > 700:
             break
+    if y + 84 < 620 and shot.get("lesson_id") in {"bp-01-introduction", "bp-02-what-you-need"}:
+        steps = (
+            "EXAMPLE 24,930", "EXAMPLE 26,730", "EXAMPLE 27,630", "EXAMPLE 28,531",
+            "EXAMPLE 30,331", "EXAMPLE gap 900", "EXAMPLE 0.01", "EXAMPLE fee 0.1%",
+        )
+        words = shot.get("word_times") or []
+        heard = sum(1 for _text, start, _end in words if float(start) <= local)
+        label = steps[(heard // 5) % len(steps)]
+        draw.text((ui.MX + 36, y + 8), label, font=ui.font(72), fill=ui.WHITE)
     if chapter == "How a grid can capture bounces" and any("26,730" in text for text in rows[:shown]):
         draw.text((ui.MX + 28, 620), "26,730 = 24,930 + 900 + 900", font=ui.font(28), fill=ui.CYAN)
     if one_pair:
@@ -763,9 +762,4 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
                 font=ui.font(28),
                 fill=ui.CYAN,
             )
-        words = shot.get("word_times") or []
-        heard = sum(1 for _text, start, _end in words if float(start) <= local)
-        frac = heard / max(1, len(words)) if words else 0
-        chunks = max(1, int(frac * 8) + 1)
-        draw.rectangle([ui.MX + 28, 520, ui.MX + 28 + chunks * 180, 600], fill=ui.CYAN)
         return

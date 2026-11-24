@@ -35,16 +35,26 @@ def static_stretches(path: Path, limit: float = 8.0) -> list[tuple[float, float]
     frames = _frames(path)
     if len(frames) < 2:
         return []
-    strong = (np.abs(frames[1:].astype(np.int16) - frames[:-1].astype(np.int16)) > 18).mean(axis=(1, 2))
+    diff = np.abs(frames[1:].astype(np.int16) - frames[:-1].astype(np.int16)) > 18
     holds = []
     start = 0
-    for index, value in enumerate(strong):
-        if value >= 0.002:
+    for index, mask in enumerate(diff):
+        # Caption bar is already outside this crop. A change counts only when
+        # it is taller than 60px at 1080p. Highlights, chips and thin lines are
+        # not a build. A solid horizontal fill is a bar or a playhead.
+        content = False
+        if mask.any():
+            rows = np.where(mask.any(axis=1))[0]
+            height_px = int(rows[-1] - rows[0] + 1) * 12
+            band = mask[rows[0]:rows[-1] + 1]
+            if height_px > 60 and float(band.mean()) < 0.72:
+                content = True
+        if content:
             seconds = index - start + 1
             if seconds >= limit:
                 holds.append((float(start), float(seconds)))
             start = index + 1
-    seconds = len(delta) if False else len(strong) - start
+    seconds = len(diff) - start
     if seconds >= limit:
         holds.append((float(start), float(seconds)))
     return holds
@@ -220,9 +230,10 @@ def pronunciation(path: Path, words_path: Path) -> list[str]:
             corr = corr[len(corr) // 2 :]
             lags = range(int(sr / 300), int(sr / 80))
             voiced = float(np.max(corr[list(lags)]) / (corr[0] + 1e-9))
-            ok = voiced >= 0.6 and high <= 0.3
+            # Noun close needs a voiced /z/ in the coda. The vowel alone is not a pass.
+            ok = voiced >= 0.45 and high >= 0.22
             met["close"] += int(ok)
-            lines.append(f"{'MET' if ok else 'NOT MET'} close {word['start']:.2f}s voicing {voiced:.2f} high {high:.2f}")
+            lines.append(f"{'MET' if ok else 'NOT MET'} close {word['start']:.2f}s voicing {voiced:.2f} high {high:.2f} coda")
         elif name == "asic":
             pts = formants(clip)
             early = pts[: max(2, len(pts) // 4)] if pts else []
@@ -255,6 +266,71 @@ def frame_diff(new: Path, old: Path, stamps: list[float], dest: Path) -> list[st
     return lines
 
 
+def caption_echoes(path: Path, captions: Path) -> list[str]:
+    """A fragment of the burned line repeated above the caption bar."""
+    import re
+    import tempfile
+    from PIL import Image
+
+    def stamp(value: str) -> float:
+        h, m, rest = value.split(":")
+        s, ms = rest.split(",")
+        return int(h) * 3600 + int(m) * 60 + int(s) + int(ms) / 1000
+
+    cues = []
+    for piece in re.split(r"\n\s*\n", captions.read_text(encoding="utf-8").strip()):
+        lines = [line for line in piece.splitlines() if line.strip()]
+        if not any("-->" in line for line in lines):
+            continue
+        timing = next(line for line in lines if "-->" in line)
+        left, right = [part.strip() for part in timing.split("-->")]
+        text = " ".join(line for line in lines if "-->" not in line and not line.strip().isdigit())
+        cues.append((stamp(left), stamp(right), text.lower()))
+    raw = subprocess.check_output(
+        ["ffmpeg", "-v", "error", "-i", str(path), "-vf", "fps=1/15,scale=960:540", "-f", "rawvideo", "-pix_fmt", "rgb24", "-"],
+    )
+    frame = 960 * 540 * 3
+    count = min(len(raw) // frame, 60)
+    found = []
+    for index in range(count):
+        when = index * 15
+        cue = next((text for start, end, text in cues if start <= when < end), "")
+        words = [part for part in re.findall(r"[a-z0-9']+", cue) if len(part) > 2]
+        if len(words) < 4:
+            continue
+        img = Image.frombytes("RGB", (960, 540), raw[index * frame:(index + 1) * frame])
+        # The caption bar sits at y=800 of 1080, which is y=400 of 540. Keep the card only.
+        card = img.crop((0, 0, 960, 390))
+        with tempfile.NamedTemporaryFile(suffix=".png") as handle:
+            card.save(handle.name)
+            try:
+                out = subprocess.check_output(["tesseract", handle.name, "stdout"], text=True, stderr=subprocess.DEVNULL)
+            except subprocess.CalledProcessError:
+                continue
+        blob = " ".join(re.findall(r"[a-z0-9']+", out.lower()))
+        for size in (4, 5):
+            for start in range(0, len(words) - size + 1):
+                scrap = " ".join(words[start:start + size])
+                if scrap in blob:
+                    found.append(f"{when}s caption echo {scrap!r}")
+                    break
+            else:
+                continue
+            break
+        if len(found) > 20:
+            break
+    return found
+
+
+def _sha256(path: Path) -> str:
+    import hashlib
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("master")
@@ -262,6 +338,7 @@ def main() -> None:
     parser.add_argument("--out", required=True)
     parser.add_argument("--previous")
     parser.add_argument("--stamps", default="")
+    parser.add_argument("--captions")
     args = parser.parse_args()
     master = Path(args.master)
     out = Path(args.out)
@@ -281,10 +358,13 @@ def main() -> None:
         encoding="utf-8",
     )
     headers = header_only(master)
+    echoes = caption_echoes(master, Path(args.captions)) if args.captions else []
     (out / "D4-header-overlap.txt").write_text(
         "Header-only stretches over 5s (card body with almost no ink).\n"
         + ("\n".join(f"{start:.0f}s for {seconds:.0f}s" for start, seconds in headers) or "none")
-        + "\nOverlap of drawn text is enforced while painting by layout_gate.py.\n",
+        + "\n\nCaption echoes (a caption fragment above the caption bar).\n"
+        + ("\n".join(echoes) or "none")
+        + "\n\nOverlap of drawn text is enforced while painting by layout_gate.py. A frame that overlaps text does not finish.\n",
         encoding="utf-8",
     )
     jumps = level_jumps(master, Path(args.words))
@@ -301,11 +381,46 @@ def main() -> None:
         stamps = [float(item) for item in args.stamps.split(",") if item]
         lines = frame_diff(master, Path(args.previous), stamps, out / "frames")
         (out / "D1-frame-diff.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    digest = _sha256(master)
+    d5_bad = [line for line in said if line.startswith("NOT MET")]
+    failed = []
+    if holds:
+        failed.append("D2 static run over 8s\n" + "\n".join(f"  {start:.0f}s for {seconds:.0f}s" for start, seconds in holds))
+    if small:
+        failed.append("D3 text under 28px\n" + "\n".join(f"  {line}" for line in small))
+    if headers:
+        failed.append("D4 empty card\n" + "\n".join(f"  {start:.0f}s for {seconds:.0f}s" for start, seconds in headers))
+    if echoes:
+        failed.append("D4 caption echo\n" + "\n".join(f"  {line}" for line in echoes))
+    if d5_bad:
+        failed.append("D5 pronunciation NOT MET on the unchanged mix\n" + "\n".join(f"  {line}" for line in d5_bad[:40]))
+    result = "FAIL" if failed else "PASS"
+    report = [
+        "# Gate report",
+        "",
+        f"Result: **{result}**",
+        "",
+        f"Master sha256: `{digest}`",
+        "",
+        "PASS requires D2, D3, D4 and D5 to pass. A static run over 8s, text under 28px, covered text, a caption echo, or clipped text is a FAIL. Decorations under 60px and solid bars do not count as a picture change.",
+        "",
+    ]
+    if failed:
+        report.append("Failing checks:")
+        report.append("")
+        report.extend(failed)
+    else:
+        report.append("D2, D3, D4 and D5 passed.")
+    report.append("")
+    report.append("D5 totals are measured on this mix. Noun close is MET only when the coda has a voiced /z/.")
+    (out / "gate-report.md").write_text("\n".join(report) + "\n", encoding="utf-8")
     print(out)
-    if holds or headers or small:
+    print(result)
+    if failed:
         raise SystemExit(
             f"content gate failed: {len(holds)} stretches over 8s, "
-            f"{len(headers)} header-only runs, {len(small)} text blocks under 28px"
+            f"{len(headers)} header-only runs, {len(small)} text blocks under 28px, "
+            f"{len(echoes)} caption echoes, {len(d5_bad)} pronunciation misses"
         )
 
 
