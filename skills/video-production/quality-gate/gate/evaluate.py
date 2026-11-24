@@ -94,7 +94,8 @@ def beginner_term_problems(text: str) -> list[str]:
     terms = (
         ("order", "an order is"),
         ("fill", "a fill is"),
-        ("swap", "a swap is"),
+        # The signed line is "every fill is a swap", not "a swap is".
+        ("swap", "is a swap"),
         ("exchange", "an exchange is"),
         ("wallet", "a wallet is"),
         ("api secret", "an api secret is"),

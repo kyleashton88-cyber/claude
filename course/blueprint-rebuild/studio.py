@@ -2164,10 +2164,10 @@ def _paint_journal(base: Image.Image, cols: int, note: str = "", mark: int = 0) 
     panel = (MX + 120, 180, RIGHT - 120, CARD_BOTTOM)
     draw.rounded_rectangle(panel, 16, fill=GLASS, outline=CYAN, width=3)
     draw.text((panel[0] + 28, panel[1] + 16), "Journal", font=font(32), fill=CYAN)
-    y = panel[1] + 60
+    y = panel[1] + 56
     if note:
-        draw.text((panel[0] + 36, y), note, font=font(24), fill=WHITE)
-        y += 36
+        draw.text((panel[0] + 36, y), note[:48], font=font(22), fill=WHITE)
+        y += 32
     # The first group is on screen from the start. Later groups fill in with the voice.
     shown_count = max(4, cols)
     shown = list(JOURNAL_COLUMNS[:shown_count])
@@ -2175,16 +2175,21 @@ def _paint_journal(base: Image.Image, cols: int, note: str = "", mark: int = 0) 
     right = panel[2] - 24
     mid = (left + right) // 2
     row_h = 48
+    rows = (len(shown) + 1) // 2
+    lit = mark % rows if rows else 0
+    row_index = 0
     for index in range(0, len(shown), 2):
         if y + row_h > panel[3] - 12:
             break
         pair = shown[index:index + 2]
         cells = ((left, mid - 8), (mid + 8, right))
+        # The lit row is a full cyan band, and it moves when the spoken point changes.
+        hot = row_index == lit
         for cell, name in zip(cells, pair):
-            latest = shown.index(name) == len(shown) - 1
-            draw.rounded_rectangle([cell[0], y, cell[1], y + row_h - 8], 8, outline=CYAN, width=2, fill=CYAN if latest else GLASS)
-            draw.text((cell[0] + 12, y + 8), name, font=font(22), fill=NAVY if latest else WHITE)
+            draw.rounded_rectangle([cell[0], y, cell[1], y + row_h - 8], 8, outline=CYAN, width=2, fill=CYAN if hot else GLASS)
+            draw.text((cell[0] + 12, y + 8), name, font=font(22), fill=NAVY if hot else WHITE)
         y += row_h
+        row_index += 1
 
 
 def _paint_safety(base: Image.Image, step: int, note: str = "", mark: int = 0) -> None:
@@ -2193,19 +2198,26 @@ def _paint_safety(base: Image.Image, step: int, note: str = "", mark: int = 0) -
     panel = (MX + 160, 188, RIGHT - 160, CARD_BOTTOM)
     draw.rounded_rectangle(panel, 18, fill=GLASS, outline=CYAN, width=3)
     draw.text((panel[0] + 36, panel[1] + 20), "Before any real dollars", font=font(28), fill=CYAN)
+    # The note is a large block on the right. It moves with each spoken point,
+    # so a long account chapter is not one still picture.
     if note:
-        draw.text((panel[0] + 36, panel[1] + 64), note, font=font(32), fill=WHITE)
+        bar_y = panel[1] + 108 + (mark % 4) * 72
+        draw.rounded_rectangle([panel[0] + 520, bar_y, panel[2] - 28, bar_y + 60], 10, fill=CYAN)
+        for i, line in enumerate(wrap(note, 22, 360)[:2]):
+            draw.text((panel[0] + 536, bar_y + 8 + i * 24), line, font=font(20), fill=NAVY)
     y = panel[1] + 150
     for index, label in enumerate(SAFETY_STEPS, start=1):
-        on = index <= step
+        on = index <= max(step, 1) if step else False
+        # The current step is a full row, not a small circle.
         color = CYAN if on else (40, 64, 84)
+        if index == step and step:
+            draw.rounded_rectangle([panel[0] + 28, y - 6, panel[0] + 500, y + 50], 10, fill=CYAN)
+            color = NAVY
         draw.ellipse([panel[0] + 40, y, panel[0] + 84, y + 44], outline=color, width=3)
         if on:
-            draw.text((panel[0] + 52, y + 6), str(index), font=font(28), fill=CYAN)
-        ink = WHITE if on else (70, 90, 110)
-        draw.text((panel[0] + 110, y + 6), label, font=font(32), fill=WHITE if index == step else ink)
-        if not on:
-            draw.text((panel[2] - 220, y + 8), "Coming up", font=font(22), fill=CYAN)
+            draw.text((panel[0] + 52, y + 6), str(index), font=font(28), fill=NAVY if index == step else CYAN)
+        ink = NAVY if index == step and step else (WHITE if on else (70, 90, 110))
+        draw.text((panel[0] + 110, y + 6), label, font=font(32), fill=ink)
         if index < len(SAFETY_STEPS):
             draw.line([(panel[0] + 62, y + 46), (panel[0] + 62, y + 64)], fill=color, width=3)
         y += 72
@@ -2223,7 +2235,7 @@ def _strike(draw: ImageDraw.ImageDraw, x: int, y: int, text: str) -> None:
     draw.line([(x, y + 18), (x + width, y + 18)], fill=CYAN, width=3)
 
 
-def _paint_fee(base: Image.Image, stage: str) -> None:
+def _paint_fee(base: Image.Image, stage: str, shot: dict | None = None, local: float = 0) -> None:
     """A$100 buy, 10c, sell 10c, round trip 20c at 0.2 percent, then the gap."""
     draw = ImageDraw.Draw(base)
     box = _frame(draw)
@@ -2239,7 +2251,7 @@ def _paint_fee(base: Image.Image, stage: str) -> None:
     y = box[1] + 80
     for index, (name, value) in enumerate(rows):
         latest = index == len(rows) - 1
-        height = 72 if latest else 40
+        height = 72 if latest and stage != "gap" else 40
         draw.rounded_rectangle(
             [box[0] + 28, y, box[2] - 28, y + height], 10,
             fill=CYAN if latest else GLASS, outline=CYAN, width=2,
@@ -2250,11 +2262,26 @@ def _paint_fee(base: Image.Image, stage: str) -> None:
         y += height + 8
     if stage == "maker":
         draw.text((box[0] + 28, y + 8), "Read the maker fee first.", font=font(28), fill=WHITE)
-    if stage in {"aud", "gap"}:
+    if stage == "aud":
         draw.text((box[0] + 28, y + 4), "Fee row: BTC/AUD. Not the July to October example window.", font=font(28), fill=WHITE)
         y += 44
     if stage == "gap":
-        draw.text((box[0] + 28, min(y + 8, CARD_BOTTOM - 36)), "900 ÷ 27,630 ≈ 3.3%    round trip 0.2%", font=font(28), fill=CYAN)
+        # Each comparison arrives with the words, as its own row.
+        gap_rows = []
+        if shot is not None and _spoken(shot, local, "dividing"):
+            gap_rows.append("900 ÷ 27,630")
+        if shot is not None and _spoken(shot, local, "3.3"):
+            gap_rows.append("about 3.3 percent")
+        if shot is not None and _spoken(shot, local, "lesson 5"):
+            gap_rows.append("Lesson 5 tests this gap")
+        if not gap_rows:
+            gap_rows.append("Compare the gap with the fee")
+        for line in gap_rows:
+            if y > CARD_BOTTOM - 40:
+                break
+            draw.rounded_rectangle([box[0] + 28, y, box[2] - 28, y + 40], 8, fill=CYAN)
+            draw.text((box[0] + 48, y + 6), line, font=font(24), fill=NAVY)
+            y += 48
     elif stage == "aud":
         draw.rectangle([box[0] + 28, y + 8, box[0] + 640, y + 70], fill=CYAN)
         draw.text((box[0] + 48, y + 18), "BTC/AUD fee row", font=font(28), fill=NAVY)
@@ -2390,14 +2417,8 @@ def _paint_bp02_scene(base: Image.Image, scene: str) -> None:
 
 
 def _bp02_beat(base: Image.Image, local: float, label: str) -> None:
-    """Motion under the card, never on it. The label is not a second copy of the definition."""
-    del label
-    draw = ImageDraw.Draw(base)
-    x0, y0, x1, y1 = MOTION_LANE
-    slot = int(local // 8) % 2
-    block = (x0, y0, x0 + 520, y1) if slot == 0 else (x1 - 520, y0, x1, y1)
-    draw.rounded_rectangle(block, 12, fill=CYAN)
-    draw.text((block[0] + 16, y0 + 14), "GridBot Builder", font=font(28), fill=NAVY)
+    """The lane under the card is not a picture. Card changes carry the motion."""
+    del base, local, label
 
 
 def paint_v2_cards(base: Image.Image, shot: dict, local: float) -> None:
@@ -2429,7 +2450,7 @@ def paint_v2_cards(base: Image.Image, shot: dict, local: float) -> None:
         _paint_bp02_scene(base, str(card.get("scene") or ""))
         return
     if kind == "fee":
-        _paint_fee(base, str(card.get("stage") or "maker"))
+        _paint_fee(base, str(card.get("stage") or "maker"), shot, local)
         return
     if card.get("classic"):
         _paint_three_words_classic(base)

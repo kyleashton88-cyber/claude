@@ -17,7 +17,7 @@ Blueprint lessons keep the 6-minute minimum. The 10-minute upper cap is removed.
 
 | Check | Result | Detail |
 |---|---|---|
-| length | PASS | 641.7s is inside Blueprint lesson (600s–900s) |
+| length | PASS | 661.4s is inside Blueprint lesson (600s–900s) |
 | loudness | PASS | integrated -14.4 LUFS, target -14 ± 1 |
 | true_peak | PASS | true peak -3.6 dBTP, limit -1 dBTP |
 | frozen | PASS | longest static run 0.5s, limit 8s |
@@ -27,7 +27,7 @@ Blueprint lessons keep the 6-minute minimum. The 10-minute upper cap is removed.
 | resolution | PASS | 1920x1080 |
 | fps | PASS | 30.000 fps |
 | codec | PASS | video h264, audio aac, yuv420p |
-| captions | PASS | 289 cues, at most 42 characters and 20 per second |
+| captions | PASS | 296 cues, at most 42 characters and 20 per second |
 | beginner_terms | PASS | order, fill, swap, exchange, wallet, API secret, bot, base, quote, deposit and journal are defined before they are used |
 | text_recognition | PASS | tesseract read the sampled frames |
 | brands | PASS | no exchange or banned brand name |
