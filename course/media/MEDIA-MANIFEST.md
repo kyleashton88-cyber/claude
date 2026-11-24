@@ -114,3 +114,18 @@ Source commit `a487eb4` (pictures `6ad473d`, captions extended so the last cue e
 Join: `cat master.mp4.part01 master.mp4.part02 master.mp4.part03 > master.mp4`
 
 `SHA256SUMS` lists only the files that are in the folder. The joined master matches `f456ba17294fa3461fd44622b0abfb346364c83e5b31aefbfa910b637774a1d5`.
+
+## BP-02 after the signed script, 24 Nov
+
+Source commit `229bdae`. The spoken script is the canonical script from `b958dff` with X1–X6. BP-03 is titled "How a grid bot works, order by order." Duration 661.4s. 1,805 spoken words. Gate PASS: −14.4 LUFS, −3.6 dBTP. The 720p watch copy is in the same folder. Google Drive's file tool cannot take a video this size, so there is no Drive link.
+
+| Lesson | Commit | File | Duration | Bytes | SHA-256 | Where it lives |
+|---|---|---|---|---|---|---|
+| BP-02 | `229bdae` | `master.mp4` | 661.4s | 208193411 | `82b3a9b783c620a7caac9aa58f19a6169041061c54e64700e775c41f62bb41f2` | Agent store `/cursor/stores/self/artifacts/bp-23nov/bp02-229bdae/` |
+| BP-02 | `229bdae` | `master.mp4.part01` | | 104857600 | `28495ab96d6a459f6396cf9af128049e576af717910668d5e5bcdba718a4b459` | Same folder |
+| BP-02 | `229bdae` | `master.mp4.part02` | | 103335811 | `66b745a64b203f22fcdf70113b1ef23b3cbde53064cfa567cc80fdd80173380e` | Same folder |
+| BP-02 | `229bdae` | `watch-720p.mp4` | 661.4s | 49567434 | `55b12a503ef4604805d96cbc93d09a533767dfd28b63d01fa5f260e2d6dfd79d` | Same folder |
+
+Join: `cat master.mp4.part01 master.mp4.part02 > master.mp4`
+
+`SHA256SUMS` lists only the files that are in the folder. The joined master matches `82b3a9b783c620a7caac9aa58f19a6169041061c54e64700e775c41f62bb41f2`.
