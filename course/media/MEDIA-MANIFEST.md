@@ -145,3 +145,19 @@ Source commit `cca1d5b`. No spoken word changed. Duration 891.8s. Gate PASS: −
 Join: `cat master.mp4.part01 master.mp4.part02 master.mp4.part03 > master.mp4`
 
 `SHA256SUMS` lists only the files that are in the folder. The joined master matches `83bf6f787f8e8a2cdd9e54d558516e1f2b825cd377e65c7962c0467e8f74344a`.
+
+## BP-02 after fix order 15, 24 Nov
+
+Caption commit `7a322cc`. Audio and pictures `cca1d5b`. No spoken word changed. Duration 668.2s. Gate PASS: −14.4 LUFS, −3.6 dBTP. The narration stem passes the coin, close, ASIC and API acoustic check. The 720p copy is in the same folder. Google Drive's file tool cannot take a video this size, so there is no Drive link.
+
+| Lesson | Commit | File | Duration | Bytes | SHA-256 | Where it lives |
+|---|---|---|---|---|---|---|
+| BP-02 fix 15 | `7a322cc` | `master.mp4` | 668.2s | 210224065 | `e75f289efc58baeb2b0344f08cc483f0d581652fd5e40b0a201f8be88a7f8a8a` | Agent store `/cursor/stores/self/artifacts/bp-23nov/bp02-7a322cc/` |
+| BP-02 fix 15 | `7a322cc` | `master.mp4.part01` | | 104857600 | `ebff960001d197bec767930f451514e67ef59d1aa73a9fcc8c5d8e7406e59023` | Same folder |
+| BP-02 fix 15 | `7a322cc` | `master.mp4.part02` | | 104857600 | `03ba7de8e29a6a2fbe07db223b42112f4b8f56284d0d9fb83b5233109f7f98c8` | Same folder |
+| BP-02 fix 15 | `7a322cc` | `master.mp4.part03` | | 508865 | `230cf255fe91aeba9d69c585916448ba1b68da2e6bed3ec0bd5586d3c20c217c` | Same folder |
+| BP-02 fix 15 | `7a322cc` | `watch-720p.mp4` | 668.2s | 50093447 | `a48bbdfc0699987ff4813cea9b685fd59d5cf1f590f948f8d10bc774918a62b4` | Same folder |
+
+Join: `cat master.mp4.part01 master.mp4.part02 master.mp4.part03 > master.mp4`
+
+`SHA256SUMS` lists only the files that are in the folder. The joined master matches `e75f289efc58baeb2b0344f08cc483f0d581652fd5e40b0a201f8be88a7f8a8a`.
