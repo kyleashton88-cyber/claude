@@ -200,3 +200,28 @@ Source commit `e0d5ead`. No spoken word, title, or lesson order changed. The BP-
 | BP-02 fix 17 | `e0d5ead` | `watch-720p.mp4` | 664.2s | 69888383 | `8de19a8b042fc00fa3db00a54929ccf6a9fb83a50c280ff489fcead724e73b27` | Same folder |
 
 Join BP-01 with three parts and BP-02 with two parts. `SHA256SUMS` lists only the files in each folder. D1–D5 are in each folder. BP-02 `cards/` holds `76-journal.png` and `78-journal.png`.
+
+## BP-01 after fix order 18, 24 Nov
+
+Source commit `c80ee62`. No spoken word changed. The soundtrack is the e0d5ead mix, copied, not re-encoded. The pack SRT is unchanged. The gate is FAIL: 21 static runs over 8 seconds remain, and noun close is 0/16 with a voiced /z/ required. Text under 28px: none. Caption echoes: none. Empty cards: none.
+
+| Lesson | Commit | File | Duration | Bytes | SHA-256 | Where it lives |
+|---|---|---|---|---|---|---|
+| BP-01 fix 18 | `c80ee62` | `master.mp4` | 880.6s | 298699712 | `02c4d0ed57358647822608ae163031867f4dd72128af296f1d67d8536d1e4d55` | Agent store `/cursor/stores/self/artifacts/bp-23nov/bp01-c80ee62/` |
+| BP-01 fix 18 | `c80ee62` | `master.mp4.part01` | | 104857600 | `666e6c67e301bc7adedcee7e9ef14aaebde29c8fe361a491c902c25080be797a` | Same folder |
+| BP-01 fix 18 | `c80ee62` | `master.mp4.part02` | | 104857600 | `ab471a688f6b13bfdefaa0ebf54efd1d7965fc6cd190b52e662c69705ca9bb8b` | Same folder |
+| BP-01 fix 18 | `c80ee62` | `master.mp4.part03` | | 88984512 | `4966e1c7936c7126168c01df51efb95015c01d032f15afa485ad8c1cde3ae28b` | Same folder |
+| BP-01 fix 18 | `c80ee62` | `watch-720p.mp4` | 880.6s | 112527713 | `c113712d5b82aac022e3b1dc47fabd1c7da06d65bd38fc8781c1d93780499e0d` | Join `watch-720p.mp4.part01` and `watch-720p.mp4.part02` in that folder |
+
+## BP-02 after fix order 18, 24 Nov
+
+Source commit `c80ee62`. No spoken word changed. The soundtrack is the e0d5ead mix, copied, not re-encoded. The pack SRT is unchanged. The gate is FAIL: 16 static runs over 8 seconds, one empty card at 167s, and two caption echoes. Noun close is 1/9 on the coda test. ASIC is 4/4. API is 0/4. Text under 28px: none.
+
+| Lesson | Commit | File | Duration | Bytes | SHA-256 | Where it lives |
+|---|---|---|---|---|---|---|
+| BP-02 fix 18 | `c80ee62` | `master.mp4` | 664.2s | 202292883 | `7f9cfdf43039fb49e80c49506568d5a4721caee372db0941bfe882e633df7f24` | Agent store `/cursor/stores/self/artifacts/bp-23nov/bp02-c80ee62/` |
+| BP-02 fix 18 | `c80ee62` | `master.mp4.part01` | | 104857600 | `0dcd9330e3839bf89c378c03ea6f6ee04f05d72fe949b8554160bb26c169f5f4` | Same folder |
+| BP-02 fix 18 | `c80ee62` | `master.mp4.part02` | | 97435283 | `87e718c7b1e2d53528a768112d09ba47b6434ee9108a57486d92c5277641ab80` | Same folder |
+| BP-02 fix 18 | `c80ee62` | `watch-720p.mp4` | 664.2s | 80951818 | `36da7c2e9e8afc1332ea065d57e028087e2eafe36e9ed3a23549668d90f31035` | Same folder |
+
+Join BP-01 with three master parts. Join its 720p copy from two parts. Join BP-02 with two master parts. `SHA256SUMS` in each folder lists only the files that are there. D1–D5 and `gate-report.md` are in each folder. Google Drive cannot take these files. Nothing was merged and no email was sent.
