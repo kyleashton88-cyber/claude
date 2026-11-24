@@ -182,3 +182,21 @@ Source commit `205aea3`. No spoken word, title, or lesson order changed. The BP-
 | BP-02 fix 16 | `205aea3` | `watch-720p.mp4` | 664.2s | 100469523 | `e13a1bd08fc31a92cfddbc6ab51aa01341ddc82e7416002e42dc59f40b1ae492` | Same folder |
 
 Join each master with `cat master.mp4.part01 master.mp4.part02 master.mp4.part03 > master.mp4`. Join the BP-01 720p copy the same way from its two part files. `SHA256SUMS` lists only the files in each folder. The joined masters match the hashes in this table. D1–D5 gate text is in each folder.
+
+## BP-01 and BP-02 after fix order 17, 24 Nov
+
+Source commit `e0d5ead`. No spoken word, title, or lesson order changed. The BP-01 liquidation line is unchanged. One voice, af_heart at speed 1.0, no splices. The caption chips are removed. Quality gate PASS on both. The content scan still lists stretches over 8 seconds: 30 on BP-01 and 20 on BP-02. Google Drive cannot take these files.
+
+| Lesson | Commit | File | Duration | Bytes | SHA-256 | Where it lives |
+|---|---|---|---|---|---|---|
+| BP-01 fix 17 | `e0d5ead` | `master.mp4` | 880.5s | 303226543 | `5d0a81bad1111cc2c5321d03a1b1249cb6a44e5daeecf874f0e92477fd781c33` | Agent store `/cursor/stores/self/artifacts/bp-23nov/bp01-e0d5ead/` |
+| BP-01 fix 17 | `e0d5ead` | `master.mp4.part01` | | 104857600 | `f000332a631f97ef95e9f6e49567cee6243f70552157aacd64b6f4faf8e0162f` | Same folder |
+| BP-01 fix 17 | `e0d5ead` | `master.mp4.part02` | | 104857600 | `9454c97b7acd680e1f6c7689e5e23fa241342733925bee06e86fa71e6bb8d528` | Same folder |
+| BP-01 fix 17 | `e0d5ead` | `master.mp4.part03` | | 93511343 | `9ff5a283e67d87c8977ae4e9491be0109ace28b00d666d3de3d9792f8e224f5d` | Same folder |
+| BP-01 fix 17 | `e0d5ead` | `watch-720p.mp4` | 880.5s | 97701629 | `dc0603339eaf218b72ae7a09d1399c5fd38b2bf29975cdab8ce9ec2406b87618` | Same folder |
+| BP-02 fix 17 | `e0d5ead` | `master.mp4` | 664.2s | 208556585 | `dce40a72dfc16b022dc50c2bf3c1cda263d5ffc9175511af27206629e4facfab` | Agent store `/cursor/stores/self/artifacts/bp-23nov/bp02-e0d5ead/` |
+| BP-02 fix 17 | `e0d5ead` | `master.mp4.part01` | | 104857600 | `e81b9c65bd8ba1bc45d83c8c6a55a44dfc754d26261dc00d9c92db00911a38cf` | Same folder |
+| BP-02 fix 17 | `e0d5ead` | `master.mp4.part02` | | 103698985 | `7234f025b6ed96d5e542cc1c7fb265a6b81d4264c907c145f9497b83ff0fe118` | Same folder |
+| BP-02 fix 17 | `e0d5ead` | `watch-720p.mp4` | 664.2s | 69888383 | `8de19a8b042fc00fa3db00a54929ccf6a9fb83a50c280ff489fcead724e73b27` | Same folder |
+
+Join BP-01 with three parts and BP-02 with two parts. `SHA256SUMS` lists only the files in each folder. D1–D5 are in each folder. BP-02 `cards/` holds `76-journal.png` and `78-journal.png`.
