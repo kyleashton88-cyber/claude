@@ -98,3 +98,19 @@ Source commit `b4ba1f4`. Duration 879.6s. 2,395 spoken words. No spoken word cha
 Join: `cat master.mp4.part01 master.mp4.part02 master.mp4.part03 > master.mp4`
 
 `SHA256SUMS` lists only the files that are in the folder.
+
+## BP-01 after fix order 14, 24 Nov
+
+Source commit `a487eb4` (pictures `6ad473d`, captions extended so the last cue ends at the film). Duration 878.9s. No spoken word changed. Gate PASS: −14.3 LUFS, −3.6 dBTP. The 720p watch copy is in the same folder. Google Drive's file tool cannot take a 67 MB video, so there is no Drive link for this copy.
+
+| Lesson | Commit | File | Duration | Bytes | SHA-256 | Where it lives |
+|---|---|---|---|---|---|---|
+| BP-01 fix 14 | `a487eb4` | `master.mp4` | 878.9s | 309229915 | `f456ba17294fa3461fd44622b0abfb346364c83e5b31aefbfa910b637774a1d5` | Agent store `/cursor/stores/self/artifacts/bp-23nov/bp01-a487eb4/` |
+| BP-01 fix 14 | `a487eb4` | `master.mp4.part01` | | 104857600 | `0fc97151959413c0be599037b77e536f0b1465c6afeb2760ce12ab9154d1b551` | Same folder |
+| BP-01 fix 14 | `a487eb4` | `master.mp4.part02` | | 104857600 | `0f8475a92c45e4aa00ffefcd56b865b897830c68d5d7ccec8b3cd3fbb14d02e9` | Same folder |
+| BP-01 fix 14 | `a487eb4` | `master.mp4.part03` | | 99514715 | `4c26d6b6cda37626f1fbae36a2f064500b9858d02f6393937e389f64c675cb10` | Same folder |
+| BP-01 fix 14 | `a487eb4` | `watch-720p.mp4` | 878.9s | 70069526 | `5b3cbf3ad8e77206eb0c371327d5e8fa6f62ab268ba852d0a3a0adc7b776049e` | Same folder |
+
+Join: `cat master.mp4.part01 master.mp4.part02 master.mp4.part03 > master.mp4`
+
+`SHA256SUMS` lists only the files that are in the folder. The joined master matches `f456ba17294fa3461fd44622b0abfb346364c83e5b31aefbfa910b637774a1d5`.
