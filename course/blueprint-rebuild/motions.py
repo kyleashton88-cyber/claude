@@ -633,29 +633,47 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
         ui._example(draw, ui.RIGHT - 280, 168)
         draw.text((ui.MX + 28, 188), "Three buys on the way down", font=ui.font(32), fill=ui.WHITE)
         down_at = ui._phrase_at(shot, "you are down")
-        # Before the first buy is spoken, the takeaway stays on screen and
-        # changes with the sentence, so the card is not a header for 19s.
+        # Before the first buy is spoken, stack the takeaway lines and drop
+        # one more coin every five seconds. One line used to sit for 14s.
         first_buy = ui._phrase_at(shot, "276")
         if first_buy is None or local < first_buy:
             clauses = [
                 (0.0, "The loss can keep growing until the stop acts."),
-                (ui._phrase_at(shot, "either") or 8.0, "You stop the bot either way."),
-                (ui._phrase_at(shot, "written") or 16.0, "Then you follow the written rule."),
+                (ui._phrase_at(shot, "either") or 6.0, "You stop the bot either way."),
+                (ui._phrase_at(shot, "written") or 12.0, "Then you follow the written rule."),
             ]
-            line = clauses[0][1]
-            for at, text in clauses:
-                if local >= at:
-                    line = text
-            draw.rounded_rectangle([ui.MX, 260, ui.RIGHT, 360], 12, fill=ui.CYAN)
-            draw.text((ui.MX + 28, 292), line, font=ui.font(32), fill=ui.NAVY)
+            shown = [(at, text) for at, text in clauses if local >= at]
+            hot = int(local // 5) % max(1, len(shown))
+            y = 248
+            for index, (_at, text) in enumerate(shown):
+                on = index == hot
+                draw.rounded_rectangle(
+                    [ui.MX, y, ui.RIGHT - 220, y + 64], 12,
+                    fill=ui.CYAN if on else ui.GLASS, outline=ui.CYAN, width=2,
+                )
+                draw.text((ui.MX + 24, y + 16), text, font=ui.font(28), fill=ui.NAVY if on else ui.WHITE)
+                y += 76
+            # Coins step down the right side. A new coin is a new picture.
+            coins = 1 + int(local // 5)
+            for index in range(min(coins, 4)):
+                cx = ui.RIGHT - 110
+                cy = 280 + index * 72
+                draw.ellipse([cx - 28, cy - 28, cx + 28, cy + 28], outline=ui.CYAN, width=4)
+                draw.text((cx - 8, cy - 14), "B", font=ui.font(28), fill=ui.WHITE)
             return
         y = 240
+        latest = None
+        for name, value, at in table:
+            if name == "Down":
+                at = down_at or at
+            if at is not None and local >= at:
+                latest = name
         for name, value, at in table:
             if name == "Down":
                 at = down_at or at
             if at is None or local < at:
                 break
-            hot = at is not None and local >= at and (name == "Down" or local < (at + 8))
+            hot = name == latest
             draw.rounded_rectangle(
                 [ui.MX, y, ui.RIGHT, y + 56], 12,
                 fill=ui.CYAN if hot else ui.GLASS, outline=ui.CYAN, width=2,

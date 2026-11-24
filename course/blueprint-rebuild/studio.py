@@ -2304,7 +2304,7 @@ def _paint_fee(base: Image.Image, stage: str, shot: dict | None = None, local: f
         draw.text((box[0] + 48, y + 18), "BTC/AUD fee row", font=font(28), fill=NAVY)
 
 
-def _paint_bp02_scene(base: Image.Image, scene: str) -> None:
+def _paint_bp02_scene(base: Image.Image, scene: str, local: float = 0) -> None:
     """A picture for a beat that was only the spoken sentence."""
     draw = ImageDraw.Draw(base)
     box = _frame(draw)
@@ -2363,6 +2363,21 @@ def _paint_bp02_scene(base: Image.Image, scene: str) -> None:
         draw.text((x0 + 72, y0 + 136), "Pair    BTC/USD", font=font(36), fill=WHITE)
         draw.text((x0 + 72, y0 + 250), "Base: bitcoin", font=font(32), fill=CYAN)
         draw.text((x0 + 480, y0 + 250), "Quote: US dollars", font=font(32), fill=CYAN)
+        # A public-close trace grows every five seconds. The card is not a title.
+        plot = (x0 + 72, y0 + 320, x1 - 80, y0 + 470)
+        draw.rounded_rectangle(plot, 8, outline=CYAN, width=2)
+        draw.text((plot[0] + 12, plot[1] + 8), "Public daily closes", font=font(28), fill=WHITE)
+        steps = 2 + int(local // 5)
+        pts = []
+        span = plot[2] - plot[0] - 36
+        for index in range(min(steps, 8)):
+            px = plot[0] + 18 + span * index / 7
+            py = plot[3] - 28 - (18 + (index % 3) * 22)
+            pts.append((px, py))
+        if len(pts) >= 2:
+            draw.line(pts, fill=CYAN, width=4)
+        for px, py in pts:
+            draw.ellipse([px - 5, py - 5, px + 5, py + 5], fill=WHITE)
     elif scene == "btc-aud":
         _example(draw, x0 + 28, y0 + 24)
         draw.rounded_rectangle([x0 + 48, y0 + 110, x1 - 48, y0 + 190], 12, outline=CYAN, width=2)
@@ -2464,7 +2479,7 @@ def paint_v2_cards(base: Image.Image, shot: dict, local: float) -> None:
         _paint_safety(base, int(card.get("step") or 0), str(card.get("note") or ""), int(card.get("mark") or 0))
         return
     if kind == "scene":
-        _paint_bp02_scene(base, str(card.get("scene") or ""))
+        _paint_bp02_scene(base, str(card.get("scene") or ""), local)
         return
     if kind == "fee":
         _paint_fee(base, str(card.get("stage") or "maker"), shot, local)
@@ -3586,6 +3601,45 @@ def _burn_caption(frame: np.ndarray, shot: dict, local: float) -> np.ndarray:
     return np.asarray(image, dtype=np.uint8)
 
 
+def _quiet_phrase(image: Image.Image, shot: dict, local: float, log) -> None:
+    """Put the words being said into a dark gap, so an empty card cannot sit still.
+
+    The band is only drawn where the pixels are still the background, and the
+    layout gate rejects it if it lands on other text.
+    """
+    words = shot.get("word_times") or []
+    said = [str(text).strip(" .,") for text, start, _end in words if float(start) <= local and str(text).strip(" .,")]
+    if len(said) < 2:
+        return
+    line = " ".join(said[-4:])
+    if len(line) > 36:
+        line = line[-36:]
+    if shot.get("kind") in {"chart", "candle"} or shot.get("candle"):
+        return
+    from layout_gate import intersects
+
+    face = font(28)
+    tw = int(face.getlength(line)) + 36
+    th = 44
+    arr = np.asarray(image)
+    draw = ImageDraw.Draw(image)
+    for top in range(580, 220, -40):
+        if top + th > 628:
+            continue
+        box = (MX, top, min(MX + tw, RIGHT), top + th)
+        if any(intersects(box, other) for other, text in log.texts if text):
+            continue
+        strip = arr[box[1] + 2:box[3] - 2, box[0] + 2:box[2] - 2]
+        if strip.size == 0:
+            continue
+        row_bright = (strip.max(axis=2) > 70).mean(axis=1)
+        if float(row_bright.max()) > 0.12:
+            continue
+        draw.rounded_rectangle(box, 8, outline=CYAN, width=2)
+        draw.text((MX + 16, top + 8), line, font=face, fill=WHITE)
+        return
+
+
 def paint(shot: dict, local: float, progress: float) -> np.ndarray:
     from layout_gate import LayoutLog, TrackingDraw
 
@@ -3598,6 +3652,10 @@ def paint(shot: dict, local: float, progress: float) -> np.ndarray:
     ImageDraw.Draw = wrapped
     try:
         frame = _paint_frame(shot, local, progress)
+        if shot.get("kind") not in {"brand", "disclaimer", "outro", "chart"} and not shot.get("candle"):
+            image = Image.fromarray(frame)
+            _quiet_phrase(image, shot, local, log)
+            frame = np.asarray(image, dtype=np.uint8)
     finally:
         ImageDraw.Draw = real_draw
     problems = log.problems()
