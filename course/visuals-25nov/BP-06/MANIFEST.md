@@ -13,6 +13,8 @@ Do not reuse the 180 old fallback stills. They belong to the old scripts.
 A ChatGPT beat is an illustration. Charts, ladders, forms, disclaimer, title and the end lockup stay code.
 There is no corner EXAMPLE chip and no untaught figure. A number is on screen only when this beat says it.
 
+Code stills are `stills/NNN.png`, where NNN is the beat number. A ChatGPT beat has no PNG. That beat number is the open slot.
+
 Hero cards: 6. Beats: 99. ChatGPT images needed: 51. Fallback images: 0.
 
 ## Hero cards
@@ -23,7 +25,7 @@ Hero cards: 6. Beats: 99. ChatGPT images needed: 51. Fallback images: 0.
 | `heroes/02.png` | A leave card: 23 October is 2,755 above 30,331, 24 October is 3,571 above 30,331 (closing price 33,902, still outside, so the finish rule is confirmed), and 7 October is 2,362 under the top and 339 over the middle. Every figure marked Example. | pass-list label, word for word | code | no |
 | `heroes/03.png` | An inside card: 27,969 between 24,930 and 30,331, a little above 27,630. | pass-list label, word for word | code | no |
 | `heroes/04.png` | A self-check card. The size line stays empty on purpose. | pass-list label, word for word | code | no |
-| `heroes/05.png` | Order of the lines: finish, then the before sentence, then the size line left blank. The word ceiling is not on this card. | added so this lesson has more than the pass-list card count | code | no |
+| `heroes/05.png` | Order of the lines: finish, then the before sentence, then the size line left blank. | added so this lesson has more than the pass-list card count | code | no |
 | `heroes/06.png` | After the word ceiling has been spoken: a ceiling of 600 dollars across 6 orders is 100 dollars an order. Example only. Not a size for your account. | added so this lesson has more than the pass-list card count | code | no |
 
 ## Beats

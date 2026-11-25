@@ -96,7 +96,7 @@ EXTRA_HEROES = {
     "06": [
         (
             "05.png",
-            "Order of the lines: finish, then the before sentence, then the size line left blank. The word ceiling is not on this card.",
+            "Order of the lines: finish, then the before sentence, then the size line left blank.",
         ),
         (
             "06.png",
