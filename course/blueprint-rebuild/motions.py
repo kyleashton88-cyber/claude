@@ -520,11 +520,14 @@ def _paint_stop_card(draw, shot: dict, local: float, ui) -> None:
         draw.rounded_rectangle([px, py, px + pill_w, py + 36], 8, fill=ui.CYAN)
         draw.text((px + 12, py + 6), label, font=face, fill=ui.NAVY)
         if show_out and len(pts) >= 2:
-            # Arrows sit beside the dots, not on them. Labels stay off the 24,930 line.
+            # The two outside days are close in price, so the words sit in a stack
+            # on the right, clear of each other and of the price dots.
             for index, (x, y) in enumerate(pts[-2:]):
-                label = f"Closing price {index + 1}"
-                draw.line([(x - 70, y - 36), (x - 18, y - 8)], fill=ui.CYAN, width=4)
-                draw.text((x - 168, y - 52), label, font=ui.font(28), fill=ui.WHITE)
+                label = "Day 1 outside" if index == 0 else "Day 2 still outside"
+                label_x = plot[2] - 240
+                label_y = plot[1] + 56 + index * 48
+                draw.line([(x, y), (label_x, label_y + 14)], fill=ui.CYAN, width=3)
+                draw.text((label_x, label_y), label, font=ui.font(28), fill=ui.WHITE)
 
 
 def paint_visual(base, shot: dict, local: float, ui) -> None:
@@ -587,8 +590,7 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
             fee_at = ui._phrase_at(shot, "exchanges charge")
             if fee_at is not None and local >= fee_at:
                 # In the lane under the stall, not across the drawing.
-                lane = ui.MOTION_LANE
-                draw.text((lane[0] + 16, lane[1] + 14), "A fee on each trade", font=ui.font(28), fill=ui.WHITE)
+                draw.text((ui.MX + 36, 250), "A fee on each trade", font=ui.font(28), fill=ui.WHITE)
             return
         sell_at = ui._phrase_at(shot, "later sell")
         if sell_at is None or local < sell_at:
