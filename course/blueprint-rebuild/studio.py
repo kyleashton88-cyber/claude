@@ -3822,12 +3822,13 @@ def _advance_build(img: Image.Image, shot: dict, local: float) -> None:
     """
     if (shot.get("kind") or "") == "disclaimer":
         return
-    beat = int(float(local) // 6)
+    beat = int(float(local) // 5)
     label = _BUILD_LABELS[beat % len(_BUILD_LABELS)]
     arr = np.asarray(img)
     step = 8
     small = arr[::step, ::step]
-    dark = (small[:, :, 0] < 36) & (small[:, :, 1] < 46) & (small[:, :, 2] < 62)
+    # The background grid is a 1px line. It is empty space, not content.
+    dark = (small[:, :, 0] < 55) & (small[:, :, 1] < 90) & (small[:, :, 2] < 130) & (small[:, :, 1] < 150)
     ink = np.pad(~dark, 4, constant_values=False)
     height, width = dark.shape
     best = None
