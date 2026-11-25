@@ -48,12 +48,12 @@ SPECS: dict[str, dict] = {
     "BP01-V06": {
         "title": "The stop, plainly",
         "rows": [
-            "EXAMPLE. 23 Oct close 33,086. Close 1 outside.",
-            "EXAMPLE. 24 Oct close 33,902. Close 2 still outside.",
+            "EXAMPLE. 23 Oct closing price 33,086. Closing price 1 outside.",
+            "EXAMPLE. 24 Oct closing price 33,902. Closing price 2 still outside.",
             "1. Stop the bot. Waiting orders are cancelled.",
             "2. Follow the rule: keep the coin, or swap back to cash.",
             "3. Who: the bot's stop setting, or you by hand.",
-            "Two daily closes. The second one still outside.",
+            "Two daily closing prices. The second one still outside.",
         ],
     },
     "BP01-V08": {
@@ -453,15 +453,15 @@ def _paint_stop_card(draw, shot: dict, local: float, ui) -> None:
     draw.polygon(points, fill=ui.CYAN)
     draw.line(points + [points[0]], fill=ui.CYAN, width=4)
     draw.text((cx - 36, cy - 16), "STOP", font=ui.font(28), fill=ui.NAVY)
-    draw.text((box[0] + 28, box[1] + 268), "Two closes outside.", font=ui.font(28), fill=ui.WHITE)
+    draw.text((box[0] + 28, box[1] + 268), "Two closing prices outside.", font=ui.font(28), fill=ui.WHITE)
     draw.text((box[0] + 28, box[1] + 308), "Then the stop acts.", font=ui.font(28), fill=ui.CYAN)
     steps = (
         "Write the stop",
         "Before you start",
-        "Two closes",
+        "Two closing prices",
         "Still outside",
-        "Close 1",
-        "Close 2",
+        "Closing price 1",
+        "Closing price 2",
         "You act",
         "The rule holds",
     )
@@ -522,7 +522,7 @@ def _paint_stop_card(draw, shot: dict, local: float, ui) -> None:
         if show_out and len(pts) >= 2:
             # Arrows sit beside the dots, not on them. Labels stay off the 24,930 line.
             for index, (x, y) in enumerate(pts[-2:]):
-                label = f"Close {index + 1}"
+                label = f"Closing price {index + 1}"
                 draw.line([(x - 70, y - 36), (x - 18, y - 8)], fill=ui.CYAN, width=4)
                 draw.text((x - 168, y - 52), label, font=ui.font(28), fill=ui.WHITE)
 

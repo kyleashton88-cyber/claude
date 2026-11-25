@@ -311,8 +311,8 @@ def bp01() -> list[dict]:
         vo=(
             "The range is the top line and the bottom line, taken from the path. "
             "Hindsight: this range is drawn after the fact. "
-            "The chart is bitcoin's real daily closes from 19 July to 16 October 2023. "
-            "Every close in this window stayed between those two lines."
+            "The chart is bitcoin's real daily closing prices from 19 July to 16 October 2023. "
+            "Every closing price in this window stayed between those two lines."
         ),
         caption="The top line and the bottom line, taken from the path. Bottom 24,930. Top 30,331.",
         levels=[LOW, HIGH],
@@ -348,7 +348,7 @@ def bp01() -> list[dict]:
     ))
     s.append(gloss(
         "How a grid can capture bounces",
-        "Think of a market stall. The stallholder buys stock a little cheaper and sells it a little dearer, and pays a fee on every sale. Exchanges charge a small fee on each trade. A grid can do that while price bounces inside the range. A bounce means price moves down and back up, or up and back down, and stays inside. One buy at a lower line and the later sell of that same coin is one pair. On these daily closes, the July to October example window finished only three pairs, each a buy and a sell on lines next to each other. The sell line is higher, so the cash that comes back is more than the cash that left, before the fee. A fee is what the exchange charges when an order fills. The fees come out of what the pair makes. If the fees are larger than that, the pair keeps nothing. This is not a promise. The pair finishes only if price does bounce and both orders fill.",
+        "Think of a market stall. The stallholder buys stock a little cheaper and sells it a little dearer, and pays a fee on every sale. Exchanges charge a small fee on each trade. A grid can do that while price bounces inside the range. A bounce means price moves down and back up, or up and back down, and stays inside. One buy at a lower line and the later sell of that same coin is one pair. On these daily closing prices, the July to October example window finished only three pairs, each a buy and a sell on lines next to each other. The sell line is higher, so the cash that comes back is more than the cash that left, before the fee. A fee is what the exchange charges when an order fills. The fees come out of what the pair makes. If the fees are larger than that, the pair keeps nothing. This is not a promise. The pair finishes only if price does bounce and both orders fill.",
         "A pair keeps the gap only after fees, and only on a bounce.",
         "Fee",
         "What the exchange charges when an order fills. It comes out of the gap.",
@@ -359,14 +359,14 @@ def bp01() -> list[dict]:
         chart_title="One day inside the range",
         candle={"high": 30184, "low": 29794, "close": 29914, "date": "19 July 2023"},
         vo=(
-            "The daily close is the last price of the day. Crypto trades all day, so the day is cut at a set time. "
+            "The daily closing price is the last price of the day. Crypto trades all day, so the day is cut at a set time. "
             "This lesson uses the end of each UTC day, the world's standard clock, which is 11am Sydney time in daylight saving, 10am otherwise. "
-            "This is a simple candle that shows the day's high, low and close. "
-            "Traders call it a candle because the full version has a thick body and a thin wick, like a candle. Here we only need the high, the low and the close. "
-            "This candle is 19 July 2023. The high, the low, and the close are labelled."
+            "This is a simple candle that shows the day's high, low and closing price. "
+            "Traders call it a candle because the full version has a thick body and a thin wick, like a candle. Here we only need the high, the low and the closing price. "
+            "This candle is 19 July 2023. The high, the low, and the closing price are labelled."
         ),
-        caption="19 July 2023. Close 29,914. This lesson uses the end of each UTC day, the world's standard clock, which is 11am Sydney time in daylight saving, 10am otherwise.",
-        term_text="Daily close",
+        caption="19 July 2023. Closing price 29,914. This lesson uses the end of each UTC day, the world's standard clock, which is 11am Sydney time in daylight saving, 10am otherwise.",
+        term_text="Daily closing price",
         definition_text="The last price of the day. This lesson uses the end of each UTC day, the world's standard clock, which is 11am Sydney time in daylight saving, 10am otherwise.",
     ))
     s.append(_shot(
@@ -376,21 +376,21 @@ def bp01() -> list[dict]:
         vo=(
             "The example is Bitcoin's public daily price in US dollars. "
             "From 19 July 2023 to 16 October 2023, every one of those days closed inside the range. "
-            "The close crossed the seven lines 28 times in that window. The count is an example, not a forecast. "
+            "The closing price crossed the seven lines 28 times in that window. The count is an example, not a forecast. "
             "We do not need to read each day. The shape is the lesson, and it is marked Example. "
             "Worked check: 19 July 2023 to 16 October 2023. The low is the bottom line. The high is the top line. Nothing on this card is an order."
         ),
-        caption="Every close stayed inside the range.",
+        caption="Every closing price stayed inside the range.",
         levels=[LOW, HIGH],
         term_text="Example",
         definition_text="A real past price used for practice. Not a live trade and not a forecast.",
     ))
     s.append(gloss(
         "Crossings",
-        "Those 28 crossings, each time the price crosses a line, are not 28 results. A crossing only means the close moved from one side of a line to the other. A pair is finished only when a buy and its later sell have both filled, and only after the fee. The price can cross many lines and still leave you holding coin if it walks out through the bottom.",
+        "Those 28 crossings, each time the price crosses a line, are not 28 results. A crossing only means the closing price moved from one side of a line to the other. A pair is finished only when a buy and its later sell have both filled, and only after the fee. The price can cross many lines and still leave you holding coin if it walks out through the bottom.",
         "A crossing is not a finished pair.",
         "Crossing",
-        "The close moved from one side of a line to the other. It is not a finished pair and not a result.",
+        "The closing price moved from one side of a line to the other. It is not a finished pair and not a result.",
     ))
     s.append(gloss(
         "One pair",
@@ -405,14 +405,14 @@ def bp01() -> list[dict]:
         "Now watch what you hold when the price leaves the range and stays out. Above the range the sells have filled and you are holding cash, with nothing left to sell. Below the range the buys have filled and you are holding coin, with nothing left to buy. That is why the way down matters most: every buy fills, and you are left holding coin.",
         "Leave through the top: cash. Leave through the bottom: coin.",
         "Leave",
-        "A close outside the range. Through the top you hold mostly cash. Through the bottom you hold mostly coin.",
+        "A closing price outside the range. Through the top you hold mostly cash. Through the bottom you hold mostly coin.",
     ))
     s.append(gloss(
         "The stop",
-        "Here is that stop rule on the real path. It triggers if a daily close is outside the range, through the top or the bottom, and the next daily close is still outside. Then the idea is finished. You stop the bot, which cancels the waiting orders, and do what you wrote: keep the coin or swap to cash. A bot's automatic stop is a price that can fire during the day. This course uses the two daily closes, unless your written plan says you turned on a price stop. This is a teaching rule, not a recommendation. The stop is your written rule for when you stop the bot. On 23 October 2023 the close finished above the top line, and the next day was still above it.",
-        "Two closes outside, top or bottom. Then stop the bot.",
+        "Here is that stop rule on the real path. It triggers if a daily closing price is outside the range, through the top or the bottom, and the next daily closing price is still outside. Then the idea is finished. You stop the bot, which cancels the waiting orders, and do what you wrote: keep the coin or swap to cash. A bot's automatic stop is a price that can fire during the day. This course uses the two daily closing prices, unless your written plan says you turned on a price stop. This is a teaching rule, not a recommendation. The stop is your written rule for when you stop the bot. On 23 October 2023 the closing price finished above the top line, and the next day was still above it.",
+        "Two closing prices outside, top or bottom. Then stop the bot.",
         "Stop",
-        "A written rule for what you do if price leaves the range and the next daily close is still outside.",
+        "A written rule for what you do if price leaves the range and the next daily closing price is still outside.",
         visual="BP01-V06",
     ))
     s.append(gloss(
@@ -446,10 +446,10 @@ def bp01() -> list[dict]:
     ))
     s.append(gloss(
         "The map",
-        "Steps one to six. This introduction is step one. Then what you need. Then exactly what a grid bot does, order by order. Then market regimes. Then choosing grid spacing and range. Then entry and exit rules. Steps seven to eleven. Then a paper test. Then weekly checks. Then common mistakes. Then scaling up under written rules. Then an opt-in lesson on liquidation and your complete plan.",
+        "Steps one to six. This introduction is step one. Then what you need. Then exactly what a grid bot does, order by order. Then market regimes. Then choosing grid spacing and range. Then entry and exit rules. Steps seven to eleven. Then a paper test. Then weekly checks. Then common mistakes. Then scaling up under written rules. Then an optional wrap-up of the spot page, and what this course does not cover.",
         "Steps 1 to 6, each lesson named.",
         "The map",
-        "The eleven lessons, ending in scaling under written rules and your complete plan.",
+        "The eleven lessons, ending in scaling under written rules and an optional wrap-up.",
         screen_lines=(
             ("1", "Introduction"),
             ("2", "Checklist"),
@@ -468,7 +468,7 @@ def bp01() -> list[dict]:
     ))
     s.append(gloss(
         "One sentence to keep",
-        "In short: a grid waits, it buys lower and sells higher while price bounces, the fees come out of what the pair makes, and if a daily close leaves and stays out, you stop the bot and follow the rule you wrote.",
+        "In short: a grid waits, it buys lower and sells higher while price bounces, the fees come out of what the pair makes, and if a daily closing price leaves and stays out, you stop the bot and follow the rule you wrote.",
         "Wait, bounce, fees, and a written stop.",
         "One sentence",
         "Buys lower, sells higher, fees come out of what the pair makes, and the stop is yours to follow.",
@@ -476,19 +476,19 @@ def bp01() -> list[dict]:
     s += stack("Self-check", [
         "Check yourself. Why does a grid start with some coin as well as cash? Because the sell orders need coin you already hold.",
         "In the example pair, why is the net about 8 dollars 46 and not the full 9 dollars? The two fees come out first.",
-        "Price closes above your top line, and the next day's close is still above it. What do you do, and who does it? You stop the bot and follow your written rule, by hand, unless you turned on the bot's stop setting.",
+        "Price closes above your top line, and the next day's closing price is still above it. What do you do, and who does it? You stop the bot and follow your written rule, by hand, unless you turned on the bot's stop setting.",
     ], "")
     s += stack("Your turn", [
         "Your turn. On paper, write the top and the bottom, one gap, and the stop rule.",
-        "Say what you will do if a daily close leaves the range and the next close is still outside. Pause the video and write your answer before you go on.",
+        "Say what you will do if a daily closing price leaves the range and the next closing price is still outside. Pause the video and write your answer before you go on.",
         "No real order is sent in this lesson. Paper practice comes in Lesson 7, and real money only after your written graduation rule. A graduation rule is the written test you pass on paper first. You draw the idea. If a screen appears later, it should be a copy of the page, and only on paper or demo.",
     ], "")
     s.append(gloss(
         "No secrets",
-        "Bring a notebook, and no secrets: no seed phrase, private key or API secret. A seed phrase or private key is the master password to a crypto wallet. An API secret is a key that lets an app place trades on your account, and sometimes move money out of it.",
+        "Bring a notebook, and no secrets: no seed phrase, private key or API secret. A seed phrase or private key is the master password to a crypto wallet. An API secret is a key that lets an app place trades on your account, and sometimes move money out of it. Never share a seed phrase, a private key or an API secret. Nobody from this course will ask for one.",
         "No seed phrase, private key, or API secret.",
         "Secrets",
-        "A seed phrase or private key is the master password to a crypto wallet. An API secret is a key that lets an app place trades on your account, and sometimes move money out of it.",
+        "A seed phrase or private key is the master password to a crypto wallet. An API secret is a key that lets an app place trades on your account, and sometimes move money out of it. Never share a seed phrase, a private key or an API secret. Nobody from this course will ask for one.",
     ))
     s.append(gloss(
         "The pair, next",
@@ -501,7 +501,7 @@ def bp01() -> list[dict]:
         "A grid bot places waiting buys below the current price and waiting sells above it, inside a range you choose.",
         "A finished pair buys lower and sells higher. The fees come out of what the pair makes. In the example that was about 8 dollars 46, and it is not a promise.",
         "Leave through the top and you hold mostly cash. Leave through the bottom and you hold mostly coin.",
-        "If a daily close leaves the range and the next close is still outside, you stop the bot and follow the rule you wrote.",
+        "If a daily closing price leaves the range and the next closing price is still outside, you stop the bot and follow the rule you wrote.",
     ], "")
     end = outro(
         "What you are going to need",
@@ -586,7 +586,7 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "No secrets keeps the keys off the page. The written stop is the action. "
         "Example marks a teaching number. "
         "For this course the pair is bitcoin priced in US dollars. "
-        "A demo account uses pretend money. A daily close is the last price of the day. "
+        "A demo account uses pretend money. A daily closing price is the last price of the day. "
         "You are naming that public series, not choosing an app.",
         [
             {"cue": "", "kind": "notebook", "shown": 0, "title": "Seven items"},
@@ -606,7 +606,7 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
             {"cue": "example marks", "kind": "notebook", "shown": 7, "highlight": 6, "title": "Seven items"},
             {"cue": "for this course", "title": "The pair", "lines": ["Bitcoin priced in US dollars.", "BTC/USD"], "example": True},
             {"cue": "uses pretend money", "title": "A demo account", "lines": ["Uses pretend money.", "BTC/USD"]},
-            {"cue": "a daily close", "title": "A daily close", "lines": ["A daily close is the last price of the day."]},
+            {"cue": "closing price", "title": "A daily closing price", "lines": ["A daily closing price is the last price of the day."]},
         ],
     ),
     (
@@ -614,7 +614,7 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "Three words, before any number. Range is the top line and the bottom line. "
         "An order is an instruction to buy or sell that can wait for a price. "
         "Levels are the price lines where orders wait, like the rungs of a ladder, and a gap is the space between two of them. "
-        "A stop is the rule for what you will do if a daily close finishes outside the range and the next daily close is still outside. "
+        "A stop is the rule for what you will do if a daily closing price finishes outside the range and the next daily closing price is still outside. "
         "The figures from lesson 1 are on the card, marked Example. "
         "If you can only say one of the three words, the page is missing a part.",
         [
@@ -632,7 +632,7 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "A private key is a secret that can move your crypto. "
         "An API secret is a password that lets a program place orders on an account, and sometimes move money out of it. "
         "You never type a seed phrase, a private key, or an API secret onto this page. "
-        "The chart has no balance on it. A public close is not your account. "
+        "The chart has no balance on it. A public closing price is not your account. "
         "If a form asks for a secret, that form is not this lesson.",
         [
             {"cue": "", "title": "", "lines": ["A wallet is where your crypto is held. A seed phrase is the list of words that unlocks that wallet."]},
@@ -646,18 +646,18 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "Copy the path",
         "You copy the range onto the page, not every day's prices. "
         "Copy the bottom line and the top line, with six gaps of about 900. "
-        "Every close in that window stayed inside the range. Mark each figure Example.",
+        "Every closing price in that window stayed inside the range. Mark each figure Example.",
         [
             {"cue": "", "kind": "chart", "stage": "range", "title": "Copy the range"},
             {"cue": "copy the bottom", "kind": "chart", "stage": "gaps", "title": "Copy the range"},
-            {"cue": "every close", "kind": "chart", "stage": "page", "title": "Copy the range"},
+            {"cue": "every closing", "kind": "chart", "stage": "page", "title": "Copy the range"},
         ],
     ),
     (
         "Worked check",
         "Worked check: pair, range, gaps, stop, and Example. "
         "If the stop line is only a tick with no sentence, the page fails the check. "
-        "The rule has to say: if a daily close finishes outside the range and the next daily close is still outside, the example is over.",
+        "The rule has to say: if a daily closing price finishes outside the range and the next daily closing price is still outside, the example is over.",
         [
             {"cue": "", "kind": "chart", "stage": "check", "title": "Worked check"},
         ],
@@ -686,7 +686,7 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
     (
         "The pair",
         "Write the pair first. The base is what you buy. The quote is what you pay with. "
-        "For this course the prices are the July to October example window, the public bitcoin closes from 19 July to 16 October 2023, so you buy the base, bitcoin, with the quote, US dollars, and that row is labelled BTC/USD. "
+        "For this course the prices are the July to October example window, the public bitcoin closing prices from 19 July to 16 October 2023, so you buy the base, bitcoin, with the quote, US dollars, and that row is labelled BTC/USD. "
         "Every other row depends on the pair. "
         "We price in US dollars. Your exchange may charge fees in Australian dollars, so keep each in its own column. "
         "If a fee sum is in Australian dollars, that sum goes on its own line, labelled BTC/AUD. "
@@ -715,7 +715,7 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "The stop",
         "The stop sentence has to say what you will do. "
         "A bot is a program that places and cancels the waiting orders for you. "
-        "Two daily closes outside the range, through the top or the bottom, and the second close still outside. "
+        "Two daily closing prices outside the range, through the top or the bottom, and the second closing price still outside. "
         "Then you stop the bot, which cancels the waiting orders, and you follow the rule you wrote. "
         "Write that stop in one sentence.",
         [
