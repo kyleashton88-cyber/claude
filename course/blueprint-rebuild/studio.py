@@ -3801,16 +3801,16 @@ def _caption_fragments(log, shot: dict, local: float) -> list[str]:
 
 
 _BUILD_LABELS = (
-    "Buy lower",
-    "Sell higher",
-    "One pair",
-    "Inside range",
-    "The stop",
-    "Daily price",
-    "Both filled",
-    "Hold coin",
-    "No promise",
-    "Follow rule",
+    "Buy",
+    "Sell",
+    "Pair",
+    "Range",
+    "Stop",
+    "Price",
+    "Filled",
+    "Coin",
+    "Promise",
+    "Rule",
 )
 
 
@@ -3820,7 +3820,7 @@ def _advance_build(img: Image.Image, shot: dict, local: float) -> None:
     The step changes every six seconds of the shot, which is the voice.
     Two words, not a caption line. No example chip and no new figure.
     """
-    if (shot.get("kind") or "") in {"brand", "disclaimer", "outro"}:
+    if (shot.get("kind") or "") == "disclaimer":
         return
     beat = int(float(local) // 6)
     label = _BUILD_LABELS[beat % len(_BUILD_LABELS)]
@@ -3831,12 +3831,15 @@ def _advance_build(img: Image.Image, shot: dict, local: float) -> None:
     ink = np.pad(~dark, 4, constant_values=False)
     height, width = dark.shape
     best = None
-    # Prefer a wide block. A small one still counts when the card is nearly full.
-    for win_w, win_h in ((40, 20), (28, 16), (18, 14)):
-        y_lo = 168 // step
-        y_hi = min(height - win_h - 1, 500 // step)
+    # Prefer a block in the lower half, inside the 5% margin, so it does not
+    # sit on a top formula or run off the right edge.
+    for win_w, win_h in ((36, 18), (26, 15), (16, 12)):
+        y_lo = 300 // step
+        y_hi = min(height - win_h - 1, 520 // step)
+        x_lo = 96 // step
+        x_hi = (1920 - 96) // step - win_w
         for y in range(y_lo, y_hi, 2):
-            for x in range(width - win_w - 2, 8, -3):
+            for x in range(x_hi, x_lo, -3):
                 if not ink[y:y + win_h + 8, x:x + win_w + 8].any() and dark[y:y + win_h, x:x + win_w].all():
                     best = (x, y, win_w, win_h)
                     break
@@ -3845,9 +3848,28 @@ def _advance_build(img: Image.Image, shot: dict, local: float) -> None:
         if best is not None:
             break
     if best is None:
+        for win_w, win_h in ((26, 15), (16, 12)):
+            y_lo = 160 // step
+            y_hi = min(height - win_h - 1, 300 // step)
+            x_lo = 96 // step
+            x_hi = (1920 - 96) // step - win_w
+            for y in range(y_lo, max(y_lo + 1, y_hi), 2):
+                for x in range(x_lo, x_hi, 3):
+                    if not ink[y:y + win_h + 8, x:x + win_w + 8].any() and dark[y:y + win_h, x:x + win_w].all():
+                        best = (x, y, win_w, win_h)
+                        break
+                if best is not None:
+                    break
+            if best is not None:
+                break
+    if best is None:
         return
     x0, y0 = best[0] * step, best[1] * step
-    x1, y1 = x0 + best[2] * step, y0 + best[3] * step
+    x1 = min(1920 - 96, x0 + best[2] * step)
+    y1 = min(620, y0 + best[3] * step)
+    x0 = max(96, x0)
+    if x1 - x0 < 120 or y1 - y0 < 80:
+        return
     draw = ImageDraw.Draw(img)
     face = font(48 if x1 - x0 >= 280 else 36)
     shown = label if face.getlength(label) <= (x1 - x0 - 16) else label.split()[0]
@@ -3858,17 +3880,17 @@ def _advance_build(img: Image.Image, shot: dict, local: float) -> None:
     if y1 - top >= 30:
         room = max(10, (y1 - top - 2) // slots)
         for index in range(slots):
-            filled = ((beat + index) % 2) == 0
+            filled = index != (beat % slots)
             yy = top + index * room
             bottom = min(y1 - 2, yy + room - 3)
-            if bottom <= yy + 6:
+            if bottom <= yy + 8:
                 continue
-            pill_w = int((x1 - x0 - 20) * (0.9 if filled else 0.35))
+            pill_w = int((x1 - x0 - 20) * (0.62 if filled else 0.28))
             box = [x0 + 10, yy, x0 + 10 + max(20, pill_w), bottom]
             if filled:
                 draw.rounded_rectangle(box, 4, fill=WHITE)
             else:
-                draw.rounded_rectangle(box, 4, outline=CYAN, width=3)
+                draw.rounded_rectangle(box, 4, outline=CYAN, width=4)
 
 
 def _open_build(img: Image.Image, shot: dict, local: float) -> None:
