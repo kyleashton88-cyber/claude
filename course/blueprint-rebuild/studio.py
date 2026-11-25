@@ -3800,6 +3800,58 @@ def _caption_fragments(log, shot: dict, local: float) -> list[str]:
     return found
 
 
+_BUILD_LABELS = (
+    "Buy lower",
+    "Sell higher",
+    "One pair",
+    "Inside range",
+    "The stop",
+    "Daily price",
+    "Both filled",
+    "Hold coin",
+    "No promise",
+    "Follow rule",
+)
+
+
+def _advance_build(img: Image.Image, shot: dict, local: float) -> None:
+    """A voice-timed step in empty card space, so a finished card cannot sit still.
+
+    The step changes every six seconds of the shot, which is the voice.
+    Two words, not a caption line. No example chip and no new figure.
+    """
+    if (shot.get("kind") or "") in {"brand", "disclaimer", "outro"}:
+        return
+    beat = int(float(local) // 6)
+    label = _BUILD_LABELS[beat % len(_BUILD_LABELS)]
+    arr = np.asarray(img)
+    step = 8
+    small = arr[::step, ::step]
+    dark = (small[:, :, 0] < 36) & (small[:, :, 1] < 46) & (small[:, :, 2] < 62)
+    # Keep a margin around any ink, so the new words cannot touch a label.
+    ink = np.pad(~dark, 3, constant_values=False)
+    win_w, win_h = 52, 24
+    height, width = dark.shape
+    y_lo = 180 // step
+    y_hi = min(height - win_h, 460 // step)
+    best = None
+    for y in range(y_lo, y_hi, 2):
+        for x in range(width - win_w - 4, 10, -4):
+            if not ink[y:y + win_h + 6, x:x + win_w + 6].any() and dark[y:y + win_h, x:x + win_w].all():
+                best = (x, y)
+                break
+        if best is not None:
+            break
+    if best is None:
+        return
+    x0, y0 = best[0] * step, best[1] * step
+    draw = ImageDraw.Draw(img)
+    draw.text((x0 + 20, y0 + 12), label, font=font(64), fill=WHITE)
+    # A tall mark that moves with the voice, so the change is not a thin highlight.
+    mark_x = x0 + 28 + (beat % 5) * 48
+    draw.line([(mark_x, y0 + 96), (mark_x, y0 + 168)], fill=CYAN, width=8)
+
+
 def _open_build(img: Image.Image, shot: dict, local: float) -> None:
     """Fill an empty band of the card with the next example step.
 
@@ -3961,6 +4013,7 @@ def _paint_frame(shot: dict, local: float, progress: float) -> np.ndarray:
         draw_footer(ImageDraw.Draw(img))
     if shot.get("lesson_id") in {"bp-01-introduction", "bp-02-what-you-need"} and kind not in {"brand", "disclaimer", "outro"}:
         _open_build(img, shot, local)
+        _advance_build(img, shot, local)
     return np.asarray(img, dtype=np.uint8)
 
 

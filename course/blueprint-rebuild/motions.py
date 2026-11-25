@@ -41,7 +41,7 @@ SPECS: dict[str, dict] = {
             "EXAMPLE. 29 Aug sell 0.01 bitcoin at 27,630 = US$276.30",
             "EXAMPLE. Before fees US$9.00",
             "EXAMPLE. Fees 0.1% + 0.1% = US$0.54",
-            "EXAMPLE. After fees, net about US$8.46 (8.4564)",
+            "EXAMPLE. After fees, about 8.46",
             "Only if price comes back up. Not a forecast.",
         ],
     },
@@ -653,7 +653,7 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
             ("Down", "81.90", ui._phrase_at(shot, "81")),
         ]
         ui._example(draw, ui.RIGHT - 280, 168)
-        draw.text((ui.MX + 28, 188), "Three buys on the way down", font=ui.font(32), fill=ui.WHITE)
+        draw.text((ui.MX + 28, 188), "Example, made up", font=ui.font(32), fill=ui.WHITE)
         down_at = ui._phrase_at(shot, "you are down")
         # Before the buys, a falling price and a stop. Not a reprint of the caption.
         first_buy = ui._phrase_at(shot, "276")
@@ -697,7 +697,7 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
             )
             ink = ui.NAVY if hot else ui.CYAN
             draw.text((ui.MX + 28, y + 12), name, font=ui.font(32), fill=ink)
-            draw.text((ui.MX + 280, y + 12), "EXAMPLE  " + value, font=ui.font(32), fill=ui.NAVY if hot else ui.WHITE)
+            draw.text((ui.MX + 280, y + 12), value, font=ui.font(32), fill=ui.NAVY if hot else ui.WHITE)
             y += 64
         if local >= (ui._phrase_at(shot, "0.03") or 10**9):
             draw.text((ui.MX + 28, y + 8), "0.03 BTC × $24,000 = $720", font=ui.font(32), fill=ui.CYAN)
@@ -741,15 +741,6 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
         y += step
         if y > 700:
             break
-    if y + 84 < 620 and shot.get("lesson_id") in {"bp-01-introduction", "bp-02-what-you-need"}:
-        steps = (
-            "EXAMPLE 24,930", "EXAMPLE 26,730", "EXAMPLE 27,630", "EXAMPLE 28,531",
-            "EXAMPLE 30,331", "EXAMPLE gap 900", "EXAMPLE 0.01", "EXAMPLE fee 0.1%",
-        )
-        words = shot.get("word_times") or []
-        heard = sum(1 for _text, start, _end in words if float(start) <= local)
-        label = steps[(heard // 5) % len(steps)]
-        draw.text((ui.MX + 36, y + 8), label, font=ui.font(72), fill=ui.WHITE)
     if chapter == "How a grid can capture bounces" and any("26,730" in text for text in rows[:shown]):
         draw.text((ui.MX + 28, 620), "26,730 = 24,930 + 900 + 900", font=ui.font(28), fill=ui.CYAN)
     if one_pair:
@@ -760,7 +751,7 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
         if fee_line_on:
             draw.text(
                 (ui.MX + 24, 560),
-                "0.1% of $267.30 = $0.2673; 0.1% of $276.30 = $0.2763; total $0.5436 ≈ $0.54",
+                "About 27 cents and about 28 cents. About 54 cents together.",
                 font=ui.font(28),
                 fill=ui.CYAN,
             )
