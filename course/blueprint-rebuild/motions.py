@@ -691,8 +691,9 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
             if at is None or local < at:
                 break
             hot = name == latest
+            # Leave the right side open so the voice-timed step has room.
             draw.rounded_rectangle(
-                [ui.MX, y, ui.RIGHT, y + 56], 12,
+                [ui.MX, y, ui.RIGHT - 480, y + 56], 12,
                 fill=ui.CYAN if hot else ui.GLASS, outline=ui.CYAN, width=2,
             )
             ink = ui.NAVY if hot else ui.CYAN

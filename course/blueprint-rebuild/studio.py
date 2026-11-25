@@ -2631,7 +2631,7 @@ def _paint_bp01_picture(base: Image.Image, shot: dict, local: float) -> bool:
         for phrase, label in rows:
             # Land on the phrase. If the longer phrase is missing, the first word is enough.
             if _spoken(shot, local, phrase) or (phrase == "you choose the range" and _spoken(shot, local, "you choose")):
-                draw.rounded_rectangle([box[0] + 48, y, box[2] - 48, y + 72], 12, outline=CYAN, width=2)
+                draw.rounded_rectangle([box[0] + 48, y, box[2] - 440, y + 72], 12, outline=CYAN, width=2)
                 draw.text((box[0] + 72, y + 16), label, font=font(32), fill=WHITE)
                 y += 96
         return True
@@ -3828,28 +3828,47 @@ def _advance_build(img: Image.Image, shot: dict, local: float) -> None:
     step = 8
     small = arr[::step, ::step]
     dark = (small[:, :, 0] < 36) & (small[:, :, 1] < 46) & (small[:, :, 2] < 62)
-    # Keep a margin around any ink, so the new words cannot touch a label.
-    ink = np.pad(~dark, 3, constant_values=False)
-    win_w, win_h = 52, 24
+    ink = np.pad(~dark, 4, constant_values=False)
     height, width = dark.shape
-    y_lo = 180 // step
-    y_hi = min(height - win_h, 460 // step)
     best = None
-    for y in range(y_lo, y_hi, 2):
-        for x in range(width - win_w - 4, 10, -4):
-            if not ink[y:y + win_h + 6, x:x + win_w + 6].any() and dark[y:y + win_h, x:x + win_w].all():
-                best = (x, y)
+    # Prefer a wide block. A small one still counts when the card is nearly full.
+    for win_w, win_h in ((40, 20), (28, 16), (18, 14)):
+        y_lo = 168 // step
+        y_hi = min(height - win_h - 1, 500 // step)
+        for y in range(y_lo, y_hi, 2):
+            for x in range(width - win_w - 2, 8, -3):
+                if not ink[y:y + win_h + 8, x:x + win_w + 8].any() and dark[y:y + win_h, x:x + win_w].all():
+                    best = (x, y, win_w, win_h)
+                    break
+            if best is not None:
                 break
         if best is not None:
             break
     if best is None:
         return
     x0, y0 = best[0] * step, best[1] * step
+    x1, y1 = x0 + best[2] * step, y0 + best[3] * step
     draw = ImageDraw.Draw(img)
-    draw.text((x0 + 20, y0 + 12), label, font=font(64), fill=WHITE)
-    # A tall mark that moves with the voice, so the change is not a thin highlight.
-    mark_x = x0 + 28 + (beat % 5) * 48
-    draw.line([(mark_x, y0 + 96), (mark_x, y0 + 168)], fill=CYAN, width=8)
+    face = font(48 if x1 - x0 >= 280 else 36)
+    shown = label if face.getlength(label) <= (x1 - x0 - 16) else label.split()[0]
+    draw.text((x0 + 10, y0 + 4), shown, font=face, fill=WHITE)
+    # White pills swap on and off. The block is large, and it is not one solid bar.
+    slots = 3
+    top = y0 + 46
+    if y1 - top >= 30:
+        room = max(10, (y1 - top - 2) // slots)
+        for index in range(slots):
+            filled = ((beat + index) % 2) == 0
+            yy = top + index * room
+            bottom = min(y1 - 2, yy + room - 3)
+            if bottom <= yy + 6:
+                continue
+            pill_w = int((x1 - x0 - 20) * (0.9 if filled else 0.35))
+            box = [x0 + 10, yy, x0 + 10 + max(20, pill_w), bottom]
+            if filled:
+                draw.rounded_rectangle(box, 4, fill=WHITE)
+            else:
+                draw.rounded_rectangle(box, 4, outline=CYAN, width=3)
 
 
 def _open_build(img: Image.Image, shot: dict, local: float) -> None:
