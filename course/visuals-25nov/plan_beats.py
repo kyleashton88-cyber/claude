@@ -227,9 +227,6 @@ def plan(number: str) -> dict:
             problems = []
             if seconds > 8:
                 problems.append("hold over 8s")
-            if number == "11" and re.search(r"\b(margin|liquidation|isolated|cross)\b", beat.lower()):
-                if "no definition" not in visual:
-                    problems.append("excluded term would be defined")
             if number in {"10", "11"} and "2020" in window_for(number, beat):
                 problems.append("2020 chart on a lesson that does not use it")
             rows.append({

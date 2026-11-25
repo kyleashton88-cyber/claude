@@ -1,15 +1,26 @@
 id: bp-08-managing-and-monitoring
 format: blueprint
-source: course/data/public-prices/btc-usd-windows.json
-disclaimer_spoken: "Education only. Not financial advice. This is general information and doesn't consider your objectives, financial situation or needs. Crypto is high risk. You could lose all the money you put in."
+source: course/approved-scripts-25nov/BP-08-APPROVED.md
+disclaimer_spoken: "Education only. Not financial advice. This is general information and doesn't consider your objectives, financial situation or needs. Crypto is high risk; you could lose all the money you put in. Past performance is not a reliable indicator of future results. The prices are public historical daily prices, marked Example. The range uses the high and the low of that window. When we say inside or outside, we use the daily closing price. No order is sent from this lesson."
 disclaimer_on_screen: "Education only. Not financial advice."
+past_performance: "Past performance is not a reliable indicator of future results."
 dates:
   - "7 October 2023"
   - "23 October 2023"
   - "7 October"
   - "23 October"
+  - "24 October 2023"
+  - "24 October"
 chart_labels:
-  - "08"
-  - "28"
-  - "33"
+  - "54"
+  - "339"
+  - "0.01"
+  - "2755"
+  - "24930"
   - "27630"
+  - "27969"
+  - "30331"
+  - "33086"
+  - "33902"
+spoken_words: 1954
+beats: 213

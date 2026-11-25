@@ -1,11 +1,26 @@
 id: bp-07-spot-paper-trading
 format: blueprint
-source: course/data/public-prices/btc-usd-windows.json
-disclaimer_spoken: "Education only. Not financial advice. This is general information and doesn't consider your objectives, financial situation or needs. Crypto is high risk. You could lose all the money you put in."
+source: course/approved-scripts-25nov/BP-07-APPROVED.md
+disclaimer_spoken: "Education only. Not financial advice. This is general information and doesn't consider your objectives, financial situation or needs. Crypto is high risk; you could lose all the money you put in. Past performance is not a reliable indicator of future results. The prices are public historical daily prices, marked Example. The range uses the high and the low of that window. When we say inside or outside, we use the daily closing price. No order is sent from this lesson."
 disclaimer_on_screen: "Education only. Not financial advice."
+past_performance: "Past performance is not a reliable indicator of future results."
 dates:
+  - "19 July 2023"
+  - "16 October 2023"
+  - "23 October 2023"
+  - "7 October 2023"
 chart_labels:
-  - "07"
-  - "14"
+  - "100"
+  - "600"
+  - "900"
   - "24930"
+  - "25830"
+  - "26730"
+  - "27630"
+  - "27969"
+  - "28531"
+  - "29431"
   - "30331"
+  - "33086"
+spoken_words: 1739
+beats: 185
