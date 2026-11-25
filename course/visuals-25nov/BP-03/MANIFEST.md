@@ -13,9 +13,9 @@ Do not reuse the 180 old fallback stills. They belong to the old scripts.
 A ChatGPT beat is an illustration. Charts, ladders, forms, disclaimer, title and the end lockup stay code.
 There is no corner EXAMPLE chip and no untaught figure. A number is on screen only when this beat says it.
 
-Code stills are `stills/NNN.png`, where NNN is the beat number. A ChatGPT beat has no PNG. That beat number is the open slot.
+Code stills are `stills/NNN.png`, where NNN is the beat number. Illustration beats are generated here. Source is cursor. Status is PENDING_CS_QA, not passed.
 
-Hero cards: 7. Beats: 116. ChatGPT images needed: 37. Fallback images: 0.
+Hero cards: 7. Beats: 116. Illustration images: 37, source cursor, status PENDING_CS_QA.
 
 ## Hero cards
 
