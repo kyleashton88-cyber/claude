@@ -35,7 +35,12 @@ class KokoroEngine:
         # this voice. ASIC is the word AY-sick. API is three letters, once.
         phonemes = self.kokoro.tokenizer.phonemize(text, self.lang)
         phonemes = phonemes.replace("ɐsˈɪk", "ˈeɪsɪk")
-        phonemes = phonemes.replace("ˌeɪpˌiːˈaɪ", "ˈeɪ. pˈiː. ˈaɪ.")
+        # One connected "A-P-I", not a pause between the letters.
+        phonemes = phonemes.replace("ˌeɪpˌiːˈaɪ", "ˈeɪpiːˈaɪ")
+        phonemes = phonemes.replace("ˈeɪ. pˈiː. ˈaɪ.", "ˈeɪpiːˈaɪ")
+        # "coin" was coming out as "kind". Keep the word; use the join vowel.
+        if "coin" in text.lower():
+            phonemes = phonemes.replace("kˈaɪn", "kˈɔɪn")
         samples, rate = self.kokoro.create(
             phonemes, voice=self.voice_name, speed=speed, lang=self.lang, is_phonemes=True,
         )

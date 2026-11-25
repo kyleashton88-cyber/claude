@@ -41,7 +41,7 @@ SPECS: dict[str, dict] = {
             "EXAMPLE. 29 Aug sell 0.01 bitcoin at 27,630 = US$276.30",
             "EXAMPLE. Before fees US$9.00",
             "EXAMPLE. Fees 0.1% + 0.1% = US$0.54",
-            "EXAMPLE. After fees, about 8.46",
+            "EXAMPLE. After fees, about 8.46. Net 8.4564.",
             "Only if price comes back up. Not a forecast.",
         ],
     },
@@ -417,7 +417,7 @@ def _paint_stall(draw, ui, shot: dict, local: float) -> None:
     )
     y = 540
     due = [line for need, line in notes if frac >= need]
-    draw.text((box[0] + 36, 500), "Example amount, explained shortly", font=ui.font(28), fill=ui.CYAN)
+    draw.text((box[0] + 36, 500), "Not to scale. The coin amount comes later.", font=ui.font(28), fill=ui.CYAN)
     for index, line in enumerate(due):
         latest = index == len(due) - 1
         draw.rounded_rectangle(
@@ -490,8 +490,8 @@ def _paint_stop_card(draw, shot: dict, local: float, ui) -> None:
     top_y, bot_y = y_of(30331), y_of(24930)
     draw.line([(plot[0] + 12, top_y), (plot[2] - 12, top_y)], fill=ui.CYAN, width=3)
     draw.line([(plot[0] + 12, bot_y), (plot[2] - 12, bot_y)], fill=ui.CYAN, width=3)
-    draw.text((plot[2] - 140, top_y - 32), "30,331", font=ui.font(28), fill=ui.CYAN)
-    draw.text((plot[2] - 140, bot_y + 8), "24,930", font=ui.font(28), fill=ui.CYAN)
+    draw.text((plot[0] + 16, top_y - 36), "30,331", font=ui.font(28), fill=ui.CYAN)
+    draw.text((plot[0] + 16, bot_y + 8), "24,930", font=ui.font(28), fill=ui.CYAN)
     ui._example(draw, plot[2] - 200, plot[1] + 8)
     # The path grows with the words, not on a clock. No playhead bar.
     words = shot.get("word_times") or []
@@ -520,13 +520,13 @@ def _paint_stop_card(draw, shot: dict, local: float, ui) -> None:
         draw.rounded_rectangle([px, py, px + pill_w, py + 36], 8, fill=ui.CYAN)
         draw.text((px + 12, py + 6), label, font=face, fill=ui.NAVY)
         if show_out and len(pts) >= 2:
-            # The two outside days are close in price, so the words sit in a stack
-            # on the right, clear of each other and of the price dots.
+            # Labels sit on the left of the plot, under the date pill, so the
+            # leader stops before the words and does not cross 30,331.
             for index, (x, y) in enumerate(pts[-2:]):
                 label = "Day 1 outside" if index == 0 else "Day 2 still outside"
-                label_x = plot[2] - 240
-                label_y = plot[1] + 56 + index * 48
-                draw.line([(x, y), (label_x, label_y + 14)], fill=ui.CYAN, width=3)
+                label_x = plot[0] + 16
+                label_y = plot[1] + 120 + index * 44
+                draw.line([(x, y), (label_x + 150, label_y + 14)], fill=ui.CYAN, width=3)
                 draw.text((label_x, label_y), label, font=ui.font(28), fill=ui.WHITE)
 
 
@@ -584,6 +584,8 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
         if october_at is None or local < october_at:
             rows = [row for row in rows if "Oct" not in row and "33," not in row]
     if chapter == "How a grid can capture bounces":
+        # 0.01 is taught with the fee card, later. Do not preview it here.
+        rows = [row.replace("0.01 bitcoin", "a coin amount").replace("0.01", "a coin amount") for row in rows]
         buy_at = ui._phrase_at(shot, "one buy")
         if buy_at is None or local < buy_at:
             _paint_stall(draw, ui, shot, local)
@@ -743,17 +745,19 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
         if y > 700:
             break
     if chapter == "How a grid can capture bounces" and any("26,730" in text for text in rows[:shown]):
-        draw.text((ui.MX + 28, 620), "26,730 = 24,930 + 900 + 900", font=ui.font(28), fill=ui.CYAN)
+        draw.text((ui.MX + 28, 620), "26,730 = 24,930 + 900 + 900", font=ui.font(40), fill=ui.CYAN)
+        draw.text((ui.MX + 28, 668), "Not to scale. One worked bounce.", font=ui.font(28), fill=ui.WHITE)
     if one_pair:
         # At most four lines, counting the formula and the fee basis.
         if formula_on:
             draw.rounded_rectangle([ui.MX, 188, ui.RIGHT, 236], 10, fill=ui.GLASS, outline=ui.CYAN, width=2)
             draw.text((ui.MX + 24, 198), "gap × coin size = gross:  $900 × 0.01 = $9.00", font=ui.font(32), fill=ui.WHITE)
         if fee_line_on:
+            draw.text((ui.MX + 24, 520), "EXAMPLE  0.2673 + 0.2763 = 0.5436", font=ui.font(36), fill=ui.CYAN)
             draw.text(
                 (ui.MX + 24, 560),
-                "About 27 cents and about 28 cents. About 54 cents together.",
+                "About 27 cents and about 28 cents. About US$0.54.",
                 font=ui.font(28),
-                fill=ui.CYAN,
+                fill=ui.WHITE,
             )
         return

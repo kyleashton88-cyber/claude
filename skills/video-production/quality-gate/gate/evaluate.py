@@ -171,13 +171,28 @@ def evaluate(
     checks.append(_check("true_peak", peak_problems, ok_detail=peak_ok))
 
     frames = gray_frames(master, fps=2)
-    hold, hold_at = longest_static(frames, fps=2)
-    if hold > profile.max_hold_seconds + 1e-6:
-        freeze = [f"static frames run {hold:.1f}s from {hold_at:.1f}s, limit {profile.max_hold_seconds:.0f}s"]
-        freeze_ok = ""
+    if profile.name == "blueprint":
+        # The glow moves every frame, so a whole-frame diff reports 0.5s while
+        # the card is still. Measure the card with captions and the lower third masked.
+        picture = visual_frames(master, fps=1)
+        holds = visual_holds(picture, fps=1, min_seconds=profile.max_hold_seconds)
+        if holds:
+            start, seconds = max(holds, key=lambda item: item[1])
+            freeze = [
+                f"static run {seconds:.0f}s from {start:.0f}s, captions ignored, limit {profile.max_hold_seconds:.0f}s"
+            ]
+            freeze_ok = ""
+        else:
+            freeze = []
+            freeze_ok = f"no picture hold over {profile.max_hold_seconds:.0f}s once captions and the lower third are ignored"
     else:
-        freeze = []
-        freeze_ok = f"longest static run {hold:.1f}s, limit {profile.max_hold_seconds:.0f}s"
+        hold, hold_at = longest_static(frames, fps=2)
+        if hold > profile.max_hold_seconds + 1e-6:
+            freeze = [f"static frames run {hold:.1f}s from {hold_at:.1f}s, limit {profile.max_hold_seconds:.0f}s"]
+            freeze_ok = ""
+        else:
+            freeze = []
+            freeze_ok = f"longest static run {hold:.1f}s, limit {profile.max_hold_seconds:.0f}s"
     checks.append(_check("frozen", freeze, ok_detail=freeze_ok))
 
     if profile.name == "blueprint":
