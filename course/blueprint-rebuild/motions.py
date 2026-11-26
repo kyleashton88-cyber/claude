@@ -468,14 +468,18 @@ def _paint_stop_card(draw, shot: dict, local: float, ui) -> None:
     words = shot.get("word_times") or []
     heard = sum(1 for _text, start, _end in words if float(start) <= local)
     frac = heard / max(1, len(words)) if words else 0
-    count = max(1, min(len(steps), int(frac * len(steps)) + 1))
+    count = min(len(steps), 1 + heard // 6)
     sy = box[1] + 360
-    for line in steps[:count]:
-        if sy + 48 > box[3] - 16:
+    for index, line in enumerate(steps[:count]):
+        if sy + 36 > box[3] - 16:
             break
-        draw.rounded_rectangle([box[0] + 28, sy, box[0] + 560, sy + 48], 8, fill=ui.CYAN)
-        draw.text((box[0] + 40, sy + 10), line, font=ui.font(28), fill=ui.NAVY)
-        sy += 56
+        hot = index == count - 1
+        draw.rounded_rectangle(
+            [box[0] + 28, sy, box[0] + 560, sy + 32], 8,
+            outline=ui.CYAN, width=4 if hot else 2,
+        )
+        draw.text((box[0] + 40, sy + 2), line, font=ui.font(28), fill=ui.WHITE if hot else ui.CYAN)
+        sy += 40
     inside, outside = _summer_closes(ui)
     october_at = ui._word_at(shot, "october")
     show_out = october_at is not None and local >= october_at
@@ -760,4 +764,5 @@ def paint_visual(base, shot: dict, local: float, ui) -> None:
                 font=ui.font(28),
                 fill=ui.WHITE,
             )
+            draw.text((ui.MX + 24, 600), "Net 8.4564", font=ui.font(40), fill=ui.CYAN)
         return

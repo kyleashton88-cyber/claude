@@ -1604,7 +1604,7 @@ def paint_copy_band(base: Image.Image) -> None:
 
 def _center_card(draw: ImageDraw.ImageDraw, title: str, lines: list[str], example: bool = False) -> None:
     """One card in the middle of the frame, so a new line is a new picture."""
-    box = (MX, 200, RIGHT, 680)
+    box = (MX, 200, RIGHT, 620)
     draw.rounded_rectangle(box, 22, fill=GLASS, outline=CYAN, width=3)
     draw.text((box[0] + 36, box[1] + 28), title, font=font(40), fill=CYAN)
     y = box[1] + 110
@@ -2248,7 +2248,12 @@ def _paint_journal(base: Image.Image, shot: dict, local: float, note: str = "") 
         for phrase, label, value in columns:
             if _spoken(shot, local, phrase):
                 by_voice.append((label, value))
-    shown = [(label, value) for _phrase, label, value in columns] if started else []
+    columns_at = _phrase_at(shot, "the columns") or _phrase_at(shot, "columns on")
+    after = 0
+    if columns_at is not None:
+        after = sum(1 for _text, start, _end in words if columns_at <= float(start) <= local)
+    due = min(len(columns), 1 + after // 4)
+    shown = [(label, value) for _phrase, label, value in columns[:due]] if started else []
     y = panel[1] + 56
     if not shown and _spoken(shot, local, "for every transaction"):
         fields = ("Date and time", "Amount", "AUD value", "Fee", "Exchange", "What it was for", "Other side")
@@ -2297,10 +2302,12 @@ def _paint_safety(base: Image.Image, step: int, note: str = "", mark: int = 0) -
     # The note is a large block on the right. It moves with each spoken point,
     # so a long account chapter is not one still picture.
     if note:
-        bar_y = panel[1] + 108 + (mark % 4) * 72
-        draw.rounded_rectangle([panel[0] + 520, bar_y, panel[2] - 28, bar_y + 60], 10, fill=CYAN)
-        for i, line in enumerate(wrap(note, 22, 360)[:2]):
-            draw.text((panel[0] + 536, bar_y + 8 + i * 28), line, font=font(28), fill=NAVY)
+        bar_y = panel[1] + 96 + (mark % 3) * 110
+        bar = [panel[0] + 520, bar_y, panel[2] - 36, bar_y + 96]
+        draw.rounded_rectangle(bar, 10, fill=CYAN)
+        note_w = bar[2] - bar[0] - 32
+        for i, line in enumerate(wrap(note, 28, note_w)[:2]):
+            draw.text((bar[0] + 16, bar_y + 14 + i * 36), line, font=font(28), fill=NAVY)
     y = panel[1] + 150
     for index, label in enumerate(SAFETY_STEPS, start=1):
         on = index <= max(step, 1) if step else False
@@ -2373,10 +2380,15 @@ def _paint_fee(base: Image.Image, stage: str, shot: dict | None = None, local: f
         draw.text((box[0] + 48, y + 8), name, font=font(32 if latest else 28), fill=ink)
         draw.text((box[0] + 460, y + 8), value, font=font(32 if latest else 28), fill=ink)
         y += height + 8
-    if stage == "maker":
-        draw.text((box[0] + 28, y + 8), "Read the maker fee first.", font=font(28), fill=WHITE)
+    if stage == "maker" and y + 44 < box[3] - 8:
+        draw.text((box[0] + 28, y + 8), "Waiting order.", font=font(28), fill=WHITE)
     if stage == "aud":
-        draw.text((box[0] + 28, y + 4), "Fee row: BTC/AUD. Not the July to October example window.", font=font(28), fill=WHITE)
+        note = "This fee row is Australian dollars. It is not the July to October example window."
+        for line in wrap(note, 28, box[2] - box[0] - 80)[:2]:
+            if y + 36 > box[3] - 12:
+                break
+            draw.text((box[0] + 28, y + 4), line, font=font(28), fill=WHITE)
+            y += 36
         y += 44
     if stage == "gap":
         # Each comparison arrives with the words, as its own row.
@@ -2541,10 +2553,10 @@ def _paint_bp02_scene(base: Image.Image, scene: str, local: float = 0, shot: dic
         draw.text((x0 + 48, y0 + 280), "Stop. Define it before you go on.", font=font(32), fill=WHITE)
     elif scene == "practice":
         _example(draw, x0 + 28, y0 + 24)
-        draw.rounded_rectangle([x0 + 80, y0 + 120, x1 - 80, y0 + 460], 16, outline=CYAN, width=3)
-        draw.text((x0 + 120, y0 + 170), "Example", font=font(48), fill=WHITE)
-        draw.text((x0 + 120, y0 + 260), "A practice sketch.", font=font(32), fill=CYAN)
-        draw.text((x0 + 120, y0 + 320), "Not a live plan.", font=font(32), fill=WHITE)
+        inner_bottom = min(y0 + 400, box[3] - 28)
+        draw.rounded_rectangle([x0 + 80, y0 + 110, x1 - 80, inner_bottom], 16, outline=CYAN, width=3)
+        draw.text((x0 + 120, y0 + 150), "Practice sketch", font=font(40), fill=WHITE)
+        draw.text((x0 + 120, y0 + 220), "Not a live plan.", font=font(32), fill=CYAN)
     else:
         draw.text((x0 + 48, y0 + 80), scene, font=font(36), fill=WHITE)
 
@@ -3942,41 +3954,66 @@ def _advance_build(img: Image.Image, shot: dict, local: float) -> None:
 
 
 def _open_build(img: Image.Image, shot: dict, local: float) -> None:
-    """A tall line of words already spoken, in empty space under the card.
+    """One clause highlight inside the card. A new clause every six spoken words.
 
-    It changes as the voice moves, so a finished card cannot sit for 8 seconds.
-    It is not the rotating Buy/Pair/Promise widget, and it is not a caption.
+    The panel is tall enough to count as a build. It is not drawn under the
+    card, and it is never a four-word reprint of the caption.
     """
     words = shot.get("word_times") or []
     skip = {
         "that", "this", "with", "from", "your", "have", "will", "what", "when",
         "they", "them", "then", "than", "into", "about", "there", "their",
         "would", "could", "should", "which", "where", "just", "only", "each",
+        "example",
     }
-    content = []
+    heard: list[str] = []
     for text, start, _end in words:
         if float(start) > local:
             break
         token = str(text).strip(".,;:!?\"'")
-        if len(token) > 3 and token.lower() not in skip and token.lower() != "example":
-            content.append(token)
-    if len(content) < 3:
+        if token and not any(ch.isdigit() for ch in token):
+            heard.append(token)
+    if len(heard) < 6:
         return
-    # Not three words in a row, so this cannot reprint a caption line.
-    lines = [content[0], content[len(content) // 2], content[-1]]
-    face = font(36)
-    x, y = MX, 656
-    width = max(int(face.getlength(line)) for line in lines) + 8
-    height = 40 * len(lines)
-    if x + width > RIGHT or y + height > 790:
+    step = len(heard) // 6
+    chunk: list[str] = []
+    for token in heard[step * 6:step * 6 + 6]:
+        if token.lower() in skip or len(token) < 4:
+            continue
+        chunk.append(token)
+        if len(chunk) == 3:
+            break
+    if len(chunk) < 2:
         return
+    label = " ".join(chunk).title()
+    face = font(40)
+    width = max(460, int(face.getlength(label)) + 40)
+    height = 120
     arr = np.asarray(img)
-    patch = arr[y:y + height, x:x + width]
-    if patch.size == 0 or int((patch[:, :, 1] > 90).sum()) > 80:
+    bright = arr[:, :, 1] > 90
+    found = None
+    for y in range(188, 500, 8):
+        if y + height > 620:
+            break
+        for x in (260, 780, 1180):
+            if x + width > RIGHT - 8:
+                continue
+            if int(bright[y:y + height, x:x + width].sum()) < 24:
+                found = (x, y)
+                break
+        if found:
+            break
+    if found is None:
         return
+    x, y = found
     draw = ImageDraw.Draw(img)
-    for index, line in enumerate(lines):
-        draw.text((x, y + index * 40), line, font=face, fill=WHITE)
+    draw.rounded_rectangle([x, y, x + width, y + height], 14, outline=CYAN, width=4)
+    draw.text((x + 18, y + 18), label, font=face, fill=WHITE)
+    marks = min(8, step + 1)
+    mx = x + 18
+    for _index in range(marks):
+        draw.rounded_rectangle([mx, y + 78, mx + 36, y + 100], 6, outline=CYAN, width=3)
+        mx += 48
     return
     if shot.get("candle") and local < 4.5:
         return
@@ -4129,9 +4166,8 @@ def _paint_frame(shot: dict, local: float, progress: float) -> np.ndarray:
             chart_card(img, shot, local, dur)
         lower_third(ImageDraw.Draw(img), shot)
         draw_footer(ImageDraw.Draw(img))
-    if shot.get("lesson_id") in {"bp-01-introduction", "bp-02-what-you-need"} and kind not in {"brand", "disclaimer", "outro"}:
+    if shot.get("lesson_id") in {"bp-01-introduction", "bp-02-what-you-need"} and kind not in {"brand"}:
         _open_build(img, shot, local)
-        _advance_build(img, shot, local)
     return np.asarray(img, dtype=np.uint8)
 
 
@@ -4517,6 +4553,12 @@ def _pack_caption_line(words: list, width: int, tidy: bool = False) -> list[list
         trial = current + [word]
         text = " ".join(item.text for item in trial)
         if current and len(text) > width:
+            nxt = str(word.text).strip(".,;:").lower()
+            if nxt in {"cents", "cent", "dollars", "percent"} and len(current) > 1:
+                moved = current[-1]
+                lines.append(current[:-1])
+                current = [moved, word]
+                continue
             glued = (
                 tidy
                 and str(word.text).strip(".,;:").lower() == "words"
