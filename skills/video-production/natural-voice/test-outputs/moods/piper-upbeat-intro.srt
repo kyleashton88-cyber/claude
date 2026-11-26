@@ -1,0 +1,35 @@
+1
+00:00:00,107 --> 00:00:04,550
+A grid places buy orders below the price
+
+2
+00:00:04,694 --> 00:00:09,884
+and sell orders above it. When price crosses
+
+3
+00:00:10,209 --> 00:00:15,406
+a line, that order fills. The range is
+
+4
+00:00:15,529 --> 00:00:20,796
+the band chosen before the start. Past that
+
+5
+00:00:20,952 --> 00:00:23,496
+band, the grid has left its plan. A
+
+6
+00:00:23,496 --> 00:00:23,846
+liquidation line sits beyond the range. The
+
+7
+00:00:23,846 --> 00:00:24,246
+gap is the buffer. If the buffer shrinks,
+
+8
+00:00:24,246 --> 00:00:24,646
+the plan is under stress. Count the fills.
+
+9
+00:00:24,646 --> 00:00:24,946
+Read the buffer. Keep the picture.

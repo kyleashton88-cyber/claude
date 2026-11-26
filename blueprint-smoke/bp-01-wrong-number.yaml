@@ -1,0 +1,18 @@
+id: bp-01-introduction
+format: blueprint
+disclaimer_spoken: "Educational content only. Not financial advice. Trading involves risk; you can lose money."
+disclaimer_on_screen: "Educational content only. Not financial advice."
+beats:
+  - id: open
+    chapter: "Open"
+    vo: "Grid Bot Builder. Grid Bot Blueprint. Lesson one. Introduction."
+    caption: "Lesson 01. Introduction."
+  - id: disclaimer
+    chapter: "Disclaimer"
+    vo: "Educational content only. Not financial advice. Trading involves risk; you can lose money."
+    caption: "Educational content only. Not financial advice. Trading involves risk; you can lose money."
+  - id: next
+    chapter: "Next"
+    vo: "Next. The page stays marked example. No order is sent."
+    caption: "What you are going to need"
+chart_labels: []

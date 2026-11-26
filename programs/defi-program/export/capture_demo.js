@@ -1,4 +1,7 @@
 // Capture a screen demo as a sequence of screenshots for a `cutaway` scene.
+// Blur and the sensitive-text QA live in skills/video-production/screen-demo-kit.
+// After shots are written:
+//   python3 skills/video-production/screen-demo-kit/cli.py qa --image path/to/shot.png
 //
 // Usage:  node capture_demo.js ../demos/<id>.json
 // Input:  a demo spec (see ../demos/README.md):

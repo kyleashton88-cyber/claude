@@ -1,0 +1,1205 @@
+{
+  "lessons_covered": "BP-04 through BP-11",
+  "image_count": 161,
+  "creative_studio": {
+    "branch": "cursor/blueprint-beginner-images",
+    "commit": "2f8bac1df6907f887a0c1b677450ab885efbe563",
+    "report": "blueprint-image-qa/bp04-11/REPORT.md",
+    "result": "0 pass / 161 fail of 161. Creative Studio is remaking every beat image. This file lists the paths and does not rescore them."
+  },
+  "beats_with_no_image_field": [],
+  "beats_with_missing_file": [],
+  "lessons": [
+    {
+      "id": "bp-04-market-regimes",
+      "title": "Market regimes",
+      "script": "course/scripts/bp-04-market-regimes.json",
+      "beat_count": 20,
+      "beats": [
+        {
+          "n": 1,
+          "role": "hook",
+          "chapter": "Hook",
+          "image": "course/images/bp-04-market-regimes/001.png",
+          "file_exists": true
+        },
+        {
+          "n": 2,
+          "role": "legal",
+          "chapter": "Disclaimer",
+          "image": "course/images/bp-04-market-regimes/002.png",
+          "file_exists": true
+        },
+        {
+          "n": 3,
+          "role": "intro",
+          "chapter": "Title card",
+          "image": "course/images/bp-04-market-regimes/003.png",
+          "file_exists": true
+        },
+        {
+          "n": 4,
+          "role": "body",
+          "chapter": "Three shapes",
+          "image": "course/images/bp-04-market-regimes/004.png",
+          "file_exists": true
+        },
+        {
+          "n": 5,
+          "role": "body",
+          "chapter": "Sort first",
+          "image": "course/images/bp-04-market-regimes/005.png",
+          "file_exists": true
+        },
+        {
+          "n": 6,
+          "role": "diagram",
+          "chapter": "Range fit",
+          "image": "course/images/bp-04-market-regimes/006.png",
+          "file_exists": true
+        },
+        {
+          "n": 7,
+          "role": "body",
+          "chapter": "Trend",
+          "image": "course/images/bp-04-market-regimes/007.png",
+          "file_exists": true
+        },
+        {
+          "n": 8,
+          "role": "body",
+          "chapter": "Break",
+          "image": "course/images/bp-04-market-regimes/008.png",
+          "file_exists": true
+        },
+        {
+          "n": 9,
+          "role": "demo",
+          "chapter": "Worked sort",
+          "image": "course/images/bp-04-market-regimes/009.png",
+          "file_exists": true
+        },
+        {
+          "n": 10,
+          "role": "body",
+          "chapter": "What you do with the label",
+          "image": "course/images/bp-04-market-regimes/010.png",
+          "file_exists": true
+        },
+        {
+          "n": 11,
+          "role": "body",
+          "chapter": "Ordinary day",
+          "image": "course/images/bp-04-market-regimes/011.png",
+          "file_exists": true
+        },
+        {
+          "n": 12,
+          "role": "body",
+          "chapter": "News and thin books",
+          "image": "course/images/bp-04-market-regimes/012.png",
+          "file_exists": true
+        },
+        {
+          "n": 13,
+          "role": "body",
+          "chapter": "Common miss",
+          "image": "course/images/bp-04-market-regimes/013.png",
+          "file_exists": true
+        },
+        {
+          "n": 14,
+          "role": "recap",
+          "chapter": "One sentence",
+          "image": "course/images/bp-04-market-regimes/014.png",
+          "file_exists": true
+        },
+        {
+          "n": 15,
+          "role": "action",
+          "chapter": "Paper sort",
+          "image": "course/images/bp-04-market-regimes/015.png",
+          "file_exists": true
+        },
+        {
+          "n": 16,
+          "role": "demo",
+          "chapter": "Your turn",
+          "image": "course/images/bp-04-market-regimes/016.png",
+          "file_exists": true
+        },
+        {
+          "n": 17,
+          "role": "demo",
+          "chapter": "Your turn",
+          "image": "course/images/bp-04-market-regimes/017.png",
+          "file_exists": true
+        },
+        {
+          "n": 18,
+          "role": "demo",
+          "chapter": "Your turn",
+          "image": "course/images/bp-04-market-regimes/018.png",
+          "file_exists": true
+        },
+        {
+          "n": 19,
+          "role": "body",
+          "chapter": "No score",
+          "image": "course/images/bp-04-market-regimes/019.png",
+          "file_exists": true
+        },
+        {
+          "n": 20,
+          "role": "outro",
+          "chapter": "Outro",
+          "image": "course/images/bp-04-market-regimes/020.png",
+          "file_exists": true
+        }
+      ]
+    },
+    {
+      "id": "bp-05-spacing-and-range",
+      "title": "Choosing grid spacing and range",
+      "script": "course/scripts/bp-05-spacing-and-range.json",
+      "beat_count": 19,
+      "beats": [
+        {
+          "n": 1,
+          "role": "hook",
+          "chapter": "Hook",
+          "image": "course/images/bp-05-spacing-and-range/001.png",
+          "file_exists": true
+        },
+        {
+          "n": 2,
+          "role": "legal",
+          "chapter": "Disclaimer",
+          "image": "course/images/bp-05-spacing-and-range/002.png",
+          "file_exists": true
+        },
+        {
+          "n": 3,
+          "role": "intro",
+          "chapter": "Title card",
+          "image": "course/images/bp-05-spacing-and-range/003.png",
+          "file_exists": true
+        },
+        {
+          "n": 4,
+          "role": "body",
+          "chapter": "Gaps and orders",
+          "image": "course/images/bp-05-spacing-and-range/004.png",
+          "file_exists": true
+        },
+        {
+          "n": 5,
+          "role": "demo",
+          "chapter": "The span",
+          "image": "course/images/bp-05-spacing-and-range/005.png",
+          "file_exists": true
+        },
+        {
+          "n": 6,
+          "role": "body",
+          "chapter": "Half spacing",
+          "image": "course/images/bp-05-spacing-and-range/006.png",
+          "file_exists": true
+        },
+        {
+          "n": 7,
+          "role": "body",
+          "chapter": "Range first",
+          "image": "course/images/bp-05-spacing-and-range/007.png",
+          "file_exists": true
+        },
+        {
+          "n": 8,
+          "role": "body",
+          "chapter": "Fees",
+          "image": "course/images/bp-05-spacing-and-range/008.png",
+          "file_exists": true
+        },
+        {
+          "n": 9,
+          "role": "body",
+          "chapter": "Too many lines",
+          "image": "course/images/bp-05-spacing-and-range/009.png",
+          "file_exists": true
+        },
+        {
+          "n": 10,
+          "role": "demo",
+          "chapter": "Worked recount",
+          "image": "course/images/bp-05-spacing-and-range/010.png",
+          "file_exists": true
+        },
+        {
+          "n": 11,
+          "role": "body",
+          "chapter": "Wicks",
+          "image": "course/images/bp-05-spacing-and-range/011.png",
+          "file_exists": true
+        },
+        {
+          "n": 12,
+          "role": "body",
+          "chapter": "Common miss",
+          "image": "course/images/bp-05-spacing-and-range/012.png",
+          "file_exists": true
+        },
+        {
+          "n": 13,
+          "role": "action",
+          "chapter": "What you write",
+          "image": "course/images/bp-05-spacing-and-range/013.png",
+          "file_exists": true
+        },
+        {
+          "n": 14,
+          "role": "body",
+          "chapter": "Quiet page",
+          "image": "course/images/bp-05-spacing-and-range/014.png",
+          "file_exists": true
+        },
+        {
+          "n": 15,
+          "role": "recap",
+          "chapter": "Recap",
+          "image": "course/images/bp-05-spacing-and-range/015.png",
+          "file_exists": true
+        },
+        {
+          "n": 16,
+          "role": "demo",
+          "chapter": "Your turn",
+          "image": "course/images/bp-05-spacing-and-range/016.png",
+          "file_exists": true
+        },
+        {
+          "n": 17,
+          "role": "demo",
+          "chapter": "Your turn",
+          "image": "course/images/bp-05-spacing-and-range/017.png",
+          "file_exists": true
+        },
+        {
+          "n": 18,
+          "role": "demo",
+          "chapter": "Stay on paper",
+          "image": "course/images/bp-05-spacing-and-range/018.png",
+          "file_exists": true
+        },
+        {
+          "n": 19,
+          "role": "outro",
+          "chapter": "Outro",
+          "image": "course/images/bp-05-spacing-and-range/019.png",
+          "file_exists": true
+        }
+      ]
+    },
+    {
+      "id": "bp-06-entry-and-exit",
+      "title": "Entry and exit rules",
+      "script": "course/scripts/bp-06-entry-and-exit.json",
+      "beat_count": 20,
+      "beats": [
+        {
+          "n": 1,
+          "role": "hook",
+          "chapter": "Hook",
+          "image": "course/images/bp-06-entry-and-exit/001.png",
+          "file_exists": true
+        },
+        {
+          "n": 2,
+          "role": "legal",
+          "chapter": "Disclaimer",
+          "image": "course/images/bp-06-entry-and-exit/002.png",
+          "file_exists": true
+        },
+        {
+          "n": 3,
+          "role": "intro",
+          "chapter": "Title card",
+          "image": "course/images/bp-06-entry-and-exit/003.png",
+          "file_exists": true
+        },
+        {
+          "n": 4,
+          "role": "body",
+          "chapter": "Two columns",
+          "image": "course/images/bp-06-entry-and-exit/004.png",
+          "file_exists": true
+        },
+        {
+          "n": 5,
+          "role": "body",
+          "chapter": "Stop first",
+          "image": "course/images/bp-06-entry-and-exit/005.png",
+          "file_exists": true
+        },
+        {
+          "n": 6,
+          "role": "demo",
+          "chapter": "A finish sentence",
+          "image": "course/images/bp-06-entry-and-exit/006.png",
+          "file_exists": true
+        },
+        {
+          "n": 7,
+          "role": "body",
+          "chapter": "A before sentence",
+          "image": "course/images/bp-06-entry-and-exit/007.png",
+          "file_exists": true
+        },
+        {
+          "n": 8,
+          "role": "demo",
+          "chapter": "Worked columns",
+          "image": "course/images/bp-06-entry-and-exit/008.png",
+          "file_exists": true
+        },
+        {
+          "n": 9,
+          "role": "body",
+          "chapter": "What hope is not",
+          "image": "course/images/bp-06-entry-and-exit/009.png",
+          "file_exists": true
+        },
+        {
+          "n": 10,
+          "role": "body",
+          "chapter": "Invalidation",
+          "image": "course/images/bp-06-entry-and-exit/010.png",
+          "file_exists": true
+        },
+        {
+          "n": 11,
+          "role": "body",
+          "chapter": "Common miss",
+          "image": "course/images/bp-06-entry-and-exit/011.png",
+          "file_exists": true
+        },
+        {
+          "n": 12,
+          "role": "body",
+          "chapter": "Copy order",
+          "image": "course/images/bp-06-entry-and-exit/012.png",
+          "file_exists": true
+        },
+        {
+          "n": 13,
+          "role": "body",
+          "chapter": "No size yet",
+          "image": "course/images/bp-06-entry-and-exit/013.png",
+          "file_exists": true
+        },
+        {
+          "n": 14,
+          "role": "action",
+          "chapter": "The action",
+          "image": "course/images/bp-06-entry-and-exit/014.png",
+          "file_exists": true
+        },
+        {
+          "n": 15,
+          "role": "recap",
+          "chapter": "Recap",
+          "image": "course/images/bp-06-entry-and-exit/015.png",
+          "file_exists": true
+        },
+        {
+          "n": 16,
+          "role": "demo",
+          "chapter": "Your turn",
+          "image": "course/images/bp-06-entry-and-exit/016.png",
+          "file_exists": true
+        },
+        {
+          "n": 17,
+          "role": "demo",
+          "chapter": "Your turn",
+          "image": "course/images/bp-06-entry-and-exit/017.png",
+          "file_exists": true
+        },
+        {
+          "n": 18,
+          "role": "demo",
+          "chapter": "Your turn",
+          "image": "course/images/bp-06-entry-and-exit/018.png",
+          "file_exists": true
+        },
+        {
+          "n": 19,
+          "role": "demo",
+          "chapter": "Audit",
+          "image": "course/images/bp-06-entry-and-exit/019.png",
+          "file_exists": true
+        },
+        {
+          "n": 20,
+          "role": "outro",
+          "chapter": "Outro",
+          "image": "course/images/bp-06-entry-and-exit/020.png",
+          "file_exists": true
+        }
+      ]
+    },
+    {
+      "id": "bp-07-spot-paper-trading",
+      "title": "Spot paper trading",
+      "script": "course/scripts/bp-07-spot-paper-trading.json",
+      "beat_count": 20,
+      "beats": [
+        {
+          "n": 1,
+          "role": "hook",
+          "chapter": "Hook",
+          "image": "course/images/bp-07-spot-paper-trading/001.png",
+          "file_exists": true
+        },
+        {
+          "n": 2,
+          "role": "legal",
+          "chapter": "Disclaimer",
+          "image": "course/images/bp-07-spot-paper-trading/002.png",
+          "file_exists": true
+        },
+        {
+          "n": 3,
+          "role": "intro",
+          "chapter": "Title card",
+          "image": "course/images/bp-07-spot-paper-trading/003.png",
+          "file_exists": true
+        },
+        {
+          "n": 4,
+          "role": "body",
+          "chapter": "Not affiliated",
+          "image": "course/images/bp-07-spot-paper-trading/004.png",
+          "file_exists": true
+        },
+        {
+          "n": 5,
+          "role": "body",
+          "chapter": "Fields from the page",
+          "image": "course/images/bp-07-spot-paper-trading/005.png",
+          "file_exists": true
+        },
+        {
+          "n": 6,
+          "role": "body",
+          "chapter": "Spot, not a contract",
+          "image": "course/images/bp-07-spot-paper-trading/006.png",
+          "file_exists": true
+        },
+        {
+          "n": 7,
+          "role": "body",
+          "chapter": "Keys",
+          "image": "course/images/bp-07-spot-paper-trading/007.png",
+          "file_exists": true
+        },
+        {
+          "n": 8,
+          "role": "demo",
+          "chapter": "Walk the pair",
+          "image": "course/images/bp-07-spot-paper-trading/008.png",
+          "file_exists": true
+        },
+        {
+          "n": 9,
+          "role": "demo",
+          "chapter": "Walk the band",
+          "image": "course/images/bp-07-spot-paper-trading/009.png",
+          "file_exists": true
+        },
+        {
+          "n": 10,
+          "role": "demo",
+          "chapter": "Walk the count",
+          "image": "course/images/bp-07-spot-paper-trading/010.png",
+          "file_exists": true
+        },
+        {
+          "n": 11,
+          "role": "demo",
+          "chapter": "Walk the sentences",
+          "image": "course/images/bp-07-spot-paper-trading/011.png",
+          "file_exists": true
+        },
+        {
+          "n": 12,
+          "role": "body",
+          "chapter": "Common miss",
+          "image": "course/images/bp-07-spot-paper-trading/012.png",
+          "file_exists": true
+        },
+        {
+          "n": 13,
+          "role": "body",
+          "chapter": "No order",
+          "image": "course/images/bp-07-spot-paper-trading/013.png",
+          "file_exists": true
+        },
+        {
+          "n": 14,
+          "role": "action",
+          "chapter": "The action",
+          "image": "course/images/bp-07-spot-paper-trading/014.png",
+          "file_exists": true
+        },
+        {
+          "n": 15,
+          "role": "recap",
+          "chapter": "Recap",
+          "image": "course/images/bp-07-spot-paper-trading/015.png",
+          "file_exists": true
+        },
+        {
+          "n": 16,
+          "role": "demo",
+          "chapter": "Your turn",
+          "image": "course/images/bp-07-spot-paper-trading/016.png",
+          "file_exists": true
+        },
+        {
+          "n": 17,
+          "role": "demo",
+          "chapter": "Your turn",
+          "image": "course/images/bp-07-spot-paper-trading/017.png",
+          "file_exists": true
+        },
+        {
+          "n": 18,
+          "role": "demo",
+          "chapter": "Your turn",
+          "image": "course/images/bp-07-spot-paper-trading/018.png",
+          "file_exists": true
+        },
+        {
+          "n": 19,
+          "role": "body",
+          "chapter": "If the screen differs",
+          "image": "course/images/bp-07-spot-paper-trading/019.png",
+          "file_exists": true
+        },
+        {
+          "n": 20,
+          "role": "outro",
+          "chapter": "Outro",
+          "image": "course/images/bp-07-spot-paper-trading/020.png",
+          "file_exists": true
+        }
+      ]
+    },
+    {
+      "id": "bp-08-managing-and-monitoring",
+      "title": "Managing and monitoring",
+      "script": "course/scripts/bp-08-managing-and-monitoring.json",
+      "beat_count": 20,
+      "beats": [
+        {
+          "n": 1,
+          "role": "hook",
+          "chapter": "Hook",
+          "image": "course/images/bp-08-managing-and-monitoring/001.png",
+          "file_exists": true
+        },
+        {
+          "n": 2,
+          "role": "legal",
+          "chapter": "Disclaimer",
+          "image": "course/images/bp-08-managing-and-monitoring/002.png",
+          "file_exists": true
+        },
+        {
+          "n": 3,
+          "role": "intro",
+          "chapter": "Title card",
+          "image": "course/images/bp-08-managing-and-monitoring/003.png",
+          "file_exists": true
+        },
+        {
+          "n": 4,
+          "role": "body",
+          "chapter": "Three questions",
+          "image": "course/images/bp-08-managing-and-monitoring/004.png",
+          "file_exists": true
+        },
+        {
+          "n": 5,
+          "role": "diagram",
+          "chapter": "Inside the band",
+          "image": "course/images/bp-08-managing-and-monitoring/005.png",
+          "file_exists": true
+        },
+        {
+          "n": 6,
+          "role": "body",
+          "chapter": "Which side",
+          "image": "course/images/bp-08-managing-and-monitoring/006.png",
+          "file_exists": true
+        },
+        {
+          "n": 7,
+          "role": "body",
+          "chapter": "The sentence",
+          "image": "course/images/bp-08-managing-and-monitoring/007.png",
+          "file_exists": true
+        },
+        {
+          "n": 8,
+          "role": "body",
+          "chapter": "Cadence",
+          "image": "course/images/bp-08-managing-and-monitoring/008.png",
+          "file_exists": true
+        },
+        {
+          "n": 9,
+          "role": "body",
+          "chapter": "What you do not open",
+          "image": "course/images/bp-08-managing-and-monitoring/009.png",
+          "file_exists": true
+        },
+        {
+          "n": 10,
+          "role": "demo",
+          "chapter": "Worked check",
+          "image": "course/images/bp-08-managing-and-monitoring/010.png",
+          "file_exists": true
+        },
+        {
+          "n": 11,
+          "role": "body",
+          "chapter": "Alerts",
+          "image": "course/images/bp-08-managing-and-monitoring/011.png",
+          "file_exists": true
+        },
+        {
+          "n": 12,
+          "role": "body",
+          "chapter": "Common miss",
+          "image": "course/images/bp-08-managing-and-monitoring/012.png",
+          "file_exists": true
+        },
+        {
+          "n": 13,
+          "role": "body",
+          "chapter": "After the check",
+          "image": "course/images/bp-08-managing-and-monitoring/013.png",
+          "file_exists": true
+        },
+        {
+          "n": 14,
+          "role": "action",
+          "chapter": "The action",
+          "image": "course/images/bp-08-managing-and-monitoring/014.png",
+          "file_exists": true
+        },
+        {
+          "n": 15,
+          "role": "recap",
+          "chapter": "Recap",
+          "image": "course/images/bp-08-managing-and-monitoring/015.png",
+          "file_exists": true
+        },
+        {
+          "n": 16,
+          "role": "demo",
+          "chapter": "Your turn",
+          "image": "course/images/bp-08-managing-and-monitoring/016.png",
+          "file_exists": true
+        },
+        {
+          "n": 17,
+          "role": "demo",
+          "chapter": "Your turn",
+          "image": "course/images/bp-08-managing-and-monitoring/017.png",
+          "file_exists": true
+        },
+        {
+          "n": 18,
+          "role": "demo",
+          "chapter": "Your turn",
+          "image": "course/images/bp-08-managing-and-monitoring/018.png",
+          "file_exists": true
+        },
+        {
+          "n": 19,
+          "role": "body",
+          "chapter": "Paper screen optional",
+          "image": "course/images/bp-08-managing-and-monitoring/019.png",
+          "file_exists": true
+        },
+        {
+          "n": 20,
+          "role": "outro",
+          "chapter": "Outro",
+          "image": "course/images/bp-08-managing-and-monitoring/020.png",
+          "file_exists": true
+        }
+      ]
+    },
+    {
+      "id": "bp-09-common-mistakes",
+      "title": "Common mistakes",
+      "script": "course/scripts/bp-09-common-mistakes.json",
+      "beat_count": 21,
+      "beats": [
+        {
+          "n": 1,
+          "role": "hook",
+          "chapter": "Hook",
+          "image": "course/images/bp-09-common-mistakes/001.png",
+          "file_exists": true
+        },
+        {
+          "n": 2,
+          "role": "legal",
+          "chapter": "Disclaimer",
+          "image": "course/images/bp-09-common-mistakes/002.png",
+          "file_exists": true
+        },
+        {
+          "n": 3,
+          "role": "intro",
+          "chapter": "Title card",
+          "image": "course/images/bp-09-common-mistakes/003.png",
+          "file_exists": true
+        },
+        {
+          "n": 4,
+          "role": "body",
+          "chapter": "Blank stop",
+          "image": "course/images/bp-09-common-mistakes/004.png",
+          "file_exists": true
+        },
+        {
+          "n": 5,
+          "role": "body",
+          "chapter": "Tight band",
+          "image": "course/images/bp-09-common-mistakes/005.png",
+          "file_exists": true
+        },
+        {
+          "n": 6,
+          "role": "body",
+          "chapter": "Ending early",
+          "image": "course/images/bp-09-common-mistakes/006.png",
+          "file_exists": true
+        },
+        {
+          "n": 7,
+          "role": "body",
+          "chapter": "Counting lines",
+          "image": "course/images/bp-09-common-mistakes/007.png",
+          "file_exists": true
+        },
+        {
+          "n": 8,
+          "role": "body",
+          "chapter": "Default size",
+          "image": "course/images/bp-09-common-mistakes/008.png",
+          "file_exists": true
+        },
+        {
+          "n": 9,
+          "role": "body",
+          "chapter": "Result language",
+          "image": "course/images/bp-09-common-mistakes/009.png",
+          "file_exists": true
+        },
+        {
+          "n": 10,
+          "role": "demo",
+          "chapter": "Worked audit",
+          "image": "course/images/bp-09-common-mistakes/010.png",
+          "file_exists": true
+        },
+        {
+          "n": 11,
+          "role": "body",
+          "chapter": "One fix at a time",
+          "image": "course/images/bp-09-common-mistakes/011.png",
+          "file_exists": true
+        },
+        {
+          "n": 12,
+          "role": "body",
+          "chapter": "Not a score",
+          "image": "course/images/bp-09-common-mistakes/012.png",
+          "file_exists": true
+        },
+        {
+          "n": 13,
+          "role": "body",
+          "chapter": "Leverage mention",
+          "image": "course/images/bp-09-common-mistakes/013.png",
+          "file_exists": true
+        },
+        {
+          "n": 14,
+          "role": "action",
+          "chapter": "The action",
+          "image": "course/images/bp-09-common-mistakes/014.png",
+          "file_exists": true
+        },
+        {
+          "n": 15,
+          "role": "recap",
+          "chapter": "Recap",
+          "image": "course/images/bp-09-common-mistakes/015.png",
+          "file_exists": true
+        },
+        {
+          "n": 16,
+          "role": "demo",
+          "chapter": "Your turn",
+          "image": "course/images/bp-09-common-mistakes/016.png",
+          "file_exists": true
+        },
+        {
+          "n": 17,
+          "role": "demo",
+          "chapter": "Your turn",
+          "image": "course/images/bp-09-common-mistakes/017.png",
+          "file_exists": true
+        },
+        {
+          "n": 18,
+          "role": "demo",
+          "chapter": "Your turn",
+          "image": "course/images/bp-09-common-mistakes/018.png",
+          "file_exists": true
+        },
+        {
+          "n": 19,
+          "role": "demo",
+          "chapter": "Your turn",
+          "image": "course/images/bp-09-common-mistakes/019.png",
+          "file_exists": true
+        },
+        {
+          "n": 20,
+          "role": "demo",
+          "chapter": "Keep the pages",
+          "image": "course/images/bp-09-common-mistakes/020.png",
+          "file_exists": true
+        },
+        {
+          "n": 21,
+          "role": "outro",
+          "chapter": "Outro",
+          "image": "course/images/bp-09-common-mistakes/021.png",
+          "file_exists": true
+        }
+      ]
+    },
+    {
+      "id": "bp-10-scaling-up",
+      "title": "Scaling up on spot",
+      "script": "course/scripts/bp-10-scaling-up.json",
+      "beat_count": 21,
+      "beats": [
+        {
+          "n": 1,
+          "role": "hook",
+          "chapter": "Hook",
+          "image": "course/images/bp-10-scaling-up/001.png",
+          "file_exists": true
+        },
+        {
+          "n": 2,
+          "role": "legal",
+          "chapter": "Disclaimer",
+          "image": "course/images/bp-10-scaling-up/002.png",
+          "file_exists": true
+        },
+        {
+          "n": 3,
+          "role": "intro",
+          "chapter": "Title card",
+          "image": "course/images/bp-10-scaling-up/003.png",
+          "file_exists": true
+        },
+        {
+          "n": 4,
+          "role": "body",
+          "chapter": "A second page",
+          "image": "course/images/bp-10-scaling-up/004.png",
+          "file_exists": true
+        },
+        {
+          "n": 5,
+          "role": "body",
+          "chapter": "Buckets",
+          "image": "course/images/bp-10-scaling-up/005.png",
+          "file_exists": true
+        },
+        {
+          "n": 6,
+          "role": "body",
+          "chapter": "Same size is allowed",
+          "image": "course/images/bp-10-scaling-up/006.png",
+          "file_exists": true
+        },
+        {
+          "n": 7,
+          "role": "body",
+          "chapter": "One change",
+          "image": "course/images/bp-10-scaling-up/007.png",
+          "file_exists": true
+        },
+        {
+          "n": 8,
+          "role": "demo",
+          "chapter": "Worked pair",
+          "image": "course/images/bp-10-scaling-up/008.png",
+          "file_exists": true
+        },
+        {
+          "n": 9,
+          "role": "body",
+          "chapter": "Not the end",
+          "image": "course/images/bp-10-scaling-up/009.png",
+          "file_exists": true
+        },
+        {
+          "n": 10,
+          "role": "body",
+          "chapter": "Spot only",
+          "image": "course/images/bp-10-scaling-up/010.png",
+          "file_exists": true
+        },
+        {
+          "n": 11,
+          "role": "body",
+          "chapter": "Capital is not a target",
+          "image": "course/images/bp-10-scaling-up/011.png",
+          "file_exists": true
+        },
+        {
+          "n": 12,
+          "role": "body",
+          "chapter": "Common miss",
+          "image": "course/images/bp-10-scaling-up/012.png",
+          "file_exists": true
+        },
+        {
+          "n": 13,
+          "role": "body",
+          "chapter": "Correlation",
+          "image": "course/images/bp-10-scaling-up/013.png",
+          "file_exists": true
+        },
+        {
+          "n": 14,
+          "role": "action",
+          "chapter": "The line",
+          "image": "course/images/bp-10-scaling-up/014.png",
+          "file_exists": true
+        },
+        {
+          "n": 15,
+          "role": "recap",
+          "chapter": "Recap",
+          "image": "course/images/bp-10-scaling-up/015.png",
+          "file_exists": true
+        },
+        {
+          "n": 16,
+          "role": "demo",
+          "chapter": "Your turn",
+          "image": "course/images/bp-10-scaling-up/016.png",
+          "file_exists": true
+        },
+        {
+          "n": 17,
+          "role": "demo",
+          "chapter": "Your turn",
+          "image": "course/images/bp-10-scaling-up/017.png",
+          "file_exists": true
+        },
+        {
+          "n": 18,
+          "role": "demo",
+          "chapter": "Your turn",
+          "image": "course/images/bp-10-scaling-up/018.png",
+          "file_exists": true
+        },
+        {
+          "n": 19,
+          "role": "demo",
+          "chapter": "Your turn",
+          "image": "course/images/bp-10-scaling-up/019.png",
+          "file_exists": true
+        },
+        {
+          "n": 20,
+          "role": "demo",
+          "chapter": "File them",
+          "image": "course/images/bp-10-scaling-up/020.png",
+          "file_exists": true
+        },
+        {
+          "n": 21,
+          "role": "outro",
+          "chapter": "Outro",
+          "image": "course/images/bp-10-scaling-up/021.png",
+          "file_exists": true
+        }
+      ]
+    },
+    {
+      "id": "bp-11-advanced-liquidation",
+      "title": "Advanced: liquidation scenarios",
+      "script": "course/scripts/bp-11-advanced-liquidation.json",
+      "beat_count": 20,
+      "beats": [
+        {
+          "n": 1,
+          "role": "hook",
+          "chapter": "Hook",
+          "image": "course/images/bp-11-advanced-liquidation/001.png",
+          "file_exists": true
+        },
+        {
+          "n": 2,
+          "role": "legal",
+          "chapter": "Disclaimer",
+          "image": "course/images/bp-11-advanced-liquidation/002.png",
+          "file_exists": true
+        },
+        {
+          "n": 3,
+          "role": "intro",
+          "chapter": "Title card",
+          "image": "course/images/bp-11-advanced-liquidation/003.png",
+          "file_exists": true
+        },
+        {
+          "n": 4,
+          "role": "body",
+          "chapter": "Spot is complete",
+          "image": "course/images/bp-11-advanced-liquidation/004.png",
+          "file_exists": true
+        },
+        {
+          "n": 5,
+          "role": "body",
+          "chapter": "What liquidation means",
+          "image": "course/images/bp-11-advanced-liquidation/005.png",
+          "file_exists": true
+        },
+        {
+          "n": 6,
+          "role": "diagram",
+          "chapter": "Losing path",
+          "image": "course/images/bp-11-advanced-liquidation/006.png",
+          "file_exists": true
+        },
+        {
+          "n": 7,
+          "role": "body",
+          "chapter": "Isolated",
+          "image": "course/images/bp-11-advanced-liquidation/007.png",
+          "file_exists": true
+        },
+        {
+          "n": 8,
+          "role": "body",
+          "chapter": "Cross",
+          "image": "course/images/bp-11-advanced-liquidation/008.png",
+          "file_exists": true
+        },
+        {
+          "n": 9,
+          "role": "body",
+          "chapter": "No multiple",
+          "image": "course/images/bp-11-advanced-liquidation/009.png",
+          "file_exists": true
+        },
+        {
+          "n": 10,
+          "role": "body",
+          "chapter": "Funding",
+          "image": "course/images/bp-11-advanced-liquidation/010.png",
+          "file_exists": true
+        },
+        {
+          "n": 11,
+          "role": "body",
+          "chapter": "What was deleted",
+          "image": "course/images/bp-11-advanced-liquidation/011.png",
+          "file_exists": true
+        },
+        {
+          "n": 12,
+          "role": "body",
+          "chapter": "Flags",
+          "image": "course/images/bp-11-advanced-liquidation/012.png",
+          "file_exists": true
+        },
+        {
+          "n": 13,
+          "role": "body",
+          "chapter": "Not a venue guide",
+          "image": "course/images/bp-11-advanced-liquidation/013.png",
+          "file_exists": true
+        },
+        {
+          "n": 14,
+          "role": "action",
+          "chapter": "The sentence",
+          "image": "course/images/bp-11-advanced-liquidation/014.png",
+          "file_exists": true
+        },
+        {
+          "n": 15,
+          "role": "recap",
+          "chapter": "Recap",
+          "image": "course/images/bp-11-advanced-liquidation/015.png",
+          "file_exists": true
+        },
+        {
+          "n": 16,
+          "role": "demo",
+          "chapter": "Your turn",
+          "image": "course/images/bp-11-advanced-liquidation/016.png",
+          "file_exists": true
+        },
+        {
+          "n": 17,
+          "role": "demo",
+          "chapter": "Your turn",
+          "image": "course/images/bp-11-advanced-liquidation/017.png",
+          "file_exists": true
+        },
+        {
+          "n": 18,
+          "role": "demo",
+          "chapter": "Your turn",
+          "image": "course/images/bp-11-advanced-liquidation/018.png",
+          "file_exists": true
+        },
+        {
+          "n": 19,
+          "role": "body",
+          "chapter": "If you skip",
+          "image": "course/images/bp-11-advanced-liquidation/019.png",
+          "file_exists": true
+        },
+        {
+          "n": 20,
+          "role": "outro",
+          "chapter": "Outro",
+          "image": "course/images/bp-11-advanced-liquidation/020.png",
+          "file_exists": true
+        }
+      ]
+    }
+  ]
+}

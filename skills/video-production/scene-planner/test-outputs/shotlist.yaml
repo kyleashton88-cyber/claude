@@ -1,0 +1,61 @@
+lesson: sample-grid
+title: A grid in one picture
+max_shot_seconds: 8.0
+shot_count: 4
+shots:
+- id: candles-1
+  beat: candles
+  chapter: Candles
+  start: 0.0
+  end: 3.0
+  duration: 3.0
+  visual: candle chart
+  labels:
+  - Open
+  - High
+  - Low
+  - Close
+  idea: Four facts
+  alt: 'Candle chart of Four facts. Labels read: Open, High, Low, Close.'
+  vo: Each candle shows four facts
+  engine_type: candle_series
+- id: ladder-1
+  beat: ladder
+  chapter: The ladder
+  start: 0.0
+  end: 7.2
+  duration: 7.2
+  visual: grid ladder
+  labels:
+  - Buys below
+  - Sells above
+  idea: Orders on a ladder
+  alt: 'Grid ladder of Orders on a ladder. Labels read: Buys below, Sells above.'
+  vo: Buy orders sit below the price and sell orders sit above
+  engine_type: grid_ladder
+- id: ladder-2
+  beat: ladder
+  chapter: The ladder
+  start: 7.2
+  end: 15.0
+  duration: 7.8
+  visual: kinetic type
+  labels:
+  - Buys below
+  - Sells above
+  idea: Orders on a ladder
+  alt: 'Kinetic type of Orders on a ladder. Labels read: Buys below, Sells above.'
+  vo: it while the picture keeps moving so a still frame
+- id: ladder-3
+  beat: ladder
+  chapter: The ladder
+  start: 15.0
+  end: 17.4
+  duration: 2.4
+  visual: motion graphic
+  labels:
+  - Buys below
+  - Sells above
+  idea: Orders on a ladder
+  alt: 'Motion graphic of Orders on a ladder. Labels read: Buys below, Sells above.'
+  vo: never holds

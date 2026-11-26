@@ -1,0 +1,7 @@
+A grid places buy orders below the price and sell orders above it. When price crosses a line, that order fills.
+
+The range is the band chosen before the start. Past that band, the grid has left its plan.
+
+A liquidation line sits beyond the range. The gap is the *buffer*. If the buffer shrinks, the plan is under stress. <pause 400ms>
+
+Count the fills. Read the buffer. Keep the picture.

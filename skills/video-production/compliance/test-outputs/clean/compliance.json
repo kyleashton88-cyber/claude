@@ -1,0 +1,13 @@
+{
+  "tool": "compliance",
+  "source": "samples/clean-lesson.yaml",
+  "status": "pending legal review",
+  "auto_clear": false,
+  "content_result": "pass",
+  "content_hash": "4615b444ff74c852e2a4cb2758445c92875e0e9ea8bf4095dd15449bd9333682",
+  "flag_count": 0,
+  "flags": [],
+  "signoff": "A person records legal approval in the review record. This linter never writes that approval.",
+  "publishes": false,
+  "legal_recorded": false
+}

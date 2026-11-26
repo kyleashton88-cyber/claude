@@ -102,7 +102,7 @@ LESSONS = [
     {
         "slug": "bp-02-what-you-need",
         "title": "What you are going to need",
-        "next": "What is a grid bot",
+        "next": "How a grid bot works, order by order",
         "facts": [
             ("Hook", "hook",
              "You need a page before you need a screen.",
@@ -192,7 +192,7 @@ LESSONS = [
     },
     {
         "slug": "bp-03-what-is-a-grid-bot",
-        "title": "What is a grid bot",
+        "title": "How a grid bot works, order by order",
         "next": "Market regimes",
         "facts": [
             ("Hook", "hook",

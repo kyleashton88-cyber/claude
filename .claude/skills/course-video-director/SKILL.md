@@ -5,6 +5,11 @@ description: Produce a high-end course lesson video end to end, from lesson text
 
 # Course Video Director
 
+Deprecated as the entry point. New lessons start at `skills/production-pipeline`
+and the pass/fail is `skills/video-production/quality-gate`. This note stays so
+the On-Chain Operator gold steps below are still readable. Kokoro `af_heart`
+remains the narration default.
+
 The lead skill for course video. It runs the other video skills in order and
 owns the finished result. The bar is `programs/defi-program/video-scripts/gold/lesson-03-2.json`
 (rendered as `video/lesson-03-2.mp4`). Every lesson should reach or beat it.

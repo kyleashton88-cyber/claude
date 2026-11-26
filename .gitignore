@@ -1,3 +1,16 @@
 config.local.md
 __pycache__/
 course/render/work/
+
+# Lesson renders are not committed and are not stored in Git LFS.
+# Full masters live in the agent store. Review copies live in Google Drive.
+# See course/media/MEDIA-MANIFEST.md.
+course/blueprint-rebuild/masters/*.mp4
+course/blueprint-rebuild/masters/*.mov
+course/blueprint-rebuild/masters/*.wav
+course/blueprint-rebuild/review/*.mp4
+course/blueprint-rebuild/review/*.mov
+course/blueprint-rebuild/review/*.wav
+blueprint-smoke/**/*.mp4
+blueprint-smoke/**/*.mov
+blueprint-smoke/**/*.wav
