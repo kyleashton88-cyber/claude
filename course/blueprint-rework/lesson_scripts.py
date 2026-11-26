@@ -424,7 +424,7 @@ def bp01() -> list[dict]:
     ))
     s.append(gloss(
         "Downside",
-        "That loss can keep growing until the stop acts. You stop the bot either way, then you follow the written rule. The bot does not decide the stop unless you turned that setting on. EXAMPLE, made up: three buys fill on the way down. One hundredth of a bitcoin at 27,630 is 276 dollars 30. One hundredth at 26,730 is 267 dollars 30. One hundredth at 25,830 is 258 dollars 30. Together that is 801 dollars 90. Three buys of 0.01 is 0.03 bitcoin. At 24,000, that is 720 dollars. A little below the range, at a made-up price of 24,000, that coin is worth 720 dollars. You are down 81 dollars 90 before fees, and the loss keeps growing until your stop acts.",
+        "That loss can keep growing until the stop acts. You stop the bot either way, then you follow the written rule. The bot does not decide the stop unless you turned that setting on. EXAMPLE, made up: three buys fill on the way down. One hundredth at twenty-seven thousand, six hundred and thirty costs 276 dollars 30. One hundredth at 26,730 is 267 dollars 30. One hundredth at 25,830 is 258 dollars 30. Together that is 801 dollars 90. Three buys of 0.01 is 0.03 bitcoin. A little below the range, at a made-up price of 24,000, that coin is worth 720 dollars. You are down 81 dollars 90 before fees, and the loss keeps growing until your stop acts.",
         "EXAMPLE, made up. About 800 down to about 720.",
         "Downside example",
         "A made-up example. Three buys on the way down. Not a real fill.",
@@ -768,11 +768,11 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "A maker fee is the charge when your order waits and someone else trades with it. "
         "A taker fee is the charge when your order fills straight away. "
         "A grid uses waiting orders, so read the maker fee first. "
-        "Some bots also pay a taker fee when they first start. In this example both are 0.1 percent. "
-        "On an example buy of 100 Australian dollars, 0.1 percent is 10 cents. "
-        "The sell costs about 10 cents as well. "
+        "Some bots also pay a taker fee when they first start. Here is a worked example, marked example. In this example both fees are 0.1 percent. First, the buy. "
+        "On an example buy of 100 Australian dollars, 0.1 percent is 10 cents. Next, the sell. "
+        "The sell costs about 10 cents as well. Now add them. "
         "The round trip is about 20 cents, which is 0.2 percent. "
-        "This fee row is Australian dollars. It is not the July to October example window. "
+        "This fee row is Australian dollars. It is not the July to October example window. Here is why that 0.2 percent matters. "
         "If the gap is smaller than that 0.2 percent, each completed buy and sell costs more in fees than the gap is worth. "
         "To compare them, turn the gap into a percent by dividing it by the price. In the lesson 1 example, 900 divided by 27,630 is about 3.3 percent, well above 0.2 percent. "
         "Lesson 5 is where you test a gap against this fee. You do not pick a gap in this lesson.",
@@ -801,8 +801,8 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
         "That note is not money you made. A stablecoin fill goes in the journal. "
         "The tax office treats a swap like a sale, so every swap goes in the journal. "
         "The journal is also the page you will open again in lesson 8 and lesson 10. "
-        "For every transaction, including a buy, a sell, a swap, or a transfer, write the date and time, the amount, the value in Australian dollars at the time, the fee, which exchange or wallet, what it was for, and who the other side was. "
-        "The columns are the date, the pair, the range, the gaps, the money in the bot, the stop rule, the fills, the fees, the Australian dollar value of each fill, a review note, and a yes or no for the rules. "
+        "First, what you write for every transaction, including a buy, a sell, a swap, or a transfer. Write the date and time, the amount, and the value in Australian dollars at the time. Then write the fee, which exchange or wallet, what it was for, and who the other side was. "
+        "Next, the columns on the page. First the plan: the date, the pair, the range, the gaps, the money in the bot, and the stop rule. Then what happened: the fills, the fees, the Australian dollar value of each fill, a review note, and a yes or no for the rules. "
         "The Australian dollar value column is the one exception. It is for your tax records. "
         "Download your exchange's transaction history at least every three months. Keep those records for at least five years. "
         "This is general information, not tax advice. "
@@ -812,7 +812,7 @@ _BP02_BEATS: list[tuple[str, str, list]] = [
             {"cue": "", "kind": "journal", "cols": 4, "title": "Journal"},
             {"cue": "the tax office", "kind": "journal", "cols": 4, "mark": 0, "note": "A swap counts like a sale.", "title": "Journal"},
             {"cue": "for every transaction", "kind": "journal", "cols": 8, "mark": 1, "note": "Write the date and the fee.", "title": "Journal"},
-            {"cue": "the columns are", "kind": "journal", "cols": 11, "title": "Journal"},
+            {"cue": "the columns on", "kind": "journal", "cols": 11, "title": "Journal"},
             {"cue": "the range", "kind": "journal", "cols": 11, "title": "Journal"},
             {"cue": "the money in", "kind": "journal", "cols": 11, "title": "Journal"},
             {"cue": "the stop rule", "kind": "journal", "cols": 11, "title": "Journal"},

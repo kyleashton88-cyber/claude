@@ -106,7 +106,7 @@ Here is that stop rule on the real path. It triggers if a daily closing price is
 
 Through the top, the sells have filled and you hold cash. Through the bottom, the buys have filled and you hold coin that you bought above where the price is now.
 
-That loss can keep growing until the stop acts. You stop the bot either way, then you follow the written rule. The bot does not decide the stop unless you turned that setting on. EXAMPLE, made up: three buys fill on the way down. One hundredth of a bitcoin at 27,630 is 276 dollars 30. One hundredth at 26,730 is 267 dollars 30. One hundredth at 25,830 is 258 dollars 30. Together that is 801 dollars 90. Three buys of 0.01 is 0.03 bitcoin. At 24,000, that is 720 dollars. A little below the range, at a made-up price of 24,000, that coin is worth 720 dollars. You are down 81 dollars 90 before fees, and the loss keeps growing until your stop acts.
+That loss can keep growing until the stop acts. You stop the bot either way, then you follow the written rule. The bot does not decide the stop unless you turned that setting on. EXAMPLE, made up: three buys fill on the way down. One hundredth at twenty-seven thousand, six hundred and thirty costs 276 dollars 30. One hundredth at 26,730 is 267 dollars 30. One hundredth at 25,830 is 258 dollars 30. Together that is 801 dollars 90. Three buys of 0.01 is 0.03 bitcoin. A little below the range, at a made-up price of 24,000, that coin is worth 720 dollars. You are down 81 dollars 90 before fees, and the loss keeps growing until your stop acts.
 
 ## No promise of results
 
